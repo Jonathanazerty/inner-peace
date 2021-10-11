@@ -12,6 +12,7 @@
     border-radius: 16px;
     padding: 0.5rem;
     margin: 1rem;
+    box-shadow: 1px 1px 2px #868686;
 }
 
 .feeling {
@@ -22,6 +23,7 @@
     margin: 5rem;
     background-color: #DAE3E5;
     padding: 2rem;
+    border-radius: 16px;
 }
 
 .experienceHeader {
