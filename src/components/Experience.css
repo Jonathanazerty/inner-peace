@@ -1,8 +1,121 @@
-.experienceHeader{
+* {
+    color: #0d1a31;
+}
+
+.experienceButton {
+    background-color: #507DBC;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 16px;
+    padding: 0.5rem;
+    margin: 1rem;
+}
+
+.feeling {
+    width: 15%;
+}
+
+.experienceMain {
+    margin: 5rem;
+    background-color: #DAE3E5;
+    padding: 2rem;
+}
+
+.experienceHeader {
     display: grid;
     grid-template-columns: 80% 20%;
 }
-.experiencingAndNotesWrapper{
+
+.experiencingAndNotesWrapper {
     display: grid;
     grid-template-columns: 50% 50%;
+}
+
+.experiencing {
+    justify-self: end;
+    background-color: #A1C6EA;
+    padding: 1rem;
+    margin-right: 2rem;
+    min-width: 70%;
+    min-height: 100%;
+    border-radius: 16px;
+    display: flex;
+    flex-flow: column;
+}
+
+.notes {
+    justify-self: start;
+    background-color: #A1C6EA;
+    padding: 1rem;
+    margin-left: 2rem;
+    min-width: 70%;
+    min-height: 100%;
+    border-radius: 16px;
+    display: flex;
+    flex-flow: column;
+}
+
+.experienceSubmitWrapper {
+    margin: 2rem;
+    margin-bottom: 0;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.symptoms {
+    display: flex;
+    flex-flow: column;
+    background-color: #f1f6f6;
+    border-radius: 16px;
+    padding: 1rem;
+}
+@media only screen and (max-width: 1150px) {
+    .experienceButton {
+        font-weight: bold;
+        font-size: 0.7rem;
+        padding: 0.4rem;
+        margin: 1rem;
+    }
+}
+@media only screen and (max-width: 950px) {
+    .experienceHeader {
+        grid-template-columns: 65% 35%;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .experiencingAndNotesWrapper {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    .experiencing {
+        justify-self: center;
+        padding: 1.5rem;
+        padding-bottom: 2rem;
+        margin: 1rem;
+        margin-bottom: 3rem;
+        min-width: 100%;
+        min-height: auto;
+    }
+    .notes {
+        justify-self: center;
+        padding: 1.5rem;
+        padding-bottom: 2rem;
+        margin: 1rem;
+        min-width: 100%;
+        min-height: auto;
+    }
+    .experienceButton {
+        font-size: 0.5rem;
+        padding: 0.3rem;
+        margin: 0.8rem;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .experienceHeader {
+        grid-template-columns: auto;
+    }
 }
