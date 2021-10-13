@@ -2,7 +2,6 @@ import './App.css';
 import React from "react";
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import Header from './components/Header';
-import Footer from './components/Footer';
 import Intro from './components/Intro';
 import Name from './components/Name';
 import Feeling from './components/Feeling';
@@ -68,10 +67,7 @@ function App() {
               <Route path="/Help" component={Help} />
               <Route path="/Entries" component={Entries} />
           </Switch>
-        </Router>
-      <footer>
-          <Footer />
-      </footer>
+          </Router>
     </div>
   );
 }
