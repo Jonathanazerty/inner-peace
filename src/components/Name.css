@@ -1,3 +1,8 @@
+body {
+    font-family: 'Dosis', sans-serif;
+    color: #141fa0;
+}
+
 .gif {
     width: 150px;
     height: 150px;

@@ -28,7 +28,7 @@ const Name = () => {
                         NEVER EVER DOUBT THE FACT THAT
                     </Col>
                 </Row>
-                <Row align="center" justify="center" direction="column" style={{fontSize: '60px'}}>
+                <Row align="center" justify="center" direction="column" style={{fontSize: '60px'}} >
                     <Col xs={8}>
                         YOU MATTER !
                     </Col>
