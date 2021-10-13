@@ -8,38 +8,38 @@ const Name = () => {
 
   let history = useHistory();
 
-  const redirect = () => {
+  const nextPage = () => {
     history.push('/Feeling')
   }
 
     return (
 
         <Container fluid>
-          <Row align="center" justify="center" direction="column" style={{ margin: '70px' }} >
-            <Col xs={3}>
+          <Row direction="column" style={{ margin: '70px' }} >
+            <Col xs={12} align="center" justify="center" text="center">
               <div>
                  <img className="gif" src={logo} alt="logo" />
               </div>
             </Col>
           </Row>
-          <Row align="center" justify="center" direction="column" style={{ fontSize: '18px'}} >
-            <Col xs={5}>
+          <Row direction="column" style={{ fontSize: '18px'}} >
+            <Col xs={12} align="center" justify="center" text="center">
             NEVER EVER DOUBT THE FACT THAT 
             </Col>
           </Row>
-          <Row align="center" justify="center" direction="column" style={{ fontSize: '60px'}} >
-            <Col xs={8}>
+          <Row direction="column" style={{ fontSize: '60px'}} >
+            <Col xs={12} align="center" justify="center" text="center">
             YOU MATTER !
             </Col>
           </Row>
-          <Row align="center" justify="center" direction="column" style={{ margin: '50px' }} >
-            <Col xs={3} >
+          <Row direction="column" style={{ margin: '50px' }} >
+            <Col xs={12} align="center" justify="center" text="center">
               <form onSubmit>
                 <label>
                   Name:
                   <input class="input-name" type="text" placeholder="Don't forget your name"/><br></br>
                 </label><br></br>
-                <input type="submit" value="Confirm" onClick={redirect} />
+                <input type="submit" value="Confirm" onClick={nextPage} />
               </form> 
             </Col>
           </Row>

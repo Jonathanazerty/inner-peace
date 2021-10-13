@@ -20,41 +20,43 @@ function App() {
           <Header />
       </header>
         <Router>
-          <Link to="/Intro"><input className="submit" type="submit" id="Intro"
-                                        name="Intro"
-                                        value="Intro"/></Link>
+          <div align="center" justify="center" text="center">
+            <Link to="/Intro"><input className="submit" type="submit" id="Intro"
+                                          name="Intro"
+                                          value="Intro"/></Link>
 
-          <Link to="/Name"><input className="submit" type="submit" id="Name"
-                                        name="Name"
-                                        value="Name"/></Link>
+            <Link to="/Name"><input className="submit" type="submit" id="Name"
+                                          name="Name"
+                                          value="Name"/></Link>
 
-          <Link to="/Feeling"><input className="submit" type="submit" id="Feeling"
-                                        name="Feeling"
-                                        value="Feeling"/></Link>
+            <Link to="/Feeling"><input className="submit" type="submit" id="Feeling"
+                                          name="Feeling"
+                                          value="Feeling"/></Link>
 
-          <Link to="/Experience"><input className="submit" type="submit" id="Experience"
-                                        name="Experience"
-                                        value="Experience"/></Link>
+            <Link to="/Experience"><input className="submit" type="submit" id="Experience"
+                                          name="Experience"
+                                          value="Experience"/></Link>
 
-          <Link to="/Guidance"><input className="submit" type="submit" id="Guidance"
-                                        name="Guidance"
-                                        value="Guidance"/></Link>
+            <Link to="/Guidance"><input className="submit" type="submit" id="Guidance"
+                                          name="Guidance"
+                                          value="Guidance"/></Link>
 
-          <Link to="/Breathing"><input className="submit" type="submit" id="Breathing"
-                                        name="Breathing"
-                                        value="Breathing"/></Link>
+            <Link to="/Breathing"><input className="submit" type="submit" id="Breathing"
+                                          name="Breathing"
+                                          value="Breathing"/></Link>
 
-          <Link to="/Grounding"><input className="submit" type="submit" id="Grounding"
-                                        name="Grounding"
-                                        value="Grounding"/></Link>
+            <Link to="/Grounding"><input className="submit" type="submit" id="Grounding"
+                                          name="Grounding"
+                                          value="Grounding"/></Link>
 
-          <Link to="/Help"><input className="submit" type="submit" id="Help"
-                                        name="Help"
-                                        value="Help"/></Link>
+            <Link to="/Help"><input className="submit" type="submit" id="Help"
+                                          name="Help"
+                                          value="Help"/></Link>
 
-          <Link to="/Entries"><input className="submit" type="submit" id="Entries"
-                                        name="Entries"
-                                        value="Entries"/></Link>
+            <Link to="/Entries"><input className="submit" type="submit" id="Entries"
+                                          name="Entries"
+                                          value="Entries"/></Link>
+          </div>
           <Switch>
               <Route path="/Intro" exact component={Intro} />
               <Route path="/Name" component={Name} />
@@ -66,7 +68,7 @@ function App() {
               <Route path="/Help" component={Help} />
               <Route path="/Entries" component={Entries} />
           </Switch>
-          </Router>
+        </Router>
       <footer>
           <Footer />
       </footer>
