@@ -9,46 +9,47 @@ import Stack from '@mui/material/Stack';
 import Slider from '@mui/material/Slider';
 
 const Feeling = () => {
-    const [emoji, setEmoji] = useState(<SentimentNeutralIcon/>)
+    const [emoji, setEmoji] = useState(<SentimentNeutralIcon sx={{fontSize: 500}}/>)
 
     const valuetext = (value) => {
         return value
     }
     const changeEmoji = (event, value) => {
         if (value <= 20) {
-            setEmoji(<SentimentVeryDissatisfiedIcon/>)
+            setEmoji(<SentimentVeryDissatisfiedIcon sx={{fontSize: 500}}/>)
         } else if (value <= 40 && value > 20) {
-            setEmoji(<SentimentDissatisfiedIcon/>)
+            setEmoji(<SentimentDissatisfiedIcon sx={{fontSize: 500}}/>)
         } else if (value <= 60 && value > 40) {
-            setEmoji(<SentimentNeutralIcon/>)
+            setEmoji(<SentimentNeutralIcon sx={{fontSize: 500}}/>)
         } else if (value <= 80 && value > 60) {
-            setEmoji(<SentimentSatisfiedIcon/>)
+            setEmoji(<SentimentSatisfiedIcon sx={{fontSize: 500}}/>)
         } else if (value <= 100 && value > 80) {
-            setEmoji(<SentimentSatisfiedAltIcon/>)
+            setEmoji(<SentimentSatisfiedAltIcon sx={{fontSize: 500}}/>)
         }
     }
 
     return (
-        <div className='feelingWrapper'>
-            <div className='feelingEmojiWrapper'>
-                {emoji}
+        <>
+            <h2 className='feelingTitle'> How are you feeling today name? </h2>
+            <div className='feelingWrapper'>
+                <div className='feelingEmojiWrapper'>
+                    {emoji}
+                </div>
+
+                <Stack sx={{height: 300}} spacing={1} direction="row">
+                    <Slider
+                        aria-label="Temperature"
+                        orientation="vertical"
+                        getAriaValueText={valuetext}
+                        defaultValue={30}
+                        onChange={changeEmoji}
+                    />
+                </Stack>
             </div>
-
-            <Stack sx={{height: 300}} spacing={1} direction="row">
-                <Slider
-                    aria-label="Temperature"
-                    orientation="vertical"
-                    getAriaValueText={valuetext}
-                    defaultValue={30}
-                    onChange={changeEmoji}
-                />
-            </Stack>
-
-            <div>
+            <div className='feelingSubmitWrapper'>
                 <a href='Experience' className='feelingSubmit'> Submit </a>
             </div>
-        </div>
-
+        </>
     )
 }
 
