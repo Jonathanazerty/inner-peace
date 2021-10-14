@@ -1,9 +1,13 @@
-html, body {
-    padding: 0;
-    margin: 0;
-    height: 100%;
-    font-family: Helvetica, Arial, sans-serif;
-  }
+
+  .guidance {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    background-color: #91a5ff15;
+    padding: 2rem;
+    border-radius: 16px;
+}
 
   .tree {
     display: flex;

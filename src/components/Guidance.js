@@ -17,10 +17,10 @@ const Guidance = () => {
     
     return (
         
-      <div className='guidance-main'>
+      <div className='guidance'>
           <div className='guidance-header'>
             <Container fluid>
-              <Row direction="row" style={{ margin: '40px' }} >
+              <Row direction="row" style={{ margin: '10px' }} >
                 <Col xs={6} align="center" justify="center" text="center">
                   <div>
                       <button onClick={Help} >Find Help</button>
@@ -43,8 +43,8 @@ const Guidance = () => {
 
 
             <Container fluid>
-              <Row direction="row" style={{ margin: '70px' }} >
-                <Col xs={4} md={4} align="center" justify="center" text="center">
+              <Row direction="row" style={{ margin: '40px' }} >
+                <Col xs={4} align="center" justify="center" text="center">
                   <div>
                     <b>Relax</b>
                   </div>
@@ -64,7 +64,7 @@ const Guidance = () => {
                   <p> Helps you feel good and maintain your health</p>
                 </Col>
               </Row>
-              <Row direction="row" style={{ margin: '40px' }} >
+              <Row direction="row" style={{ margin: '20px' }} >
                 <Col xs={4} align="center" justify="center" text="center">
                   <div>
                     <b>Positive attitude</b>
@@ -84,7 +84,7 @@ const Guidance = () => {
                   <p> Try not to drink coffee and alcohol</p>
                 </Col>
               </Row>
-              <Row direction="row" style={{ margin: '40px' }} >
+              <Row direction="row" style={{ margin: '20px' }} >
               <Col xs={4} align="center" justify="center" text="center">
                   <div>
                     <b>Sleep</b>
