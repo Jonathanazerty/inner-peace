@@ -20,7 +20,7 @@ const Guidance = () => {
       <div className='guidance-main'>
           <div className='guidance-header'>
             <Container fluid>
-              <Row direction="row" style={{ margin: '70px' }} >
+              <Row direction="row" style={{ margin: '40px' }} >
                 <Col xs={6} align="center" justify="center" text="center">
                   <div>
                       <button onClick={Help} >Find Help</button>
@@ -39,56 +39,68 @@ const Guidance = () => {
               <h1>Guidance</h1>
             </div>
             <div className="guidance-content">
+
+
+
             <Container fluid>
               <Row direction="row" style={{ margin: '70px' }} >
-                <Col xs={4} align="center" justify="center" text="center">
+                <Col xs={4} md={4} align="center" justify="center" text="center">
                   <div>
-                    relax
+                    <b>Relax</b>
+                  </div>
+                  <p> Read a book</p>
+                  <p> Meditate</p>
+                </Col>
+                <Col direction="column" xs={4} align="center" justify="center" text="center">
+                  <div>
+                    <b>Picture</b>
                   </div>
                 </Col>
                 <Col xs={4} align="center" justify="center" text="center">
                   <div>
-                    picture
+                    <b>Exercise</b>
                   </div>
-                </Col>
-                <Col xs={4} align="center" justify="center" text="center">
-                  <div>
-                    exercise
-                  </div>
-                </Col>
-              </Row>
-              <Row direction="row" style={{ margin: '70px' }} >
-                <Col xs={4} align="center" justify="center" text="center">
-                  <div>
-                    positive attitude
-                  </div>
-                </Col>
-                <Col xs={4} align="center" justify="center" text="center">
-                  <div>
-                    picture
-                  </div>
-                </Col>
-                <Col xs={4} align="center" justify="center" text="center">
-                  <div>
-                  eat and drink
-                  </div>
+                  <p> Helps you mentally as well as physically</p>
+                  <p> Helps you feel good and maintain your health</p>
                 </Col>
               </Row>
-              <Row direction="row" style={{ margin: '70px' }} >
+              <Row direction="row" style={{ margin: '40px' }} >
+                <Col xs={4} align="center" justify="center" text="center">
+                  <div>
+                    <b>Positive attitude</b>
+                  </div>
+                  <p> Replace negative thoughts with positive ones</p>
+                </Col>
+                <Col xs={4} align="center" justify="center" text="center">
+                  <div>
+                    <b>Picture</b>
+                  </div>
+                </Col>
+                <Col xs={4} align="center" justify="center" text="center">
+                  <div>
+                    <b>Eat and drink</b>
+                  </div>
+                  <p> Eat healthy and drink a lot of water</p>
+                  <p> Try not to drink coffee and alcohol</p>
+                </Col>
+              </Row>
+              <Row direction="row" style={{ margin: '40px' }} >
               <Col xs={4} align="center" justify="center" text="center">
                   <div>
-                    sleep
+                    <b>Sleep</b>
+                  </div>
+                  <p> Your body needs additional sleep and rest</p>
+                </Col>
+                <Col xs={4} align="center" justify="center" text="center">
+                  <div>
+                    <b>Picture</b>
                   </div>
                 </Col>
                 <Col xs={4} align="center" justify="center" text="center">
                   <div>
-                    picture
+                    <b>Professional help</b>
                   </div>
-                </Col>
-                <Col xs={4} align="center" justify="center" text="center">
-                  <div>
-                    professional help
-                  </div>
+                  <p> Don't be worried or afraid to talk to a physician or therapist</p>
                 </Col>
               </Row>
             </Container>
@@ -97,5 +109,6 @@ const Guidance = () => {
       </div>
     )
 }
+
 
 export default Guidance;
