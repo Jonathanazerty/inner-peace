@@ -17,33 +17,22 @@ const Feeling = () => {
     const changeEmoji = (event, value) => {
         if (value <= 20) {
             setEmoji(<SentimentVeryDissatisfiedIcon/>)
-            console.log('worst')
-        }
-        else if (value <= 40 && value > 20) {
+        } else if (value <= 40 && value > 20) {
             setEmoji(<SentimentDissatisfiedIcon/>)
-            console.log('bad')
-        }
-        else if (value <= 60 && value > 40) {
+        } else if (value <= 60 && value > 40) {
             setEmoji(<SentimentNeutralIcon/>)
-            console.log('medium')
-        }
-        else if (value <= 80 && value > 60) {
+        } else if (value <= 80 && value > 60) {
             setEmoji(<SentimentSatisfiedIcon/>)
-            console.log('ok')
-        }
-        else if (value <= 100 && value > 80) {
+        } else if (value <= 100 && value > 80) {
             setEmoji(<SentimentSatisfiedAltIcon/>)
-            console.log('good')
         }
     }
-
 
     return (
         <div className='feelingWrapper'>
             <div className='feelingEmojiWrapper'>
                 {emoji}
             </div>
-
 
             <Stack sx={{height: 300}} spacing={1} direction="row">
                 <Slider
