@@ -1,0 +1,25 @@
+.feelingSubmitWrapper{
+    display: flex;
+    justify-content: center;
+}
+.feelingSubmit {
+    background-color: #507DBC;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 16px;
+    padding: 0.5rem;
+    margin: 1rem;
+    box-shadow: 1px 1px 2px #868686;
+}
+.feelingWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feelingTitle{
+    text-align: center;
+}
