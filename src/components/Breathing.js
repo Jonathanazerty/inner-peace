@@ -94,7 +94,7 @@ const Breathing = () => {
             <Row direction="row" style={{ margin: '40px' }} >
               <Col xs={12} align="center" justify="center" text="center">
                 <h3 className="info">
-                  Reduces anxiety and helps to get tosleep
+                  Reduces anxiety and helps to get to sleep
                 </h3>
               </Col>
             </Row>
