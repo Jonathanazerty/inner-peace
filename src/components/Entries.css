@@ -1,0 +1,13 @@
+.entriesTitle{
+    text-align: center;
+    margin: 2rem;
+}
+.entriesMain{
+    margin: 2rem;
+}
+#entriesCarouselWrapper{
+    margin-bottom: 3rem;
+}
+.previousEntries{
+    text-align: center;
+}
