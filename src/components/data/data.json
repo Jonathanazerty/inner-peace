@@ -1,29 +1,34 @@
 [
   {
+    "id": "1",
     "Date": "14.10.2021.",
     "Feeling": "Ok",
     "Experiencing": "Nausea",
     "Notes": "Feeling ok today. Just experiencing some nausea."
   },
   {
+    "id": "2",
     "Date": "09.10.2021.",
     "Feeling": "Bad",
     "Experiencing": "Nausea, Shortness of breath, Heart palpitations",
     "Notes": "Not feeling very well."
   },
   {
+    "id": "3",
     "Date": "05.10.2021.",
     "Feeling": "Good",
     "Experiencing": "",
     "Notes": "Feeling quite ok today. No complaints."
   },
   {
+    "id": "4",
     "Date": "30.09.2021.",
     "Feeling": "Great",
     "Experiencing": "",
     "Notes": "Feeling great. No complaints."
   },
   {
+    "id": "5",
     "Date": "25.09.2021.",
     "Feeling": "Ok",
     "Experiencing": "Nausea",
