@@ -13,7 +13,6 @@ const Name = (props) => {
 
     const nextPage = () => {
         history.push('/Feeling', [name])
-        // props.name = name
     }
 
     const handleForm = (event) => {
@@ -21,14 +20,6 @@ const Name = (props) => {
         console.log({name});
         nextPage();
     }
-
-
-
-    
-    // const onClick = (event) => {
-    //     nextPage();
-    //     clickHandler();
-    // }
     
 
     return (
