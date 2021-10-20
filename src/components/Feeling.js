@@ -8,7 +8,8 @@ import SentimentSatisfiedAltIcon from '@mui/icons-material/SentimentSatisfiedAlt
 import Stack from '@mui/material/Stack';
 import Slider from '@mui/material/Slider';
 
-const Feeling = () => {
+
+const Feeling = (props) => {
     const [emoji, setEmoji] = useState(<SentimentNeutralIcon sx={{fontSize: 500}}/>)
 
     const valuetext = (value) => {
@@ -30,7 +31,7 @@ const Feeling = () => {
 
     return (
         <>
-            <h2 className='feelingTitle'> How are you feeling today name? </h2>
+            <h2 className='feelingTitle'> How are you feeling today {props.location.state}? </h2>
             <div className='feelingWrapper'>
                 <div className='feelingEmojiWrapper'>
                     {emoji}

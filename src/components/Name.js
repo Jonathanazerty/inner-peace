@@ -1,17 +1,35 @@
-import React from "react";
+import React, { useState } from 'react';
 import './Name.css';
 import {Container, Row, Col} from 'react-grid-system';
 import {useHistory} from 'react-router-dom';
 import logo from '../images/Inner Peace.gif';
 import Footer from "./Footer";
 
-const Name = () => {
+const Name = (props) => {
+
+    const [name, setName] = useState('');
 
     let history = useHistory();
 
     const nextPage = () => {
-        history.push('/Feeling')
+        history.push('/Feeling', [name])
+        // props.name = name
     }
+
+    const handleForm = (event) => {
+        event.preventDefault();
+        console.log({name});
+        nextPage();
+    }
+
+
+
+    
+    // const onClick = (event) => {
+    //     nextPage();
+    //     clickHandler();
+    // }
+    
 
     return (
         <>
@@ -35,12 +53,12 @@ const Name = () => {
                 </Row>
                 <Row direction="column" style={{ margin: '50px' }} >
                     <Col xs={12} align="center" justify="center" text="center">
-                        <form onSubmit>
+                        <form>
                             <label>
                                 Name:
-                                <input class="input-name" type="text" placeholder="Don't forget your name"/><br></br>
+                                <input class="input-name" type="text" name="username" placeholder="Don't forget your name" required value={name} onChange={(e) => setName(e.target.value)}/><br></br>
                             </label><br></br>
-                            <input type="submit" value="Confirm" onClick={nextPage} />
+                            <input type="submit" value="Confirm" onClick={(event) => handleForm(event)} />
                         </form>
                     </Col>
                 </Row>
