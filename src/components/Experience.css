@@ -1,5 +1,4 @@
 
-
 .experienceButton {
     background-color: #507DBC;
     color: white;
@@ -11,6 +10,11 @@
     padding: 0.5rem;
     margin: 1rem;
     box-shadow: 1px 1px 2px #868686;
+}
+.experienceButton:hover{
+    color: white;
+    text-decoration: none;
+    background-color: #658fcb;
 }
 
 .feeling {
@@ -44,6 +48,7 @@
     border-radius: 16px;
     display: flex;
     flex-flow: column;
+    box-shadow: 2px 2px 10px darkgrey;
 }
 
 .notes {
@@ -56,6 +61,7 @@
     border-radius: 16px;
     display: flex;
     flex-flow: column;
+    box-shadow: 2px 2px 10px darkgrey;
 }
 
 .experienceSubmitWrapper {
@@ -69,10 +75,14 @@
 .symptoms {
     display: flex;
     flex-flow: column;
+    max-height: 12rem;
     background-color: #f1f6f6;
     border-radius: 16px;
     padding: 1rem;
+    box-shadow: 2px 2px 10px darkgrey;
+    overflow: auto;
 }
+
 @media only screen and (max-width: 1150px) {
     .experienceButton {
         font-weight: bold;
