@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import {useHistory} from 'react-router-dom';
 import './Feeling.css';
 import SentimentVeryDissatisfiedIcon from '@mui/icons-material/SentimentVeryDissatisfied';
 import SentimentDissatisfiedIcon from '@mui/icons-material/SentimentDissatisfied';
@@ -10,7 +11,22 @@ import Slider from '@mui/material/Slider';
 
 
 const Feeling = (props) => {
+
     const [emoji, setEmoji] = useState(<SentimentNeutralIcon sx={{fontSize: 500}}/>)
+
+    const [feeling, setFeeling] = useState('');
+
+    let history = useHistory();
+
+    const submit = () => {
+        history.push('/Experience', [feeling])
+    }
+
+    const handleFeeling = (event) => {
+        event.preventDefault();
+        console.log({feeling});
+        submit();
+    }
 
     const valuetext = (value) => {
         return value
@@ -18,14 +34,19 @@ const Feeling = (props) => {
     const changeEmoji = (event, value) => {
         if (value <= 20) {
             setEmoji(<SentimentVeryDissatisfiedIcon sx={{fontSize: 500}}/>)
+            setFeeling("I really feel bad")
         } else if (value <= 40 && value > 20) {
             setEmoji(<SentimentDissatisfiedIcon sx={{fontSize: 500}}/>)
+            setFeeling("I'm not that great")
         } else if (value <= 60 && value > 40) {
             setEmoji(<SentimentNeutralIcon sx={{fontSize: 500}}/>)
+            setFeeling("I'm feeling ok")
         } else if (value <= 80 && value > 60) {
             setEmoji(<SentimentSatisfiedIcon sx={{fontSize: 500}}/>)
+            setFeeling("I'm feeling good")
         } else if (value <= 100 && value > 80) {
             setEmoji(<SentimentSatisfiedAltIcon sx={{fontSize: 500}}/>)
+            setFeeling("I'm feeling amazing!")
         }
     }
 
@@ -48,7 +69,7 @@ const Feeling = (props) => {
                 </Stack>
             </div>
             <div className='feelingSubmitWrapper'>
-                <a href='Experience' className='feelingSubmit'> Submit </a>
+                <input type="submit" className='feelingSubmit'  required value={feeling}  onClick={(event) => handleFeeling(event)} />
             </div>
         </>
     )
