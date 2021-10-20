@@ -1,35 +1,13 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './Experience.css';
-import SentimentNeutralIcon from "@mui/icons-material/SentimentNeutral";
 
-function Experience() {
+function Experience(props) {
 
     const options = {weekday: 'long'}
     const date = new Date();
     let today = date.toLocaleDateString(undefined, options) + ' ' + date.getDate() + '-' + (date.getMonth() + 1) + '-' + date.getFullYear();
 
-    // const allChecked = [];
-    //
-    // const [feeling, setFeeling] = useState('')
-    // const [experiencing, setExperiencing] = useState('')
-    // const [notes, setNotes] = useState('')
-    //
-    //
-    // let newEntry = {
-    //     'Date' : today,
-    //     'Feeling' : '',
-    //     'Experiencing' : '',
-    //     'Notes' : ''
-    // }
-    //
-    // const makeChecked = () => {
-    //         allChecked.push()
-    // }
-    // const handleClick = () => {
-    //     setFeeling()
-    //     setExperiencing()
-    //     setNotes()
-    // }
+    console.log(props.location.state)
 
     return (
         <div>
@@ -41,7 +19,7 @@ function Experience() {
                         <a className='experienceButton' href="Entries.js">See previous entries</a>
                     </div>
                 </div>
-                <p className='feeling'>Feeling ...</p>
+                <p className='feeling'>{props.location.state}</p>
 
                 <div className='experiencingAndNotesWrapper'>
                     <div className='experiencing'>
