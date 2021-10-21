@@ -2,6 +2,9 @@
     display: flex;
     justify-content: center;
 }
+.noFeelingSubmit{
+    display: none;
+}
 .feelingSubmit {
     background-color: #507DBC;
     color: white;
@@ -13,6 +16,7 @@
     padding: 0.5rem;
     margin: 1rem;
     box-shadow: 1px 1px 2px #868686;
+    min-width: 12rem;
 }
 .feelingWrapper{
     display: flex;
@@ -22,4 +26,10 @@
 
 .feelingTitle{
     text-align: center;
+}
+
+.feelingIcon{
+    max-height: 30rem;
+    max-width: 30rem;
+    margin: 2rem;
 }

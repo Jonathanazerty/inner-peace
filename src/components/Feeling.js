@@ -14,7 +14,7 @@ const Feeling = (props) => {
 
     const [emoji, setEmoji] = useState(Neutral)
 
-    const [feeling, setFeeling] = useState('');
+    const [feeling, setFeeling] = useState("I'm feeling ok.");
 
     let history = useHistory();
 
@@ -34,19 +34,19 @@ const Feeling = (props) => {
     const changeEmoji = (event, value) => {
         if (value <= 20) {
             setEmoji(Worst)
-            setFeeling("I really feel bad")
+            setFeeling("I feel really bad.")
         } else if (value <= 40 && value > 20) {
             setEmoji(Bad)
-            setFeeling("I'm not that great")
+            setFeeling("I'm not that great.")
         } else if (value <= 60 && value > 40) {
             setEmoji(Neutral)
-            setFeeling("I'm feeling ok")
+            setFeeling("I'm feeling ok.")
         } else if (value <= 80 && value > 60) {
             setEmoji(Good)
-            setFeeling("I'm feeling good")
+            setFeeling("I'm feeling good.")
         } else if (value <= 100 && value > 80) {
             setEmoji(Best)
-            setFeeling("I'm feeling amazing!")
+            setFeeling("I'm feeling great!")
         }
     }
 
@@ -55,7 +55,7 @@ const Feeling = (props) => {
             <h2 className='feelingTitle'> How are you feeling today {props.location.state}? </h2>
             <div className='feelingWrapper'>
                 <div className='feelingEmojiWrapper'>
-                    <img src={emoji} />
+                    <img className='feelingIcon' src={emoji} />
                 </div>
 
                 <Stack sx={{height: 300}} spacing={1} direction="row">
