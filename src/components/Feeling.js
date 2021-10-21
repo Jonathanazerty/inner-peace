@@ -1,18 +1,18 @@
 import React, {useState} from "react";
 import {useHistory} from 'react-router-dom';
 import './Feeling.css';
-import SentimentVeryDissatisfiedIcon from '@mui/icons-material/SentimentVeryDissatisfied';
-import SentimentDissatisfiedIcon from '@mui/icons-material/SentimentDissatisfied';
-import SentimentNeutralIcon from '@mui/icons-material/SentimentNeutral';
-import SentimentSatisfiedIcon from '@mui/icons-material/SentimentSatisfied';
-import SentimentSatisfiedAltIcon from '@mui/icons-material/SentimentSatisfiedAlt';
+import Neutral from '../images/meh.png'
+import Bad from '../images/sad.png'
+import Worst from '../images/crying.png'
+import Good from '../images/happy.png'
+import Best from '../images/relax.png'
 import Stack from '@mui/material/Stack';
 import Slider from '@mui/material/Slider';
 
 
 const Feeling = (props) => {
 
-    const [emoji, setEmoji] = useState(<SentimentNeutralIcon sx={{fontSize: 500}}/>)
+    const [emoji, setEmoji] = useState(Neutral)
 
     const [feeling, setFeeling] = useState('');
 
@@ -33,19 +33,19 @@ const Feeling = (props) => {
     }
     const changeEmoji = (event, value) => {
         if (value <= 20) {
-            setEmoji(<SentimentVeryDissatisfiedIcon sx={{fontSize: 500}}/>)
+            setEmoji(Worst)
             setFeeling("I really feel bad")
         } else if (value <= 40 && value > 20) {
-            setEmoji(<SentimentDissatisfiedIcon sx={{fontSize: 500}}/>)
+            setEmoji(Bad)
             setFeeling("I'm not that great")
         } else if (value <= 60 && value > 40) {
-            setEmoji(<SentimentNeutralIcon sx={{fontSize: 500}}/>)
+            setEmoji(Neutral)
             setFeeling("I'm feeling ok")
         } else if (value <= 80 && value > 60) {
-            setEmoji(<SentimentSatisfiedIcon sx={{fontSize: 500}}/>)
+            setEmoji(Good)
             setFeeling("I'm feeling good")
         } else if (value <= 100 && value > 80) {
-            setEmoji(<SentimentSatisfiedAltIcon sx={{fontSize: 500}}/>)
+            setEmoji(Best)
             setFeeling("I'm feeling amazing!")
         }
     }
@@ -55,7 +55,7 @@ const Feeling = (props) => {
             <h2 className='feelingTitle'> How are you feeling today {props.location.state}? </h2>
             <div className='feelingWrapper'>
                 <div className='feelingEmojiWrapper'>
-                    {emoji}
+                    <img src={emoji} />
                 </div>
 
                 <Stack sx={{height: 300}} spacing={1} direction="row">
