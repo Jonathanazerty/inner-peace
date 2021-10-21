@@ -13,7 +13,6 @@ import Slider from '@mui/material/Slider';
 const Feeling = (props) => {
 
     const [emoji, setEmoji] = useState(Neutral)
-
     const [feeling, setFeeling] = useState("I'm feeling ok.");
 
     let history = useHistory();
@@ -24,13 +23,13 @@ const Feeling = (props) => {
 
     const handleFeeling = (event) => {
         event.preventDefault();
-        console.log({feeling});
         submit();
     }
 
     const valuetext = (value) => {
         return value
     }
+
     const changeEmoji = (event, value) => {
         if (value <= 20) {
             setEmoji(Worst)
@@ -55,7 +54,7 @@ const Feeling = (props) => {
             <h2 className='feelingTitle'> How are you feeling today {props.location.state}? </h2>
             <div className='feelingWrapper'>
                 <div className='feelingEmojiWrapper'>
-                    <img className='feelingIcon' src={emoji} />
+                    <img className='feelingIcon' src={emoji} alt='smiley'/>
                 </div>
 
                 <Stack sx={{height: 300}} spacing={1} direction="row">
@@ -69,7 +68,8 @@ const Feeling = (props) => {
                 </Stack>
             </div>
             <div className='feelingSubmitWrapper'>
-                <input type="submit" className='feelingSubmit'  required value={feeling}  onClick={(event) => handleFeeling(event)} />
+                <input type="submit" className='feelingSubmit' required value={feeling}
+                       onClick={(event) => handleFeeling(event)}/>
             </div>
         </>
     )
