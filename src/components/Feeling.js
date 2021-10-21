@@ -51,25 +51,27 @@ const Feeling = (props) => {
 
     return (
         <>
-            <h2 className='feelingTitle'> How are you feeling today {props.location.state}? </h2>
-            <div className='feelingWrapper'>
-                <div className='feelingEmojiWrapper'>
-                    <img className='feelingIcon' src={emoji} alt='smiley'/>
-                </div>
+            <div className='feelingPageWrapper'>
+                <h2 className='feelingTitle'> How are you feeling today {props.location.state}? </h2>
+                <div className='feelingWrapper'>
+                    <div className='feelingEmojiWrapper'>
+                        <img className='feelingIcon' src={emoji} alt='smiley'/>
+                    </div>
 
-                <Stack sx={{height: 300}} spacing={1} direction="row">
-                    <Slider
-                        aria-label="Temperature"
-                        orientation="vertical"
-                        getAriaValueText={valuetext}
-                        defaultValue={30}
-                        onChange={changeEmoji}
-                    />
-                </Stack>
-            </div>
-            <div className='feelingSubmitWrapper'>
-                <input type="submit" className='feelingSubmit' required value={feeling}
-                       onClick={(event) => handleFeeling(event)}/>
+                    <Stack className='stack' sx={{height: 300}} spacing={1} direction="row">
+                        <Slider
+                            aria-label="Temperature"
+                            orientation="vertical"
+                            getAriaValueText={valuetext}
+                            defaultValue={30}
+                            onChange={changeEmoji}
+                        />
+                    </Stack>
+                </div>
+                <div className='feelingSubmitWrapper'>
+                    <input type="submit" className='feelingSubmit' required value={feeling}
+                           onClick={(event) => handleFeeling(event)}/>
+                </div>
             </div>
         </>
     )
