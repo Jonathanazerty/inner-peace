@@ -1,25 +1,40 @@
 
-  .guidance {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    margin-left: 10rem;
-    margin-right: 10rem;
+body {
+  overflow: auto;
+}
+  .guidance, .grid-left1, .grid-left2, .grid-left3, .grid-right1, .grid-right2, .grid-right3  {
+    margin-left: 5rem;
+    margin-right: 5rem;
     background-color: #91a5ff15;
     padding: 2rem;
     border-radius: 16px;
+    box-shadow: 5px 5px 5px rgba(100, 167, 255, 0.192);
+}
+
+.guidance-content {
+  display: grid;
+  grid-template-columns: 0.4fr 0.7fr 0.4fr;
+  grid-template-areas: 
+  "grid-left1   tree   grid-right1"
+  "grid-left2   tree   grid-right2"
+  "grid-left3   tree   grid-right3" ;
 }
 
   .tree {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 6;
     display: flex;
-    width: 100%;
-    max-width: 200px;
+    width: auto;
+    max-width: 400px;
     margin: 0 auto;
     box-sizing: border-box;
     flex: 1 1 auto;
     flex-direction: column;
     align-items: center;
     vertical-align: center;
-    height: 100%;
+    height: auto;
     padding: 2em;
     @media screen and (min-width: 500px) {
       flex-direction: row;
@@ -44,3 +59,17 @@
     padding: 1em 0.5em 2em;
   }
   
+  .button-help, .button-breathing  {
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(100, 167, 255);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(217, 217, 255);
+  }
+
+  .button-help:hover, .button-breathing:hover  {
+    transform: scale(1.2);
+  }
