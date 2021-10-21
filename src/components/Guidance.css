@@ -2,7 +2,8 @@
 body {
   overflow: auto;
 }
-  .guidance, .grid-left1, .grid-left2, .grid-left3, .grid-right1, .grid-right2, .grid-right3  {
+
+.guidance, .grid-left1, .grid-left2, .grid-left3, .grid-right1, .grid-right2, .grid-right3  {
     margin-left: 5rem;
     margin-right: 5rem;
     background-color: #91a5ff15;
@@ -20,7 +21,16 @@ body {
   "grid-left3   tree   grid-right3" ;
 }
 
-  .tree {
+.icon-guidance {
+  border-radius: 50%;
+  box-shadow: 5px 5px 5px rgba(100, 167, 255, 0.192);
+}
+
+.icon-guidance:hover{
+  transform: scale(1.2);
+}
+
+.tree {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
@@ -39,27 +49,27 @@ body {
     @media screen and (min-width: 500px) {
       flex-direction: row;
     }
-  }
+}
   
-  #animation {
+#animation {
     width: 100%;
     height: 100%;
     margin: 2em auto 0;
     @media screen and (min-width: 800px) {
       height: 90%;
     }
-  }
+}
   
-  header {
+header {
     bottom: 0;
     left: 0;
     width: 100%;
     text-align: center;
     box-sizing: border-box;
     padding: 1em 0.5em 2em;
-  }
+}
   
-  .button-help, .button-breathing  {
+.button-help, .button-breathing  {
     padding: 10px;
     padding-left: 20px;
     padding-right: 20px;
@@ -68,8 +78,8 @@ body {
     border: none;
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgb(217, 217, 255);
-  }
+}
 
-  .button-help:hover, .button-breathing:hover  {
+.button-help:hover, .button-breathing:hover  {
     transform: scale(1.2);
-  }
+}

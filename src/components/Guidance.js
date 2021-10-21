@@ -1,5 +1,12 @@
 import React from "react";
 import './Guidance.css';
+import meditate from '../images/meditation.png';
+import read from '../images/read.png';
+import love from '../images/love-yourself.png';
+import sleep from '../images/meditation.png';
+import run from '../images/run.png';
+import eat from '../images/vegetable.png';
+import question from '../images/question.png';
 import { Container, Row, Col } from 'react-grid-system';
 import { useHistory } from 'react-router-dom';
 
@@ -43,20 +50,23 @@ const Guidance = () => {
           <div className='guidance-main'>
             <div className="guidance-content" justify="center">
               <div className="grid-left1" style={{ margin: '10px'}}>
-                  <b>Relax</b>
+                <img className="icon-guidance" src={read} alt="read" style={{ height: "70px", width: "70px", float: "right", margin:"5px"}}/>
+                <b>Relax</b>
                   <ul>
                     <li>Read a book</li>
                     <li>Meditate</li>
                   </ul>
               </div>
               <div className="grid-left2" style={{ margin: '10px'}}>
-                  <b>Positive attitude</b>
+                <img className="icon-guidance" src={love} alt="positive"style={{ height: "70px", width: "70px", float: "right", margin:"5px"}}/>
+                <b>Positive attitude</b>
                   <ul>
                     <li>Replace negative thoughts with positive ones</li>
                   </ul>
               </div>
               <div className="grid-left3" style={{ margin: '10px'}}>
-                  <b>Sleep</b>
+                <img className="icon-guidance" src={sleep} alt="sleep" style={{ height: "70px", width: "70px", float: "right", margin:"5px"}}/>
+                <b>Sleep</b>
                   <ul>
                     <li>Your body needs additional sleep and rest</li>
                   </ul>
@@ -144,92 +154,31 @@ const Guidance = () => {
                 </svg>
               </div>
               <div className="grid-right1" style={{ margin: '10px'}}>
-                  <b>Exercise</b>
+                <img className="icon-guidance" src={run} alt="sport" style={{ height: "70px", width: "70px", float: "right", margin:"5px"}}/>
+                <b>Exercise</b>
                   <ul>
                     <li>Helps you mentally as well as physically</li>
                     <li>Helps you feel good and maintain your healthy</li>
                   </ul>
               </div>
               <div className="grid-right2" style={{ margin: '10px'}}>
-                  <b>Eat and drink</b>
+                <img className="icon-guidance" src={eat} alt="eat" style={{ height: "70px", width: "70px", float: "right", margin:"5px"}}/>
+                <b>Eat and drink</b>
                   <ul>
                     <li> Eat healthy and drink a lot of water</li>
                     <li>Try not to drink coffee and alcohol</li>
                   </ul>
               </div>
               <div className="grid-right3" style={{ margin: '10px'}}>
-                  <b>Professional help</b>
+                <img className="icon-guidance" src={question} alt="help" style={{ height: "70px", width: "70px", float: "right", margin:"5px"}}/>
+                <b>Professional help</b>
                   <ul>
                     <li>Don't be worried or afraid to talk to a physician or therapist</li>
                   </ul>
-
               </div>
             </div>
-
-            {/* <Container fluid>
-              <Row direction="row" style={{ margin: '40px' }} >
-                <Col xs={4} align="center" justify="center" text="center">
-                  <div>
-                    <b>Relax</b>
-                  </div>
-                  <p> Read a book</p>
-                  <p> Meditate</p>
-                </Col>
-                <Col direction="column" xs={4} align="center" justify="center" text="center">
-                  <div>
-                    <b>Picture</b>
-                  </div>
-                </Col>
-                <Col xs={4} align="center" justify="center" text="center">
-                  <div>
-                    <b>Exercise</b>
-                  </div>
-                  <p> Helps you mentally as well as physically</p>
-                  <p> Helps you feel good and maintain your health</p>
-                </Col>
-              </Row>
-              <Row direction="row" style={{ margin: '20px' }} >
-                <Col xs={4} align="center" justify="center" text="center">
-                  <div>
-                    <b>Positive attitude</b>
-                  </div>
-                  <p> Replace negative thoughts with positive ones</p>
-                </Col>
-                <Col xs={4} align="center" justify="center" text="center">
-                  <div>
-                    <b>Picture</b>
-                  </div>
-                </Col>
-                <Col xs={4} align="center" justify="center" text="center">
-                  <div>
-                    <b>Eat and drink</b>
-                  </div>
-                  <p> Eat healthy and drink a lot of water</p>
-                  <p> Try not to drink coffee and alcohol</p>
-                </Col>
-              </Row>
-              <Row direction="row" style={{ margin: '20px' }} >
-              <Col xs={4} align="center" justify="center" text="center">
-                  <div>
-                    <b>Sleep</b>
-                  </div>
-                  <p> Your body needs additional sleep and rest</p>
-                </Col>
-                <Col xs={4} align="center" justify="center" text="center">
-                  <div>
-                    <b>Picture</b>
-                  </div>
-                </Col>
-                <Col xs={4} align="center" justify="center" text="center">
-                  <div>
-                    <b>Professional help</b>
-                  </div>
-                  <p> Don't be worried or afraid to talk to a physician or therapist</p>
-                </Col>
-              </Row>
-            </Container> */}
-            </div>
           </div>
+      </div>
     )
 }
 
