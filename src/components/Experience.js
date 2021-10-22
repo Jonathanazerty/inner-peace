@@ -26,7 +26,7 @@ function Experience(props) {
                         <p>Experiencing:</p>
                         <div className='symptoms'>
                             <div>
-                            <input type="checkbox" id="symptom1" name="symptom1" value="shortnessOfBreath"/>
+                                <input type="checkbox" id="symptom1" name="symptom1" value="shortnessOfBreath"/>
                                 <> </>
                                 <label htmlFor="symptom1">Shortness of breath </label>
                             </div>
