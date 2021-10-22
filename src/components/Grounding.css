@@ -3,7 +3,7 @@
     flex-flow: column;
     align-items: center;
 }
-.groundingTitleWrapper, .groundingCard{
+.groundingTitleWrapper, .groundingCard, .groundingExtraSection{
     background-color: #91a5ff15;
     box-shadow: 5px 5px 10px rgba(100, 167, 255, 0.192);
     border-radius: 16px;
@@ -55,4 +55,9 @@
 .groundingCards{
     display: grid;
     grid-template-columns: auto auto auto auto auto;
+}
+.groundingExtraSection{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
 }

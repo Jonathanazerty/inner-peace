@@ -65,18 +65,17 @@ const Grounding = () => {
 
     const Extra = () =>
         <div className='groundingExtraSection'>
-            <div className='groundingMessage'>
-                <p> You did it! Woohoo!</p>
-                <img className='groundingIcon' src={Yay} alt='person cheering'/>
-            </div>
+            <h4 className='groundingMessage'> You did it! Woohoo!</h4>
+            <img className='groundingIcon' src={Yay} alt='person cheering'/>
             <div className='groundingButtonWrapper'>
-                <button className='groundingButton'>Repeat grounding</button>
-                <button className='groundingButton'>Practice breathing</button>
+                <button className='groundingButton' onClick={startGrounding}>Repeat grounding</button>
+                <a href='Breathing' className='groundingButton'>Practice breathing</a>
             </div>
         </div>
 
 
     function startGrounding() {
+        setShowExtras(false)
         setShowStartButton(false)
         setShowFive(true)
     }
