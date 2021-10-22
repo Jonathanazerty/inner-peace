@@ -3,16 +3,56 @@
     flex-flow: column;
     align-items: center;
 }
-
+.groundingTitleWrapper, .groundingCard{
+    background-color: #91a5ff15;
+    box-shadow: 5px 5px 10px rgba(100, 167, 255, 0.192);
+    border-radius: 16px;
+    margin: 2rem;
+    padding: 2rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
 .groundingButton{
-    background-color: #507DBC;
+    background-color: rgb(100, 167, 255);
     color: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(217, 217, 255);
     font-weight: bold;
     text-decoration: none;
     cursor: pointer;
     text-align: center;
-    border-radius: 16px;
     padding: 0.5rem;
     margin: 1rem;
-    box-shadow: 1px 1px 2px #868686;
+}
+.groundingButton:hover{
+    background-color: rgb(116, 177, 255);
+}
+.groundingTitle{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.groundingParagraph{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.groundingIcon{
+    max-width: 4rem;
+    background-color: #98cb50;
+    border-radius: 50%;
+}
+.groundingCard{
+    max-width: 15rem;
+    text-align: center;
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    justify-items: center;
+}
+.groundingText{
+    margin-top: 1rem;
+}
+.groundingCards{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
 }
