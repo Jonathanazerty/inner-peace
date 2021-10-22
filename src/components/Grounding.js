@@ -6,6 +6,7 @@ import Touch from '../images/feel.png';
 import Smell from '../images/smell.png';
 import Taste from '../images/taste.png';
 import Yay from '../images/yay.png';
+import {useHistory} from 'react-router-dom';
 
 const Grounding = () => {
 
@@ -69,10 +70,15 @@ const Grounding = () => {
             <img className='groundingIcon' src={Yay} alt='person cheering'/>
             <div className='groundingButtonWrapper'>
                 <button className='groundingButton' onClick={startGrounding}>Repeat grounding</button>
-                <a href='Breathing' className='groundingButton'>Practice breathing</a>
+                <button className='groundingButton' onClick={Breathing}>Practice breathing</button>
             </div>
         </div>
 
+    let history = useHistory();
+
+    const Breathing = () => {
+        history.push('/Breathing')
+    }
 
     function startGrounding() {
         setShowExtras(false)
