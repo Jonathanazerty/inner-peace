@@ -1,0 +1,32 @@
+
+.breathing, .countdowncircles  {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    background-color: #91a5ff15;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 5px 5px 5px rgba(100, 167, 255, 0.192);
+}
+
+.breath-in {
+    transition: all 4s ease-in;
+}
+
+.breath-in:active {
+    transform: scale(1.2);
+}
+
+.start-breathing, .restart{
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(100, 167, 255);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(217, 217, 255);
+}
+
+.start-breathing:hover, .restart:hover {
+    transform: scale(1.2);
+}

@@ -6,7 +6,7 @@ import {Container, Row, Col} from 'react-grid-system';
 
 const renderTime = ({ remainingTime }) => {
   if (remainingTime === 0) {
-    return <div className="timer">Hold breath for 8 seconds</div>;
+    return;
   }
 
   return (
@@ -18,10 +18,11 @@ const renderTime = ({ remainingTime }) => {
 };
 
 
+
 const Breathing = () => {
 
-  const [inMotion, setInMotion ] = useState(false)
-
+  const [inMotion, setInMotion ] = useState(false);
+  const [restart, setRestart] = useState(0);
 
   return (
     <>
@@ -32,7 +33,7 @@ const Breathing = () => {
            textAlign: "center"
          }}>
           <Container fluid>
-            <Row direction="row" style={{ margin: '40px' }} >
+            <Row direction="row" style={{ marginTop: '40px' }} >
               <Col xs={12} align="center" justify="center" text="center">
                 <h1>
                 Breathing exercise
@@ -41,10 +42,11 @@ const Breathing = () => {
                 </h1>
               </Col>
             </Row>
-            <Row direction="row" style={{ margin: '40px' }} >
-              <Col xs={4} align="center" justify="center" text="center">
-                <div className="breath-in">
+            <Row direction="row" style={{ margin: '70px' }} >
+              <Col xs={12} align="center" justify="center" text="center">
+                <div className="breath-in" style={{ transition: "all 4s ease-in-out" , transform: "scale(1.2)" }}>
                   <CountdownCircleTimer
+                    key={restart}
                     isPlaying={inMotion}
                     duration={4}
                     colors={[
@@ -52,63 +54,31 @@ const Breathing = () => {
                       ['#006aff', 0.33],
                       ['#5ea1ff', 0.33],
                     ]}
-                    onComplete={() => [true, 8000]}
-                  >
-                    {renderTime}
-                  </CountdownCircleTimer>
-                </div>
-              </Col>
-              <Col xs={4} align="center" justify="center" text="center">
-                <div className="hold-breath">
-                  <CountdownCircleTimer
-                    isPlaying={inMotion}
-                    duration={8}
-                    colors={[
-                      ['#004777', 0.33],
-                      ['#006aff', 0.33],
-                      ['#5ea1ff', 0.33],
-                    ]}
-                    onComplete={() => [true, 8000]}
-                  >
-                    {renderTime}
-                  </CountdownCircleTimer>
-                </div>
-              </Col>
-              <Col xs={4} align="center" justify="center" text="center">
-                <div className="breath-out">
-                  <CountdownCircleTimer
-                    isPlaying={inMotion}
-                    duration={7}
-                    colors={[
-                      ['#004777', 0.33],
-                      ['#006aff', 0.33],
-                      ['#5ea1ff', 0.33],
-                    ]}
-                    onComplete={() => [true, 8000]}
+                    onComplete={() => [true, 0]}
                   >
                     {renderTime}
                   </CountdownCircleTimer>
                 </div>
               </Col>
             </Row>
-            <Row direction="row" style={{ margin: '40px' }} >
+            <Row direction="row" style={{ margin: '50px' }} >
               <Col xs={12} align="center" justify="center" text="center">
                 <h3 className="info">
                   Reduces anxiety and helps to get to sleep
                 </h3>
               </Col>
             </Row>
-            <Row direction="row" style={{ margin: '40px' }} >
-              <Col xs={12} align="center" justify="center" text="center">
-                <div  className="start-breathing">
-                    <input type="submit" value="Start exercise" onClick={() => setInMotion(true)} />
-                </div>
+            <Row direction="row" style={{ margin: '50px' }} >
+              <Col xs={6} align="right" justify="center" text="center">
+                  <input className="start-breathing" type="submit" value="Start" onClick={() => setInMotion(true)} />
+              </Col>
+              <Col xs={6} align="left" justify="center" text="center">
+                  <input className="restart" type="submit" value="Restart" onClick={() => setRestart(prevRestart => prevRestart + 1)} />
               </Col>
             </Row>
           </Container>
         </div>
     </>
-
   );
 }
 

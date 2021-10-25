@@ -1,6 +1,5 @@
 import React from "react";
 import './Guidance.css';
-import meditate from '../images/meditation.png';
 import read from '../images/read.png';
 import love from '../images/love-yourself.png';
 import sleep from '../images/meditation.png';
