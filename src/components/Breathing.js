@@ -44,7 +44,7 @@ const Breathing = () => {
             </Row>
             <Row direction="row" style={{ margin: '70px' }} >
               <Col xs={12} align="center" justify="center" text="center">
-                <div className="breath-in" style={{ transition: "all 4s ease-in-out" , transform: "scale(1.2)" }}>
+                <div className="breath-in" style={{ transition: "all 4s ease-in-out", transform: "scale(1.2)" }}>
                   <CountdownCircleTimer
                     key={restart}
                     isPlaying={inMotion}
