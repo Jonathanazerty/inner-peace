@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useRef} from "react";
 import './Grounding.css';
 import Hear from '../images/hear.png';
 import See from '../images/see.png';
@@ -10,6 +10,8 @@ import {useHistory} from 'react-router-dom';
 
 const Grounding = () => {
 
+    const cardRef = useRef(null);
+
     const [showStartButton, setShowStartButton] = useState(true);
     const [showFive, setShowFive] = useState(false);
     const [showFour, setShowFour] = useState(false);
@@ -20,7 +22,7 @@ const Grounding = () => {
 
     const StartButton = () => <button className='groundingButton' onClick={startGrounding}> I'm ready to start</button>
     const Five = () =>
-        <div className='groundingCard'>
+        <div className='groundingCard' ref={cardRef}>
             <img className='groundingIcon' src={See} alt='eye'/>
             <p className='groundingText'>Find <strong>5</strong> things you <strong>see</strong> around you.</p>
             <p className='groundingTextSmall'> Maybe a pen or stapler, or maybe a bird or a tree.</p>
@@ -28,7 +30,7 @@ const Grounding = () => {
         </div>
 
     const Four = () =>
-        <div className='groundingCard'>
+        <div className='groundingCard' ref={cardRef}>
             <img className='groundingIcon' src={Touch} alt='hand'/>
             <p className='groundingText'>Find <strong>4</strong> things you can <strong>touch</strong> from where you're
                 sitting.</p>
@@ -37,7 +39,7 @@ const Grounding = () => {
         </div>
 
     const Three = () =>
-        <div className='groundingCard'>
+        <div className='groundingCard' ref={cardRef}>
             <img className='groundingIcon' src={Hear} alt='ear'/>
             <p className='groundingText'>Find <strong>3</strong> things you can <strong>hear</strong> around you.</p>
             <p className='groundingTextSmall'> Focus on your stomach growling, or a car passing, a dog barking, or
@@ -47,7 +49,7 @@ const Grounding = () => {
         </div>
 
     const Two = () =>
-        <div className='groundingCard'>
+        <div className='groundingCard' ref={cardRef}>
             <img className='groundingIcon' src={Smell} alt='nose'/>
             <p className='groundingText'>Find <strong>2</strong> things you can <strong>smell</strong> around you.</p>
             <p className='groundingTextSmall'> Maybe the soap, your furniture. The outdoors has plenty of options for
@@ -56,7 +58,7 @@ const Grounding = () => {
         </div>
 
     const One = () =>
-        <div className='groundingCard'>
+        <div className='groundingCard' id='groundingCardOne' ref={cardRef}>
             <img className='groundingIcon' src={Taste} alt='tongue'/>
             <p className='groundingText'>Find <strong>1</strong> thing you can <strong>taste</strong> around you.</p>
             <p className='groundingTextSmall'> It doesn't have to be food. Maybe the toothpaste or minty floss. Your
@@ -65,7 +67,7 @@ const Grounding = () => {
         </div>
 
     const Extra = () =>
-        <div className='groundingExtraSection'>
+        <div className='groundingExtraSection' ref={cardRef}>
             <h4 className='groundingMessage'> You did it! Woohoo!</h4>
             <img className='groundingIcon' src={Yay} alt='person cheering'/>
             <div className='groundingButtonWrapper'>
@@ -88,18 +90,22 @@ const Grounding = () => {
 
     function display4() {
         setShowFour(true)
+        cardRef.current.scrollIntoView();
     }
 
     function display3() {
         setShowThree(true)
+        cardRef.current.scrollIntoView();
     }
 
     function display2() {
         setShowTwo(true)
+        cardRef.current.scrollIntoView();
     }
 
     function display1() {
         setShowOne(true)
+        cardRef.current.scrollIntoView();
     }
 
     function displayButtons() {

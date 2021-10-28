@@ -8,9 +8,11 @@ import Good from '../images/happy.png'
 import Best from '../images/relax.png'
 import Stack from '@mui/material/Stack';
 import Slider from '@mui/material/Slider';
-
+import {useMediaQuery} from "@mui/material";
 
 const Feeling = (props) => {
+
+   const isMobile = useMediaQuery('(max-width : 650px)')
 
     const [emoji, setEmoji] = useState(Neutral)
     const [feeling, setFeeling] = useState("I'm feeling ok.");
@@ -58,10 +60,10 @@ const Feeling = (props) => {
                         <img className='feelingIcon' src={emoji} alt='smiley'/>
                     </div>
 
-                    <Stack className='stack' sx={{height: 300}} spacing={1} direction="row">
+                    <Stack className='stack' sx={isMobile ? {height: 10, width: 250} : {height: 300}} spacing={1} direction="row">
                         <Slider
                             aria-label="Temperature"
-                            orientation="vertical"
+                            orientation={isMobile ? "horizontal":"vertical"}
                             getAriaValueText={valuetext}
                             defaultValue={30}
                             onChange={changeEmoji}
