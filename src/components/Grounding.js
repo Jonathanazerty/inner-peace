@@ -58,7 +58,7 @@ const Grounding = () => {
         </div>
 
     const One = () =>
-        <div className='groundingCard' ref={cardRef}>
+        <div className='groundingCard' id='groundingCardOne' ref={cardRef}>
             <img className='groundingIcon' src={Taste} alt='tongue'/>
             <p className='groundingText'>Find <strong>1</strong> thing you can <strong>taste</strong> around you.</p>
             <p className='groundingTextSmall'> It doesn't have to be food. Maybe the toothpaste or minty floss. Your
