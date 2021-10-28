@@ -1,41 +1,8 @@
-html, body {
-    padding: 0;
-    margin: 0;
-    height: 100%;
-    font-family: Helvetica, Arial, sans-serif;
-  }
-  
-  .container {
-    display: flex;
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-    box-sizing: border-box;
-    flex: 1 1 auto;
-    flex-direction: column;
-    align-items: center;
-    vertical-align: center;
-    height: 100%;
-    padding: 2em;
-    @media screen and (min-width: 500px) {
-      flex-direction: row;
-    }
-  }
-  
-  #animation {
-    width: 100%;
-    height: 100%;
-    margin: 2em auto 0;
-    @media screen and (min-width: 800px) {
-      height: 90%;
-    }
-  }
-  
-  header {
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    box-sizing: border-box;
-    padding: 1em 0.5em 2em;
-  }
+.asking, .near, .speak, .help, .heart  {
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: #91a5ff15;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 5px 5px 5px rgba(100, 167, 255, 0.192);
+}
