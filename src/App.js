@@ -11,6 +11,7 @@ import Breathing from './components/Breathing';
 import Grounding from './components/Grounding';
 import Help from './components/Help';
 import Entries from './components/Entries';
+import Maptest from './components/Maptest'
 
 function App() {
   return (
@@ -55,6 +56,9 @@ function App() {
             <Link to="/Entries"><input className="submit" type="submit" id="Entries"
                                           name="Entries"
                                           value="Entries"/></Link>
+              <Link to="/Maptest"><input className="submit" type="submit" id="Maptest"
+                                         name="Maptest"
+                                         value="Maptest"/></Link>
           </div>
           <Switch>
               <Route path="/Intro" exact component={Intro} />
@@ -66,6 +70,7 @@ function App() {
               <Route path="/Grounding" component={Grounding} />
               <Route path="/Help" component={Help} />
               <Route path="/Entries" component={Entries} />
+              <Route path="/Maptest" component={Maptest} />
           </Switch>
           </Router>
     </div>
