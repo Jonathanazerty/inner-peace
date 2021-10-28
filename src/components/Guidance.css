@@ -78,6 +78,7 @@ header {
     border: none;
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgb(217, 217, 255);
+    font-size: 20px;
 }
 
 .button-help:hover, .button-breathing:hover  {

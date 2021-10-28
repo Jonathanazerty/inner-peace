@@ -6,3 +6,12 @@
   border-radius: 16px;
   box-shadow: 5px 5px 5px rgba(100, 167, 255, 0.192);
 }
+
+.icon-help {
+  border-radius: 50%;
+  box-shadow: 5px 5px 5px rgba(100, 167, 255, 0.192);
+}
+
+.icon-help:hover, .icon-find:hover{
+  transform: scale(1.2);
+}

@@ -57,7 +57,7 @@ const Help = () => {
                  <div className="heart"  style={{ marginBottom: '30px' }}>
                     When we are physically hurt, we go to the doctor so <br></br>
                     when we are mentally hurt, we go to the psychologist.<br></br>
-                    <img className="icon-heart" src={heart} alt="read" style={{ height: "80px", width: "80px", float: "right", marginRight:"-10px"}}/><br></br>
+                    <img className="icon-help" src={heart} alt="read" style={{ height: "80px", width: "80px", float: "right", marginRight:"-10px"}}/><br></br>
                     Fight the taboo and fight for yourself !
                  </div>
                </p>

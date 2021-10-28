@@ -21,6 +21,7 @@ const Intro = ({ text }) => {
       return () => clearInterval(timeout)
     }, [fadeProp])
 
+
   return (
 
       <div className={fadeProp.fade}  style={{

@@ -25,10 +25,10 @@ const Name = (props) => {
     return (
         <div className='name'>
             <Container fluid>
-                <Row direction="column" style={{ margin: '70px' }} >
+                <Row direction="column" style={{ margin: '50px' }} >
                     <Col xs={12} align="center" justify="center" text="center">
                         <div>
-                            <img className="gif" src={logo} alt="logo" />
+                            <img className="gif" src={logo} alt="logo" style={{ height: '250px', width: '250px' }}/>
                         </div>
                     </Col>
                 </Row>
@@ -42,14 +42,14 @@ const Name = (props) => {
                         YOU MATTER !
                     </Col>
                 </Row>
-                <Row direction="column" style={{ margin: '50px' }} >
+                <Row direction="column" style={{ margin: '40px' }} >
                     <Col xs={12} align="center" justify="center" text="center">
                         <form>
-                            <label>
+                            <label class="label">
                                 Name:
-                                <input class="input-name" type="text" name="username" placeholder="Don't forget your name" required value={name} onChange={(e) => setName(e.target.value)}/><br></br>
+                                <input  class="input-name" type="text" name="username" placeholder="Don't forget your name" required value={name} onChange={(e) => setName(e.target.value)}/><br></br>
                             </label><br></br>
-                            <input type="submit" value="Confirm" onClick={(event) => handleForm(event)} />
+                            <input className="button-confirm" type="submit" value="Confirm" onClick={(event) => handleForm(event)} />
                         </form>
                     </Col>
                 </Row>
