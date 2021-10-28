@@ -50,7 +50,7 @@ const Feeling = (props) => {
     }
 
     return (
-        <>
+        <div className='feelingBody'>
             <div className='feelingPageWrapper'>
                 <h2 className='feelingTitle'> How are you feeling today {props.location.state}? </h2>
                 <div className='feelingWrapper'>
@@ -73,7 +73,7 @@ const Feeling = (props) => {
                            onClick={(event) => handleFeeling(event)}/>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

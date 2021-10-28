@@ -1,6 +1,7 @@
 .groundingBody{
     display: flex;
     flex-flow: column;
+    flex-flow: column;
     align-items: center;
 }
 .groundingTitleWrapper, .groundingCard, .groundingExtraSection{

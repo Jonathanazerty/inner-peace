@@ -23,7 +23,7 @@ const Name = (props) => {
     
 
     return (
-        <>
+        <div className='name'>
             <Container fluid>
                 <Row direction="column" style={{ margin: '70px' }} >
                     <Col xs={12} align="center" justify="center" text="center">
@@ -57,7 +57,7 @@ const Name = (props) => {
             <footer>
                 <Footer/>
             </footer>
-        </>
+        </div>
     )
 }
 
