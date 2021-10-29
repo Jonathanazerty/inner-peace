@@ -7,15 +7,14 @@ function Experience(props) {
     const date = new Date();
     let today = date.toLocaleDateString(undefined, options) + ' ' + date.getDate() + '-' + (date.getMonth() + 1) + '-' + date.getFullYear();
 
-    console.log(props.location.state)
 
     return (
         <div>
 
             <div className='experienceMain'>
                 <div className='experienceHeader'>
-                    <h3> {today} </h3>
-                    <div>
+                    <h3 className='experienceTitle'> {today} </h3>
+                    <div className='experienceButtonWrapper'>
                         <a className='experienceButton' href="Entries.js">See previous entries</a>
                     </div>
                 </div>
