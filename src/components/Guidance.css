@@ -84,3 +84,35 @@ header {
 .button-help:hover, .button-breathing:hover  {
     transform: scale(1.2);
 }
+
+/* responsiveness */
+
+@media only screen and (max-width: 1276px) {
+  .icon-guidance {
+      height: 20px;
+      width: 20px;
+  }
+}
+
+/* @media only screen and (max-width: 1276px) {
+  .icon-guidance {
+      height: 20px;
+      width: 20px;
+  }
+} */
+
+/* @media only screen and (max-width: 950px) {
+  .experienceHeader {
+      
+  }
+}
+@media only screen and (max-width: 700px) {
+  .experiencingAndNotesWrapper {
+      
+  }
+}
+@media only screen and (max-width: 500px) {
+  .experienceHeader {
+      
+  }
+} */

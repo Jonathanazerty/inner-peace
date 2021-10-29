@@ -1,5 +1,5 @@
 
-.breathing, .countdowncircles  {
+.breathing  {
     margin-left: 5rem;
     margin-right: 5rem;
     background-color: #91a5ff15;
@@ -7,14 +7,6 @@
     border-radius: 16px;
     box-shadow: 5px 5px 5px rgba(100, 167, 255, 0.192);
 }
-
-/* .breath-in {
-    transition: all 4s ease-in;
-} */
-
-/* .breath-in:active {
-    transform: scale(1.2);
-} */
 
 .start-breathing, .restart, .stop{
     padding: 10px;
@@ -30,4 +22,18 @@
 
 .start-breathing:hover, .restart:hover, .stop:hover {
     transform: scale(1.2);
+}
+
+.breath-in, .hold-breath, .breath-out {
+    position: absolute;
+}
+
+/* .breath-in:active, .breath-out:active {
+    transform: scale(1.4);
+
+} */
+
+
+.info {
+    position: relative;
 }
