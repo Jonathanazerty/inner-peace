@@ -19,7 +19,7 @@ import {Container, Row, Col} from 'react-grid-system';
 //   lng: 4.402771
 // }
 
-const Help = () => {
+const Help = (props) => {
 
 //   const { isLoaded, loadError } = useLoadScript ({
 //     googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,

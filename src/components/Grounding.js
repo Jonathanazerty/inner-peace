@@ -8,7 +8,7 @@ import Taste from '../images/taste.png';
 import Yay from '../images/yay.png';
 import {useHistory} from 'react-router-dom';
 
-const Grounding = () => {
+const Grounding = (props) => {
 
     const cardRef = useRef(null);
 

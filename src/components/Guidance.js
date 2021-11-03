@@ -9,7 +9,7 @@ import question from '../images/question.png';
 import { Container, Row, Col } from 'react-grid-system';
 import { useHistory } from 'react-router-dom';
 
-const Guidance = () => {
+const Guidance = (props) => {
 
   let history = useHistory();
 

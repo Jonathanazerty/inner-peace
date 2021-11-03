@@ -1,5 +1,6 @@
 import React from 'react';
 import './Experience.css';
+import {useHistory} from 'react-router-dom';
 
 function Experience(props) {
 
@@ -7,6 +8,21 @@ function Experience(props) {
     const date = new Date();
     let today = date.toLocaleDateString(undefined, options) + ' ' + date.getDate() + '-' + (date.getMonth() + 1) + '-' + date.getFullYear();
 
+    const advice = [
+        
+      ];
+
+    //   const [checkboxes, setCheckboxes] = useState('');
+
+      let history = useHistory();
+
+      const nextPage = () => {
+        history.push('/Guidance')
+      }
+
+      const handleSymptoms = () => {
+        nextPage();
+      }
 
     return (
         <div>
@@ -27,7 +43,7 @@ function Experience(props) {
                             <div>
                                 <input type="checkbox" id="symptom1" name="symptom1" value="shortnessOfBreath"/>
                                 <> </>
-                                <label htmlFor="symptom1">Shortness of breath </label>
+                                <label htmlFor="symptom1">Shortness of breath</label>
                             </div>
                             <div>
                                 <input type="checkbox" id="symptom2" name="symptom2" value="heartPalpitations"/>
@@ -45,34 +61,19 @@ function Experience(props) {
                                 <label htmlFor="symptom4">Trembling</label>
                             </div>
                             <div>
-                                <input type="checkbox" id="symptom5" name="symptom5" value="giproblems"/>
+                                <input type="checkbox" id="symptom5" name="symptom6" value="restlessness"/>
                                 <> </>
-                                <label htmlFor="symptom5">Gastrointestinal problems</label>
+                                <label htmlFor="symptom5">Restlessness</label>
                             </div>
                             <div>
-                                <input type="checkbox" id="symptom6" name="symptom6" value="restlessness"/>
+                                <input type="checkbox" id="symptom6" name="symptom9" value="weak"/>
                                 <> </>
-                                <label htmlFor="restlessness">Restlessness</label>
+                                <label htmlFor="symptom6">Weak / Lightheaded</label>
                             </div>
                             <div>
-                                <input type="checkbox" id="symptom7" name="symptom7" value="worry"/>
+                                <input type="checkbox" id="symptom7" name="symptom10" value="headache"/>
                                 <> </>
-                                <label htmlFor="worry">Worry and apprehension</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" id="symptom8" name="symptom8" value="tightness"/>
-                                <> </>
-                                <label htmlFor="tightness">Tightness in the throat and difficulty breathing</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" id="symptom9" name="symptom9" value="faint"/>
-                                <> </>
-                                <label htmlFor="faint">Feeling faint</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" id="symptom10" name="symptom10" value="headache"/>
-                                <> </>
-                                <label htmlFor="headache">Headache</label>
+                                <label htmlFor="symptom7">Headache</label>
                             </div>
                         </div>
                     </div>
@@ -83,7 +84,7 @@ function Experience(props) {
                     </div>
                 </div>
                 <div className='experienceSubmitWrapper'>
-                    <button className='experienceButton' id='experienceSubmit'> Add to entries</button>
+                    <button className='experienceButton' id='experienceSubmit' value="Confirm" onClick={() => handleSymptoms()} > Confirm symptoms</button>
                 </div>
             </div>
 

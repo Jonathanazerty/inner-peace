@@ -3,7 +3,7 @@ import React from 'react';
 import Slider from "react-slick";
 import Entry from "./Entry";
 
-const Entries = () => {
+const Entries = (props) => {
     let settings = {
         dots: true,
         infinite: true,
@@ -11,6 +11,7 @@ const Entries = () => {
         slidesToShow: 1,
         slidesToScroll: 1
     };
+    console.log(props)
     return (
         <div className='entriesMain'>
             <h2 className='previousEntries'> Previous Entries </h2>

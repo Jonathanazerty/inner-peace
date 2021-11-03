@@ -45,7 +45,7 @@ const renderTime3 = ({ remainingTime }) => {
 
 
 
-const Breathing = () => {
+const Breathing = (props) => {
 
   const [inMotion, setInMotion ] = useState(false);
   const [inMotion2, setInMotion2 ] = useState(false);
@@ -55,6 +55,9 @@ const Breathing = () => {
   const [hideTimer2, setHideTimer2] = useState(false);
   const [hideTimer3, setHideTimer3] = useState(false);
 
+  const [scaleTimer1, setScaleTimer1] = useState(true);
+  const [scaleTimer3, setScaleTimer3] = useState(true);
+
   const restartExercise = () => {
     window.location.reload();
  }
@@ -63,6 +66,7 @@ const Breathing = () => {
       switch(timer) {
         case 1:
            setInMotion2(true);
+           setScaleTimer1(false);
            setHideTimer1(false);
            setHideTimer2(true);
            setHideTimer3(false);
@@ -78,6 +82,7 @@ const Breathing = () => {
             setHideTimer1(false);
             setHideTimer2(false);
             setHideTimer3(false);
+            setScaleTimer3(false);
             return;
         default:
           return;
@@ -95,7 +100,7 @@ const Breathing = () => {
            textAlign: "center"
          }}>
           <Container fluid>
-            <Row direction="row" style={{ marginTop: '100px' }}>
+            <Row direction="row" style={{ marginTop: '70px' }}>
               <Col xs={7} className="text-breathing" align="center" justify="center" text="center">
                 <h1>
                 Breathing exercise
@@ -125,7 +130,7 @@ const Breathing = () => {
                 </Row>
               </Col>
               <Col xs={5} className="circles" align="center" justify="center" text="center">
-                <div className="breath-in" style={{ opacity: hideTimer1 ? 1 : 0}}>
+                <div className="breath-in" style={{ opacity: hideTimer1 ? 1 : 0, transition: scaleTimer1 ? "all .4s ease-in" : 0, transform: scaleTimer1 ? "scale(1.1)" : 0}}>
                   <CountdownCircleTimer
                     isPlaying={inMotion}
                     duration={4}
@@ -155,7 +160,7 @@ const Breathing = () => {
                     {renderTime2}
                   </CountdownCircleTimer>
                 </div>
-                <div className="breath-out" style={{ opacity: hideTimer3 ? 1 : 0}}>
+                <div className="breath-out" style={{ opacity: hideTimer3 ? 1 : 0, transition: scaleTimer3 ? "all .7s ease-in-out" : 0, transform: scaleTimer3 ? "scale(1.2)" : 0}}>
                   <CountdownCircleTimer
                     isPlaying={inMotion3}
                     duration={7}
