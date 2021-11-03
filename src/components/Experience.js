@@ -8,11 +8,29 @@ function Experience(props) {
     const date = new Date();
     let today = date.toLocaleDateString(undefined, options) + ' ' + date.getDate() + '-' + (date.getMonth() + 1) + '-' + date.getFullYear();
 
-    const advice = [
-        
+    const symptoms = [
+        {
+          name: "Shortness of breath"
+        },
+        {
+          name: "Heart palpitations"
+        },
+        {
+          name: "Nausea"
+        },
+        {
+          name: "Trembling"
+        },
+        {
+          name: "Restlessness"
+        },
+        {
+          name: "Weak / Lightheaded"
+        },
+        {
+          name: "Headache"
+        }
       ];
-
-    //   const [checkboxes, setCheckboxes] = useState('');
 
       let history = useHistory();
 
@@ -20,7 +38,7 @@ function Experience(props) {
         history.push('/Guidance')
       }
 
-      const handleSymptoms = () => {
+      const handleSymptoms = (event) => {
         nextPage();
       }
 
@@ -84,7 +102,7 @@ function Experience(props) {
                     </div>
                 </div>
                 <div className='experienceSubmitWrapper'>
-                    <button className='experienceButton' id='experienceSubmit' value="Confirm" onClick={() => handleSymptoms()} > Confirm symptoms</button>
+                    <button className='experienceButton' id='experienceSubmit' value="Confirm" onClick={(event) => handleSymptoms(event)} > Confirm symptoms</button>
                 </div>
             </div>
 
