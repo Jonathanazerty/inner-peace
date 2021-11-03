@@ -1,9 +1,12 @@
 import './Entries.css';
-import React from 'react';
+import React, {useContext} from 'react';
 import Slider from "react-slick";
 import Entry from "./Entry";
+import {SymptomsContext} from "./ContextComponent";
 
 const Entries = (props) => {
+    const {isChecked, setIsChecked} = useContext(SymptomsContext);
+
     let settings = {
         dots: true,
         infinite: true,
@@ -22,6 +25,7 @@ const Entries = (props) => {
                 <Entry number='3'/>
                 <Entry number='4'/>
             </Slider>
+            <div> {isChecked}</div>
         </div>
     )
 }
