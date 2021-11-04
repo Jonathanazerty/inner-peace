@@ -17,8 +17,7 @@ import {SymptomsContext} from "./components/ContextComponent";
 
 function App() {
 
-    const [checkboxes, setCheckboxes] = useState("HELLO FROM TANJA");
-
+    const [checkboxes, setCheckboxes] = useState('');
     return (
         <div className="App">
             <header className="App-header">

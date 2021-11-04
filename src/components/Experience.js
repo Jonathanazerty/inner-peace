@@ -34,7 +34,10 @@ function Experience(props) {
     }
   ];
 
+
+  
   const {checkboxes, setCheckboxes} = useContext(SymptomsContext);
+  const [notes, setNotes] = useState('');
   const [filteredSymptoms, setFilteredsymptoms] = useState([]);
   const [checkedState, setCheckedState] = useState(
       new Array(symptoms.length).fill(false)
@@ -44,6 +47,7 @@ function Experience(props) {
 
   const nextPage = () => {
       history.push('/Guidance')
+      history.push('/Entries', [notes])
   }
 
 
@@ -110,7 +114,7 @@ function Experience(props) {
 
                     <div className='notes'>
                         <p><label htmlFor="notes">Notes:</label></p>
-                        <textarea className='symptoms' id="notes" name="notes"/>
+                        <textarea className='symptoms' id="notes" name="notes"required value={notes} onChange={(e) => setNotes(e.target.value)}/>
                     </div>
                 </div>
                 <div className='experienceSubmitWrapper'>
