@@ -1,46 +1,74 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './Experience.css';
 import {useHistory} from 'react-router-dom';
+import {useContext} from "react";
+import {SymptomsContext} from "./ContextComponent";
 
 function Experience(props) {
 
-    const options = {weekday: 'long'}
-    const date = new Date();
-    let today = date.toLocaleDateString(undefined, options) + ' ' + date.getDate() + '-' + (date.getMonth() + 1) + '-' + date.getFullYear();
+  const options = {weekday: 'long'}
+  const date = new Date();
+  let today = date.toLocaleDateString(undefined, options) + ' ' + date.getDate() + '-' + (date.getMonth() + 1) + '-' + date.getFullYear();
 
-    const symptoms = [
-        {
-          name: "Shortness of breath"
-        },
-        {
-          name: "Heart palpitations"
-        },
-        {
-          name: "Nausea"
-        },
-        {
-          name: "Trembling"
-        },
-        {
-          name: "Restlessness"
-        },
-        {
-          name: "Weak / Lightheaded"
-        },
-        {
-          name: "Headache"
+  const symptoms = [
+    {
+      name: "Shortness of breath"
+    },
+    {
+      name: "Heart palpitations"
+    },
+    {
+      name: "Nausea"
+    },
+    {
+      name: "Trembling"
+    },
+    {
+      name: "Restlessness"
+    },
+    {
+      name: "Weak / Lightheaded"
+    },
+    {
+      name: "Headache"
+    }
+  ];
+
+  const {checkboxes, setCheckboxes} = useContext(SymptomsContext);
+  const [filteredSymptoms, setFilteredsymptoms] = useState([]);
+  const [checkedState, setCheckedState] = useState(
+      new Array(symptoms.length).fill(false)
+  );
+
+    let history = useHistory();
+
+  const nextPage = () => {
+      history.push('/Guidance')
+  }
+
+
+  const handleChange = (position) => {
+      // const filterSymptoms = []
+      const updatedCheckedState = checkedState.map((item, index) => {
+        if (index === position) {
+          // filterSymptoms.push(symptoms[index].name, index)
+          setFilteredsymptoms([...filteredSymptoms, {name:symptoms[index].name, state:false}])
         }
-      ];
-
-      let history = useHistory();
-
-      const nextPage = () => {
-        history.push('/Guidance')
+        return console.log('')
       }
+      // index === position ? !item : item
+        // return console.log(symptoms[index].name)
+    )
+        setCheckedState(updatedCheckedState);
+  }
 
-      const handleSymptoms = (event) => {
-        nextPage();
-      }
+  const handleSymptoms = () => {
+    nextPage();
+    handleChange();
+    console.log(filteredSymptoms)
+    setCheckboxes(filteredSymptoms.map(filteredSymptom => filteredSymptom.name ))
+}
+
 
     return (
         <div>
@@ -57,43 +85,27 @@ function Experience(props) {
                 <div className='experiencingAndNotesWrapper'>
                     <div className='experiencing'>
                         <p>Experiencing:</p>
-                        <div className='symptoms'>
-                            <div>
-                                <input type="checkbox" id="symptom1" name="symptom1" value="shortnessOfBreath"/>
-                                <> </>
-                                <label htmlFor="symptom1">Shortness of breath</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" id="symptom2" name="symptom2" value="heartPalpitations"/>
-                                <> </>
-                                <label htmlFor="symptom2">Heart palpitations</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" id="symptom3" name="symptom3" value="nausea"/>
-                                <> </>
-                                <label htmlFor="symptom3">Nausea</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" id="symptom4" name="symptom4" value="trembling"/>
-                                <> </>
-                                <label htmlFor="symptom4">Trembling</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" id="symptom5" name="symptom6" value="restlessness"/>
-                                <> </>
-                                <label htmlFor="symptom5">Restlessness</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" id="symptom6" name="symptom9" value="weak"/>
-                                <> </>
-                                <label htmlFor="symptom6">Weak / Lightheaded</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" id="symptom7" name="symptom10" value="headache"/>
-                                <> </>
-                                <label htmlFor="symptom7">Headache</label>
-                            </div>
-                        </div>
+                        <ul className="symptoms-list">
+                          {symptoms.map(({ name}, index) => {
+                            return (
+                              <li key={index}>
+                                <div className="symptoms-list-item">
+                                  <div className="left-section">
+                                    <input
+                                      type="checkbox"
+                                      id={`custom-checkbox-${index}`}
+                                      name={name}
+                                      value={name}
+                                      checked={checkedState[index]}
+                                      onChange={() => handleChange(index)}
+                                    />
+                                    <label htmlFor={`custom-checkbox-${index}`}>{name}</label>
+                                  </div>
+                                </div>
+                              </li>
+                            );
+                          })}
+                        </ul>
                     </div>
 
                     <div className='notes'>
@@ -102,7 +114,9 @@ function Experience(props) {
                     </div>
                 </div>
                 <div className='experienceSubmitWrapper'>
-                    <button className='experienceButton' id='experienceSubmit' value="Confirm" onClick={(event) => handleSymptoms(event)} > Confirm symptoms</button>
+                    <button className='experienceButton' id='experienceSubmit' value="Confirm"
+                            onClick={() => handleSymptoms()}> Confirm symptoms
+                    </button>
                 </div>
             </div>
 
