@@ -52,22 +52,34 @@ const Guidance = () => {
                 <img className="icon-guidance" src={read} alt="read" style={{ height: "70px", width: "70px", float: "right", margin:"5px"}}/>
                 <b>Relax</b>
                   <ul>
-                    <li>Read a book</li>
-                    <li>Meditate</li>
+                    <li>Taking a break may mean being very active. It may mean not doing very much at all.</li>
+                    <li>Take a deep breath… and relax. Try reading a book, yoga or meditation, or just putting your feet up.</li>
+                    <li>Listen to your body. If you’re really tired, give yourself time to sleep.</li>
+                    <li>Without good sleep, our mental health suffers and our concentration goes downhill.<br></br>
+                        Sometimes the world can wait.</li>
                   </ul>
               </div>
               <div className="grid-left2" style={{ margin: '10px'}}>
                 <img className="icon-guidance" src={love} alt="positive"style={{ height: "70px", width: "70px", float: "right", margin:"5px"}}/>
-                <b>Positive attitude</b>
+                <b>Talking about your feelings </b>
                   <ul>
-                    <li>Replace negative thoughts with positive ones</li>
+                    <li>If it feels awkward at first, give it time. </li>
+                    <li>Make talking about your feelings something that you do.</li>
+                    <li>Talking about your feelings isn’t a sign of weakness. </li>
+                    <li>It’s part of taking charge of your wellbeing and doing what you can to stay healthy.</li>
+                    <li>Talking can be a way to cope with a problem you’ve been carrying around in your head for a while.<br></br>
+                        Just being listened to can help you feel supported and less alone. </li>
+                    <li>And it works both ways. If you open up, it might encourage others to do the same.</li>
                   </ul>
               </div>
               <div className="grid-left3" style={{ margin: '10px'}}>
                 <img className="icon-guidance" src={sleep} alt="sleep" style={{ height: "70px", width: "70px", float: "right", margin:"5px"}}/>
-                <b>Sleep</b>
+                <b>Accept who you are</b>
                   <ul>
-                    <li>Your body needs additional sleep and rest</li>
+                    <li>We’re all different.</li>
+                    <li>It’s much healthier to accept that you’re unique than to wish you were more like someone else.</li>
+                    <li>Feeling good about yourself boosts your confidence to learn new skills, visit new places and make new friends.</li>
+                    <li>Good self-esteem helps you cope when life takes a difficult turn.</li>
                   </ul>
               </div>
               <div class="tree">
@@ -156,16 +168,25 @@ const Guidance = () => {
                 <img className="icon-guidance" src={run} alt="sport" style={{ height: "70px", width: "70px", float: "right", margin:"5px"}}/>
                 <b>Exercise</b>
                   <ul>
-                    <li>Helps you mentally as well as physically</li>
-                    <li>Helps you feel good and maintain your healthy</li>
+                    <li>Experts believe exercise releases chemicals in your brain that make you feel good. </li>
+                    <li>Regular exercise can boost your self-esteem and help you concentrate, sleep and feel better.</li>
+                    <li>Exercising doesn’t just mean doing sport or going to the gym. <br></br>
+                        Walks in the park, gardening or housework can also keep you active.</li>
+                    <li>Experts say most people should do about 30 minutes’ exercise at least five days a week.</li>
+                    <li>Try to make physical activity that you enjoy a part of your day.</li>
+                    <li>Helps you feel good and maintain your health</li>
                   </ul>
               </div>
               <div className="grid-right2" style={{ margin: '10px'}}>
                 <img className="icon-guidance" src={eat} alt="eat" style={{ height: "70px", width: "70px", float: "right", margin:"5px"}}/>
                 <b>Eat and drink</b>
                   <ul>
-                    <li> Eat healthy and drink a lot of water</li>
-                    <li>Try not to drink coffee and alcohol</li>
+                    <li>Strong links between what we eat and how we feel.</li>
+                    <li>Eat at least three meals each day and drink plenty of water.</li>
+                    <li>Try to limit how many high-caffeine or sugary drinks you have, and avoid too much alcohol.</li>
+                    <li>But food can also have a long-lasting effect on your mental health.</li>
+                    <li>Your brain needs a mix of nutrients to stay healthy and function well, just like the other organs in your body.
+                    </li>
                   </ul>
               </div>
               <div className="grid-right3" style={{ margin: '10px'}}>
@@ -173,6 +194,8 @@ const Guidance = () => {
                 <b>Professional help</b>
                   <ul>
                     <li>Don't be worried or afraid to talk to a physician or therapist</li>
+                    <li>None of us are superhuman. We all sometimes get tired or overwhelmed by how we feel or when things go wrong.</li> 
+                    <li>If things are getting too much for you and you feel you can’t cope, ask for help.</li>
                   </ul>
               </div>
             </div>
