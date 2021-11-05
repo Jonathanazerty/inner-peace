@@ -79,9 +79,6 @@ function Experience(props) {
             <div className='experienceMain'>
                 <div className='experienceHeader'>
                     <h3 className='experienceTitle'> {today} </h3>
-                    <div className='experienceButtonWrapper'>
-                        <a className='experienceButton' href="Entries.js">See previous entries</a>
-                    </div>
                 </div>
                 <p className='feeling'>{props.location.state}</p>
 
