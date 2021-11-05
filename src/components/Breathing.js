@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import './Breathing.css';
 import { CountdownCircleTimer } from 'react-countdown-circle-timer';
 import {Container, Row, Col} from 'react-grid-system';
+import { useHistory } from 'react-router-dom';
 
 
 const renderTime1 = ({ remainingTime }) => {
@@ -46,6 +47,20 @@ const renderTime3 = ({ remainingTime }) => {
 
 
 const Breathing = (props) => {
+
+  let history = useHistory();
+
+  const Grounding = () => {
+    history.push('/Grounding')
+  }
+
+  const Help = () => {
+    history.push('/Help')
+  }
+
+  const Guidance = () => {
+    history.push('/Guidance')
+  }
 
   const [inMotion, setInMotion ] = useState(false);
   const [inMotion2, setInMotion2 ] = useState(false);
@@ -92,9 +107,29 @@ const Breathing = (props) => {
 
   return (
     <>
-  
+      <div className='breathing-header'>
+        <Container fluid>
+          <Row direction="row" style={{ margin: '10px' }} >
+            <Col xs={4} align="center" justify="center" text="center">
+              <div>
+                  <button className="button-guidance" onClick={Guidance} >Guidance</button>
+              </div>
+            </Col>
+            <Col xs={4} align="center" justify="center" text="center">
+              <div>
+                <button className="button-help" onClick={Help} >Find Help</button>
+              </div>
+            </Col>
+            <Col xs={4} align="center" justify="center" text="center">
+              <div>
+                  <button className="button-grounding" onClick={Grounding} >Grounding</button>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
         <div className="breathing" style={{
-           marginTop: '70px',
+           marginTop: '20px',
            justifyContent: "center",
            alignItems: "center",
            textAlign: "center"
