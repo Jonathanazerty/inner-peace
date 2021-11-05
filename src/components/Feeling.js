@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useContext, useState} from "react";
 import {useHistory} from 'react-router-dom';
 import './Feeling.css';
 import Neutral from '../images/meh.png'
@@ -9,10 +9,13 @@ import Best from '../images/relax.png'
 import Stack from '@mui/material/Stack';
 import Slider from '@mui/material/Slider';
 import {useMediaQuery} from "@mui/material";
+import {FeelingContext} from "./ContextComponent";
 
 const Feeling = (props) => {
 
-   const isMobile = useMediaQuery('(max-width : 650px)')
+    const {feel, setFeel} = useContext(FeelingContext);
+
+    const isMobile = useMediaQuery('(max-width : 650px)')
 
     const [emoji, setEmoji] = useState(Neutral)
     const [feeling, setFeeling] = useState("I'm feeling ok.");
@@ -26,6 +29,7 @@ const Feeling = (props) => {
     const handleFeeling = (event) => {
         event.preventDefault();
         submit();
+        setFeel(feeling)
     }
 
     const valuetext = (value) => {

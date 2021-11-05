@@ -11,12 +11,14 @@ import Breathing from './components/Breathing';
 import Grounding from './components/Grounding';
 import Help from './components/Help';
 import Entries from './components/Entries';
-import {SymptomsContext} from "./components/ContextComponent";
+import {SymptomsContext, FeelingContext} from "./components/ContextComponent";
 
 
 function App() {
 
     const [checkboxes, setCheckboxes] = useState('');
+    const [feel, setFeel] = useState('');
+
     return (
         <div className="App">
             <header className="App-header">
@@ -63,15 +65,17 @@ function App() {
                 <Switch>
                     <Route path="/Intro" exact component={Intro}/>
                     <Route path="/Name" component={Name}/>
-                    <Route path="/Feeling" component={Feeling}/>
-                    <SymptomsContext.Provider value={{checkboxes, setCheckboxes}}>
-                        <Route path="/Experience" component={Experience}/>
-                        <Route path="/Guidance" exact component={Guidance}/>
-                        <Route path="/Breathing" component={Breathing}/>
-                        <Route path="/Grounding" component={Grounding}/>
-                        <Route path="/Help" component={Help}/>
-                        <Route path="/Entries" component={Entries}/>
-                    </SymptomsContext.Provider>
+                    <FeelingContext.Provider value={{feel, setFeel}}>
+                        <Route path="/Feeling" component={Feeling}/>
+                        <SymptomsContext.Provider value={{checkboxes, setCheckboxes}}>
+                            <Route path="/Experience" component={Experience}/>
+                            <Route path="/Guidance" exact component={Guidance}/>
+                            <Route path="/Breathing" component={Breathing}/>
+                            <Route path="/Grounding" component={Grounding}/>
+                            <Route path="/Help" component={Help}/>
+                            <Route path="/Entries" component={Entries}/>
+                        </SymptomsContext.Provider>
+                    </FeelingContext.Provider>
                 </Switch>
             </Router>
         </div>

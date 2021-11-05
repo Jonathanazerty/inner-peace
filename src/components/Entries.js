@@ -2,7 +2,7 @@ import './Entries.css';
 import React, {useContext} from 'react';
 import Slider from "react-slick";
 import Entry from "./Entry";
-import {SymptomsContext} from "./ContextComponent";
+import {SymptomsContext, FeelingContext} from "./ContextComponent";
 
 const Entries = (props) => {
     const options = {weekday: 'long'}
@@ -10,6 +10,7 @@ const Entries = (props) => {
     let today = date.toLocaleDateString(undefined, options) + ' ' + date.getDate() + '-' + (date.getMonth() + 1) + '-' + date.getFullYear();
 
     const {checkboxes, setCheckboxes} = useContext(SymptomsContext);
+    const {feel, setFeel} = useContext(FeelingContext);
 
     let settings = {
         dots: true,
@@ -26,7 +27,7 @@ const Entries = (props) => {
             <Slider {...settings}>
                 <div>
                     <h3 className='entriesTitle'>{today}</h3>
-                    <h4 className='entriesTitle'>Feeling</h4>
+                    <h4 className='entriesTitle'>{feel}</h4>
                     <div className='experiencingAndNotesWrapper' id='entriesCarouselWrapper'>
                     <div className='experiencing'>
                         <p>Experiencing:</p>
