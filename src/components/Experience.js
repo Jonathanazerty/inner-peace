@@ -8,7 +8,7 @@ function Experience(props) {
 
   const options = {weekday: 'long'}
   const date = new Date();
-  let today = date.toLocaleDateString(undefined, options) + ' ' + date.getDate() + '-' + (date.getMonth() + 1) + '-' + date.getFullYear();
+  let today = date.toLocaleDateString("en-US", options) + ' ' + date.getDate() + '-' + (date.getMonth() + 1) + '-' + date.getFullYear();
 
   const symptoms = [
     {
@@ -35,8 +35,7 @@ function Experience(props) {
   ];
 
 
-  
-  const {checkboxes, setCheckboxes} = useContext(SymptomsContext);
+    const {checkboxes, setCheckboxes} = useContext(SymptomsContext);
   const [notes, setNotes] = useState('');
   const [filteredSymptoms, setFilteredsymptoms] = useState([]);
   const [checkedState, setCheckedState] = useState(

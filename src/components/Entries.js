@@ -7,7 +7,7 @@ import {SymptomsContext, FeelingContext} from "./ContextComponent";
 const Entries = (props) => {
     const options = {weekday: 'long'}
     const date = new Date();
-    let today = date.toLocaleDateString(undefined, options) + ' ' + date.getDate() + '-' + (date.getMonth() + 1) + '-' + date.getFullYear();
+    let today = date.toLocaleDateString("en-US", options) + ' ' + date.getDate() + '-' + (date.getMonth() + 1) + '-' + date.getFullYear();
 
     const {checkboxes, setCheckboxes} = useContext(SymptomsContext);
     const {feel, setFeel} = useContext(FeelingContext);
