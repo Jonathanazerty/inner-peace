@@ -76,14 +76,15 @@ function Experience(props) {
 
                 <div className='experiencingAndNotesWrapper'>
                     <div className='experiencing'>
-                        <p>Experiencing:</p>
+                        <p className='experiencingSmallTitle'>Experiencing:</p>
                         <ul className="symptoms-list">
                             {symptoms.map(({name}, index) => {
                                 return (
                                     <li key={index}>
                                         <div className="symptoms-list-item">
-                                            <div className="left-section">
+                                            <div className="symptomsChecklist">
                                                 <input
+                                                    className='checkbox'
                                                     type="checkbox"
                                                     id={`custom-checkbox-${index}`}
                                                     name={name}
@@ -91,7 +92,6 @@ function Experience(props) {
                                                     checked={checkedState[index]}
                                                     onChange={() => handleChange(index)}
                                                 />
-                                                <> </>
                                                 <label htmlFor={`custom-checkbox-${index}`}>{name}</label>
                                             </div>
                                         </div>
@@ -102,7 +102,7 @@ function Experience(props) {
                     </div>
 
                     <div className='notes'>
-                        <p><label htmlFor="notes">Notes:</label></p>
+                        <p className='experiencingSmallTitle'><label htmlFor="notes">Notes:</label></p>
                         <textarea className='symptoms' id="notes" name="notes" required value={notes}
                                   onChange={(e) => setNotes(e.target.value)}/>
                     </div>
