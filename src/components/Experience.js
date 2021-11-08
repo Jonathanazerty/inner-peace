@@ -3,6 +3,7 @@ import './Experience.css';
 import {useHistory} from 'react-router-dom';
 import {useContext} from "react";
 import {SymptomsContext} from "./ContextComponent";
+import Notes from "../images/notes.png";
 
 function Experience(props) {
 
@@ -76,13 +77,14 @@ function Experience(props) {
 
                 <div className='experiencingAndNotesWrapper'>
                     <div className='experiencing'>
-                        <p className='experiencingSmallTitle'>Experiencing:</p>
-                        <ul className="symptoms-list">
+                        <p className='experiencingSmallTitle'>Check off all the symptoms you are experiencing:</p>
+                        <div className="symptoms-list">
                             {symptoms.map(({name}, index) => {
                                 return (
-                                    <li key={index}>
+                                    <div key={index}>
                                         <div className="symptoms-list-item">
                                             <div className="symptomsChecklist">
+                                                <label htmlFor={`custom-checkbox-${index}`}>{name}</label>
                                                 <input
                                                     className='checkbox'
                                                     type="checkbox"
@@ -92,17 +94,20 @@ function Experience(props) {
                                                     checked={checkedState[index]}
                                                     onChange={() => handleChange(index)}
                                                 />
-                                                <label htmlFor={`custom-checkbox-${index}`}>{name}</label>
                                             </div>
                                         </div>
-                                    </li>
+                                    </div>
                                 );
                             })}
-                        </ul>
+                        </div>
                     </div>
 
                     <div className='notes'>
-                        <p className='experiencingSmallTitle'><label htmlFor="notes">Notes:</label></p>
+
+                        <div className='notesTitleWrapper'>
+                            <img src={Notes} className='experienceImage'/>
+                            <p className='experiencingSmallTitleRight'><label htmlFor="notes">Notes:</label></p>
+                        </div>
                         <textarea className='symptoms' id="notes" name="notes" required value={notes}
                                   onChange={(e) => setNotes(e.target.value)}/>
                     </div>

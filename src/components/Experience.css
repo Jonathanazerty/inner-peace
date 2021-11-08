@@ -43,33 +43,47 @@
 
 .experiencing {
     justify-self: end;
-    padding: 1rem;
     margin-right: 2rem;
     min-width: 70%;
     min-height: 100%;
-    border-radius: 16px;
-    display: flex;
-    flex-flow: column;
     background-color: rgba(145, 165, 255, 0.25);
     box-shadow: 5px 5px 10px rgba(100, 167, 255, 0.192);
+    border-radius: 16px;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
 }
 
-.experiencingSmallTitle{
-    font-size: 1.5rem;
+.experiencingSmallTitle {
+    font-size: 1.3rem;
     text-align: center;
     margin-bottom: 2rem;
     margin-top: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    overflow-wrap: break-word;
+}
+.experiencingSmallTitleRight {
+    font-size: 1.3rem;
+    align-self: end;
 }
 .symptomsChecklist{
     display: grid;
-    grid-template-columns: 10% 90%;
+    grid-template-columns: 80% auto;
     align-items: center;
     margin-bottom: 0.8rem;
+    background-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 5px 5px 10px rgba(100, 167, 255, 0.192);
+    border-radius: 16px;
+    padding: 1rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
 }
 
 .notes {
     justify-self: start;
     padding: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
     margin-left: 2rem;
     min-width: 70%;
     min-height: auto;
@@ -98,10 +112,22 @@
     padding: 1rem;
     box-shadow: 2px 2px 10px darkgrey;
     overflow: auto;
+    margin-top: 2rem;
+}
+.experienceImage{
+    width: 4rem;
+    background-color: #eeeeee;
+    border-radius: 50%;
+    padding: 0.5rem;
+    align-self: start;
+}
+.notesTitleWrapper{
+    display: grid;
+    grid-template-columns: 40% 60%;
 }
 .checkbox{
-    width: 1.2em;
-    height: 1.2em;
+    width: 1.3em;
+    height: 1.3em;
     background-color: white;
     border-radius: 50%;
     vertical-align: middle;
@@ -110,17 +136,15 @@
     -webkit-appearance: none;
     outline: none;
     cursor: pointer;
+    justify-self: end;
 }
 label{
     margin-bottom: 0;
+    cursor: pointer;
 }
 .checkbox:checked {
-    background-color: rgba(7, 19, 118, 0.64);
-    border: solid white 5px;
-}
-
-ul {
-    list-style-type: none;
+    background-color: rgba(7, 19, 118, 0.58);
+    /*border: solid white 1px;*/
 }
 
 @media only screen and (max-width: 950px) {
