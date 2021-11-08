@@ -31,7 +31,8 @@
     background-color: #91a5ff15;
     box-shadow: 5px 5px 10px rgba(100, 167, 255, 0.192);
 }
-.experienceTitle{
+
+.experienceTitle {
     text-align: center;
     padding-bottom: 2rem;
 }
@@ -62,11 +63,13 @@
     margin-right: 2rem;
     overflow-wrap: break-word;
 }
+
 .experiencingSmallTitleRight {
     font-size: 1.3rem;
     align-self: end;
 }
-.symptomsChecklist{
+
+.symptomsChecklist {
     display: grid;
     grid-template-columns: 80% auto;
     align-items: center;
@@ -114,18 +117,21 @@
     overflow: auto;
     margin-top: 2rem;
 }
-.experienceImage{
+
+.experienceImage {
     width: 4rem;
     background-color: #eeeeee;
     border-radius: 50%;
     padding: 0.5rem;
     align-self: start;
 }
-.notesTitleWrapper{
+
+.notesTitleWrapper {
     display: grid;
     grid-template-columns: 40% 60%;
 }
-.checkbox{
+
+.checkbox {
     width: 1.3em;
     height: 1.3em;
     background-color: white;
@@ -138,23 +144,38 @@
     cursor: pointer;
     justify-self: end;
 }
-label{
+
+label {
     margin-bottom: 0;
     cursor: pointer;
 }
+
 .checkbox:checked {
     background-color: rgba(7, 19, 118, 0.58);
     /*border: solid white 1px;*/
+}
+
+@media only screen and (max-width: 1200px) {
+    .notes {
+        justify-self: auto;
+    }
+
+    .symptomsChecklist {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
 }
 
 @media only screen and (max-width: 950px) {
     .experienceHeader {
         grid-template-columns: auto auto;
     }
+
     .experiencingAndNotesWrapper {
         display: grid;
         grid-template-columns: 100%;
     }
+
     .experiencing {
         justify-self: center;
         padding: 1.5rem;
@@ -164,21 +185,25 @@ label{
         min-width: 100%;
         min-height: auto;
     }
+
     .notes {
         justify-self: center;
         padding: 1.5rem;
         padding-bottom: 2rem;
         margin: 1rem;
         min-width: 100%;
-        min-height: auto;
+        min-height: 30rem;
     }
-    .experienceHeader{
+
+    .experienceHeader {
         justify-content: space-between;
     }
-    .experienceTitle{
+
+    .experienceTitle {
         font-size: 1.2rem;
     }
-    .experienceMain{
+
+    .experienceMain {
         margin: 2rem;
     }
 }
@@ -187,7 +212,17 @@ label{
     .experienceHeader {
         grid-template-columns: auto;
     }
-    .experienceMain{
-        margin: 1rem;
+    .experienceMain {
+        margin: 0;
+    }
+    .symptomsChecklist {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        padding: 0.5rem;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .experienceMain {
+        padding: 0.7rem;
     }
 }
