@@ -29,13 +29,18 @@ const Entries = (props) => {
                     <h3 className='entriesTitle'>{today}</h3>
                     <h4 className='entriesTitle'>{feel}</h4>
                     <div className='experiencingAndNotesWrapper' id='entriesCarouselWrapper'>
-                    <div className='experiencing'>
-                        <p>Experiencing:</p>
-                        <div className='symptoms'>
-                        <div> {checkboxes}</div>
+                        <div className='experiencing'>
+                            <p>Experiencing:</p>
+                            <div className='symptoms'>
+                            {checkboxes}
+                            </div>
                         </div>
-                    </div>
-                    <div className='notes'>{props.location.state}</div>
+                        <div className='notes'>
+                            <p>Notes:</p>
+                            <div className='symptoms'>
+                            {props.location.state}
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <Entry number='0'/>

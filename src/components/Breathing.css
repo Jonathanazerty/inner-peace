@@ -8,7 +8,7 @@
     box-shadow: 5px 5px 5px rgba(100, 167, 255, 0.192);
 }
 
-.start-breathing, .restart, .stop{
+.start-breathing, .restart, .stop, .button-guidance{
     padding: 10px;
     padding-left: 20px;
     padding-right: 20px;
@@ -20,7 +20,7 @@
     font-size: 20px;
 }
 
-.start-breathing:hover, .restart:hover, .stop:hover {
+.start-breathing:hover, .restart:hover, .stop:hover, .button-guidance:hover {
     transform: scale(1.2);
 }
 
