@@ -123,7 +123,7 @@ const Guidance = (props) => {
                     <p>Click on button to get advice on what it means to <b>relax !</b></p>
                   </div>
                   <div className="grid-left2" style={{ margin: '10px'}}>
-                    <img className="icon-guidance" src={love} alt="positive"style={{ height: "70px", width: "70px", float: "right", margin:"5px"}}/>
+                    <img className="icon-guidance" src={love} alt="positive" style={{ height: "70px", width: "70px", float: "right", margin:"5px"}}/>
                     <button className="button-modals" onClick={openTalk}>Talk about your feelings</button>
                     <p>Click on button to get advice on what it means to <b>talk about your feelings !</b></p>
                   </div>

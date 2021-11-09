@@ -26,10 +26,6 @@ body {
   box-shadow: 5px 5px 5px rgba(100, 167, 255, 0.192);
 }
 
-.icon-guidance:hover{
-  transform: scale(1.2);
-}
-
 .tree {
     grid-column-start: 2;
     grid-column-end: 3;
