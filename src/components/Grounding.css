@@ -1,3 +1,6 @@
+html, body{
+    height: auto;
+}
 .groundingBody {
     display: flex;
     flex-flow: column;
