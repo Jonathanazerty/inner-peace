@@ -20,17 +20,23 @@ body {
 }
 
 .feelingSubmit {
-    background-color: #507DBC;
+    min-width: 12rem;
+    background-color: rgb(100, 167, 255);
     color: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(217, 217, 255);
     font-weight: bold;
     text-decoration: none;
     cursor: pointer;
     text-align: center;
-    border-radius: 16px;
     padding: 0.5rem;
     margin: 1rem;
-    box-shadow: 1px 1px 2px #868686;
-    min-width: 12rem;
+}
+.feelingSubmit:hover {
+    background-color: rgb(116, 177, 255);
+    text-decoration: none;
+    color: white;
 }
 
 .feelingWrapper {

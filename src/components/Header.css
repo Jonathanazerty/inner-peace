@@ -1,12 +1,12 @@
 .header{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 .headerButton{
     background-color: rgb(100, 167, 255);
     color: white;
     border: none;
-    border-radius: 16px;
+    border-radius: 10px;
     box-shadow: 5px 5px 5px rgb(217, 217, 255);
     font-weight: bold;
     text-decoration: none;
@@ -14,8 +14,7 @@
     text-align: center;
     padding: 0.5rem;
     margin: 1rem;
-    min-height: 3rem;
-    min-width: 5rem;
+    min-width: 12rem;
 }
 
 .headerButton:hover {
