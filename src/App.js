@@ -21,9 +21,6 @@ function App() {
 
     return (
         <div className="App">
-            <header className="App-header">
-                <Header/>
-            </header>
             <Router>
                 <div align="center" justify="center" text="center">
                     <Link to="/Intro"><input className="submit" type="submit" id="Intro"
@@ -63,7 +60,7 @@ function App() {
                                                value="Entries"/></Link>
                 </div>
                 <Switch>
-                    <Route path="/Intro" exact component={Intro}/>
+                    <Route path="/" exact component={Intro}/>
                     <Route path="/Name" component={Name}/>
                     <FeelingContext.Provider value={{feel, setFeel}}>
                         <Route path="/Feeling" component={Feeling}/>

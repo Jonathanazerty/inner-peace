@@ -8,9 +8,15 @@ import eat from '../images/vegetable.png';
 import question from '../images/question.png';
 import { Container, Row, Col } from 'react-grid-system';
 import { useHistory } from 'react-router-dom';
-import { Modal } from './Modal';
+import { ModalRelax } from './ModalRelax';
+import { ModalTalk } from './ModalTalk';
+import { ModalAccept } from './ModalAccept';
+import { ModalExercise } from './ModalExercise';
+import { ModalFood } from './ModalFood';
+import { ModalHelp } from './ModalHelp';
 
-const Guidance = () => {
+const Guidance = (props) => {
+  console.log(props)
 
   let history = useHistory();
 
@@ -26,14 +32,64 @@ const Guidance = () => {
     history.push('/Breathing')
   }
   
-  const [showModal, setShowModal] = useState(false)
+  /* Modals */
+  const [showRelax, setShowRelax] = useState(false)
 
-  const openModal = () => {
-    setShowModal(prev => !prev);
+  const openRelax = () => {
+    setShowRelax(prev => !prev);
   }
-    
+
+  const [showTalk, setShowTalk] = useState(false)
+
+  const openTalk = () => {
+    setShowTalk(prev => !prev);
+  }
+
+  const [showAccept, setShowAccept] = useState(false)
+
+  const openAccept = () => {
+    setShowAccept(prev => !prev);
+  }
+
+  const [showExercise, setShowExercise] = useState(false)
+
+  const openExercise = () => {
+    setShowExercise(prev => !prev);
+  }
+
+  const [showFood, setShowFood] = useState(false)
+
+  const openFood = () => {
+    setShowFood(prev => !prev);
+  }
+
+  const [showHelp, setShowHelp] = useState(false)
+
+  const openHelp = () => {
+    setShowHelp(prev => !prev);
+  }
+
     return (
       <>
+        <ModalRelax                                 
+          showModal={showRelax} setShowModal={setShowRelax}
+        />
+        <ModalTalk                                 
+          showModal={showTalk} setShowModal={setShowTalk}
+        />
+        <ModalAccept                                 
+          showModal={showAccept} setShowModal={setShowAccept}
+        />
+        <ModalExercise                                 
+          showModal={showExercise} setShowModal={setShowExercise}
+        />
+        <ModalFood                                 
+          showModal={showFood} setShowModal={setShowFood}
+        />
+        <ModalHelp                                 
+          showModal={showHelp} setShowModal={setShowHelp}
+        />
+
         <div className='guidance-header'>
           <Container fluid>
             <Row direction="row" style={{ margin: '10px' }} >
@@ -62,33 +118,19 @@ const Guidance = () => {
               <div className='guidance-main'>
                 <div className="guidance-content" justify="center">
                   <div className="grid-left1" style={{ margin: '10px'}}>
-                    <img className="icon-guidance" onClick={openModal} src={read} alt="read" style={{ height: "70px", width: "70px", float: "right", margin:"5px"}}/>
-                    {/* <b>Relax</b><br></br> */}
-                    <button className="button-breathing" onClick={openModal}>Relax</button>
-                    <Modal showModal={showModal} setShowModal={setShowModal}/>
+                    <img className="icon-guidance" src={read} alt="read" style={{ height: "70px", width: "70px", float: "right", margin:"5px"}}/>
+                    <button className="button-modals" onClick={openRelax}>Relax</button>
+                    <p>Click on button to get advice on what it means to <b>relax !</b></p>
                   </div>
                   <div className="grid-left2" style={{ margin: '10px'}}>
                     <img className="icon-guidance" src={love} alt="positive"style={{ height: "70px", width: "70px", float: "right", margin:"5px"}}/>
-                    <b>Talking about your feelings </b>
-                      <ul>
-                        <li>If it feels awkward at first, give it time. </li>
-                        <li>Make talking about your feelings something that you do.</li>
-                        <li>Talking about your feelings isn’t a sign of weakness. </li>
-                        <li>It’s part of taking charge of your wellbeing and doing what you can to stay healthy.</li>
-                        <li>Talking can be a way to cope with a problem you’ve been carrying around in your head for a while.<br></br>
-                            Just being listened to can help you feel supported and less alone. </li>
-                        <li>And it works both ways. If you open up, it might encourage others to do the same.</li>
-                      </ul>
+                    <button className="button-modals" onClick={openTalk}>Talk about your feelings</button>
+                    <p>Click on button to get advice on what it means to <b>talk about your feelings !</b></p>
                   </div>
                   <div className="grid-left3" style={{ margin: '10px'}}>
                     <img className="icon-guidance" src={sleep} alt="sleep" style={{ height: "70px", width: "70px", float: "right", margin:"5px"}}/>
-                    <b>Accept who you are</b>
-                      <ul>
-                        <li>We’re all different.</li>
-                        <li>It’s much healthier to accept that you’re unique than to wish you were more like someone else.</li>
-                        <li>Feeling good about yourself boosts your confidence to learn new skills, visit new places and make new friends.</li>
-                        <li>Good self-esteem helps you cope when life takes a difficult turn.</li>
-                      </ul>
+                    <button className="button-modals" onClick={openAccept}>Accept who you are</button>
+                    <p>Click on button to get advice on what it means to <b>accept who you are !</b></p>
                   </div>
                   <div class="tree">
                     <svg id="animation" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 302.7 436.37">
@@ -174,37 +216,18 @@ const Guidance = () => {
                   </div>
                   <div className="grid-right1" style={{ margin: '10px'}}>
                     <img className="icon-guidance" src={run} alt="sport" style={{ height: "70px", width: "70px", float: "right", margin:"5px"}}/>
-                    <b>Exercise</b>
-                      <ul>
-                        <li>Experts believe exercise releases chemicals in your brain that make you feel good. </li>
-                        <li>Regular exercise can boost your self-esteem and help you concentrate, sleep and feel better.</li>
-                        <li>Exercising doesn’t just mean doing sport or going to the gym. <br></br>
-                            Walks in the park, gardening or housework can also keep you active.</li>
-                        <li>Experts say most people should do about 30 minutes’ exercise at least five days a week.</li>
-                        <li>Try to make physical activity that you enjoy a part of your day.</li>
-                        <li>Helps you feel good and maintain your health</li>
-                      </ul>
+                    <button className="button-modals" onClick={openExercise}>Exercise</button>
+                    <p>Click on button to get advice on what it means to <b>exercise !</b></p>
                   </div>
                   <div className="grid-right2" style={{ margin: '10px'}}>
                     <img className="icon-guidance" src={eat} alt="eat" style={{ height: "70px", width: "70px", float: "right", margin:"5px"}}/>
-                    <b>Eat and drink</b>
-                      <ul>
-                        <li>Strong links between what we eat and how we feel.</li>
-                        <li>Eat at least three meals each day and drink plenty of water.</li>
-                        <li>Try to limit how many high-caffeine or sugary drinks you have, and avoid too much alcohol.</li>
-                        <li>But food can also have a long-lasting effect on your mental health.</li>
-                        <li>Your brain needs a mix of nutrients to stay healthy and function well, just like the other organs in your body.
-                        </li>
-                      </ul>
+                    <button className="button-modals" onClick={openFood}>Food and Drinks</button>
+                    <p>Click on button to get advice on what it means to <b>watch what you eat and drink !</b></p>
                   </div>
                   <div className="grid-right3" style={{ margin: '10px'}}>
                     <img className="icon-guidance" src={question} alt="help" style={{ height: "70px", width: "70px", float: "right", margin:"5px"}}/>
-                    <b>Professional help</b>
-                      <ul>
-                        <li>Don't be worried or afraid to talk to a physician or therapist</li>
-                        <li>None of us are superhuman. We all sometimes get tired or overwhelmed by how we feel or when things go wrong.</li> 
-                        <li>If things are getting too much for you and you feel you can’t cope, ask for help.</li>
-                      </ul>
+                    <button className="button-modals" onClick={openHelp}>Professional Help</button>
+                    <p>Click on button to get advice on what it means to <b>get professional help !</b></p>
                   </div>
                 </div>
               </div>
