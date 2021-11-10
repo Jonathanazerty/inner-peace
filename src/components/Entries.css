@@ -42,6 +42,7 @@ p{
 }
 
 .entriesNotes {
+    margin: 1rem;
     padding-top: 2rem;
     min-width: 70%;
     min-height: 15rem;
