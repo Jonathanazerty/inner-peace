@@ -19,8 +19,7 @@ const Entries = (props) => {
         slidesToShow: 1,
         slidesToScroll: 1
     };
-    console.log(checkboxes)
-    console.log(props)
+
     return (
         <div className='entriesMain'>
             <h2 className='previousEntries'> Previous Entries </h2>
