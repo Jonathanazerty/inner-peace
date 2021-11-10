@@ -28,7 +28,7 @@ const Entries = (props) => {
                     <h3 className='entriesTitle'>{today}</h3>
                     <h4 className='entriesTitle'>{feel}</h4>
                     <div className='experiencingAndNotesWrapper' id='entriesCarouselWrapper'>
-                        <div className='experiencing'>
+                        <div className='entriesNotes'>
                             <p className='entriesCarouselTitle'>Experiencing:</p>
                             <div className='entriesSymptoms'>
                                 {checkboxes.map(symptom => {
