@@ -44,7 +44,7 @@
 }
 
 .experiencing {
-    justify-self: end;
+    justify-self: auto;
     margin-right: 2rem;
     min-width: 70%;
     min-height: 100%;
@@ -84,7 +84,7 @@
 }
 
 .notes {
-    justify-self: start;
+    justify-self: auto;
     padding: 1rem;
     padding-top: 2rem;
     padding-bottom: 1rem;
