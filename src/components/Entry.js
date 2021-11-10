@@ -9,12 +9,15 @@ function Entry(props) {
             <div className='experiencingAndNotesWrapper' id='entriesCarouselWrapper'>
                 <div className='experiencing'>
                     <p>Experiencing:</p>
-                    <div className='symptoms'>
+                    <div className='entriesSymptoms'>
                         {data[props.number].Experiencing}
                     </div>
                 </div>
-                <div className='notes'>
-                    {data[props.number].Notes}
+                <div className='entriesNotes'>
+                    <p>Notes:</p>
+                    <div className='entriesSymptoms'>
+                        {data[props.number].Notes}
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,13 +1,42 @@
-.entriesTitle{
+.entriesTitle {
     text-align: center;
     margin: 2rem;
 }
-.entriesMain{
+
+.entriesMain {
     margin: 2rem;
 }
-#entriesCarouselWrapper{
+
+#entriesCarouselWrapper {
     margin-bottom: 3rem;
 }
-.previousEntries{
+
+.previousEntries {
     text-align: center;
+}
+
+.entriesSymptoms {
+    background-color: #f1f6f6;
+    border-radius: 16px;
+    padding: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    box-shadow: 2px 2px 10px darkgrey;
+    overflow: auto;
+}
+
+.entriesCarouselTitle {
+    padding: 1rem;
+    font-size: 1.3rem;
+}
+
+.entriesNotes {
+    padding-top: 2rem;
+    min-width: 70%;
+    min-height: 15rem;
+    border-radius: 16px;
+    display: flex;
+    flex-flow: column;
+    background-color: rgba(145, 165, 255, 0.25);
+    box-shadow: 5px 5px 10px rgba(100, 167, 255, 0.192);
 }

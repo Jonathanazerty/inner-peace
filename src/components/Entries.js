@@ -29,14 +29,14 @@ const Entries = (props) => {
                     <h4 className='entriesTitle'>{feel}</h4>
                     <div className='experiencingAndNotesWrapper' id='entriesCarouselWrapper'>
                         <div className='experiencing'>
-                            <p>Experiencing:</p>
-                            <div className='symptoms'>
+                            <p className='entriesCarouselTitle'>Experiencing:</p>
+                            <div className='entriesSymptoms'>
                             {checkboxes}
                             </div>
                         </div>
-                        <div className='notes'>
-                            <p>Notes:</p>
-                            <div className='symptoms'>
+                        <div className='entriesNotes'>
+                            <p className='entriesCarouselTitle'>Notes:</p>
+                            <div className='entriesSymptoms'>
                             {props.location.state}
                             </div>
                         </div>
