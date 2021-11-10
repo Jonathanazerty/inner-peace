@@ -1,4 +1,9 @@
-
+.entriesMain {
+    padding: 2rem;
+    border-radius: 16px;
+    background-color: #91a5ff15;
+    box-shadow: 5px 5px 10px rgba(100, 167, 255, 0.192);
+}
 .entriesTitle {
     text-align: center;
     margin: 2rem;
@@ -15,6 +20,7 @@
 .previousEntries {
     text-align: center;
 }
+
 
 .entriesSymptoms {
     background-color: #f1f6f6;
