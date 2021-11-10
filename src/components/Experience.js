@@ -42,6 +42,7 @@ function Experience(props) {
     const [checkedState, setCheckedState] = useState(
         new Array(symptoms.length).fill(false)
     );
+    const [showError, setShowError] = useState(false);
 
     let history = useHistory();
 
@@ -49,6 +50,10 @@ function Experience(props) {
         history.push('/Guidance')
         history.push('/Entries', [notes])
     }
+    const Error = () =>
+        <div className='errorMessage'> Please check off a symptom or write something in the notes 📖 </div>
+
+
     const handleChange = (position) => {
         const updatedCheckedState = checkedState.map((item, index) => {
                 if (index === position) {
@@ -61,11 +66,14 @@ function Experience(props) {
     }
 
     const handleSymptoms = () => {
-        nextPage();
-        handleChange();
-        setCheckboxes(filteredSymptoms.map(filteredSymptom => filteredSymptom.name))
-    }
-
+        if (filteredSymptoms.length > 0 || notes !== '') {
+            nextPage();
+            handleChange();
+            setCheckboxes(filteredSymptoms.map(filteredSymptom => filteredSymptom.name))
+        } else {
+            setShowError(true)
+        }
+    };
 
     return (
         <div>
@@ -113,9 +121,12 @@ function Experience(props) {
                     </div>
                 </div>
                 <div className='experienceSubmitWrapper'>
-                    <button className='experienceButton' id='experienceSubmit' value="Confirm"
-                            onClick={() => handleSymptoms()}> Confirm symptoms
-                    </button>
+                    <div>
+                        <button className='experienceButton' id='experienceSubmit' value="Confirm"
+                                onClick={() => handleSymptoms()}> Confirm symptoms
+                        </button>
+                    </div>
+                    {showError ? <Error/> : null}
                 </div>
             </div>
         </div>
