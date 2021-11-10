@@ -24,7 +24,7 @@ body {
 
 .feelingSubmit {
     min-width: 12rem;
-    background-color: rgb(100, 167, 255);
+    background-color: #5eafe5;
     color: white;
     border: none;
     border-radius: 10px;
@@ -37,7 +37,7 @@ body {
     margin: 1rem;
 }
 .feelingSubmit:hover {
-    background-color: rgb(116, 177, 255);
+    background-color: #6ab6e8;
     text-decoration: none;
     color: white;
 }
@@ -50,6 +50,7 @@ body {
 
 .feelingTitle {
     text-align: center;
+    color: #04539a;
 }
 
 .feelingIcon {

@@ -85,7 +85,7 @@ function Experience(props) {
 
                 <div className='experiencingAndNotesWrapper'>
                     <div className='experiencing'>
-                        <p className='experiencingSmallTitle'>Check off all the symptoms you are experiencing:</p>
+                        <p className='experiencingSmallTitle'>Check off <em>all</em> the symptoms you are experiencing:</p>
                         <div className="symptoms-list">
                             {symptoms.map(({name}, index) => {
                                 return (
@@ -114,7 +114,7 @@ function Experience(props) {
 
                         <div className='notesTitleWrapper'>
                             <img src={Notes} className='experienceImage'/>
-                            <p className='experiencingSmallTitleRight'><label htmlFor="notes">Notes:</label></p>
+                            <p className='experiencingSmallTitleRight'><label htmlFor="notes">Anything to add?</label></p>
                         </div>
                         <textarea className='symptoms' id="notes" name="notes" required value={notes}
                                   onChange={(e) => setNotes(e.target.value)}/>

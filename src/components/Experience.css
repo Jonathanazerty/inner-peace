@@ -1,5 +1,5 @@
 .experienceButton {
-    background-color: rgb(100, 167, 255);
+    background-color: #5eafe5;
     color: white;
     border: none;
     border-radius: 10px;
@@ -15,7 +15,7 @@
 }
 
 .experienceButton:hover {
-    background-color: rgb(116, 177, 255);
+    background-color: #6ab6e8;
     text-decoration: none;
     color: white;
 }
@@ -24,6 +24,7 @@
     text-align: center;
     font-size: 1.5rem;
     margin-bottom: 2rem;
+    color: #04539a;
 }
 
 .experienceMain {
@@ -41,11 +42,14 @@
 .experienceTitle {
     text-align: center;
     padding-bottom: 2rem;
+    font-size: 2rem;
+    color: #04539a;
 }
 
 .experiencingAndNotesWrapper {
     display: grid;
     grid-template-columns: 50% 50%;
+    color: #04539a;
 }
 
 .experiencing {
@@ -135,7 +139,7 @@
 
 .notesTitleWrapper {
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 35% 65%;
 }
 
 .checkbox {
@@ -207,7 +211,7 @@ label {
     }
 
     .experienceTitle {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         padding-bottom: 1rem;
     }
 

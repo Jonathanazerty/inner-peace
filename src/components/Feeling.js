@@ -71,6 +71,8 @@ const Feeling = (props) => {
                             getAriaValueText={valuetext}
                             defaultValue={30}
                             onChange={changeEmoji}
+                            sx={{
+                                color: '#04539a'}}
                         />
                     </Stack>
                 </div>
