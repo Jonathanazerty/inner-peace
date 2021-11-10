@@ -7,7 +7,7 @@ function Entry(props) {
             <h3 className='entriesTitle'>{data[props.number].Date}</h3>
             <h4 className='entriesTitle'>{data[props.number].Feeling}</h4>
             <div className='experiencingAndNotesWrapper' id='entriesCarouselWrapper'>
-                <div className='experiencing'>
+                <div className='entriesNotes'>
                     <p className='entriesCarouselTitle'>Experiencing:</p>
                     <div className='entriesSymptoms'>
                         {data[props.number].Experiencing}
