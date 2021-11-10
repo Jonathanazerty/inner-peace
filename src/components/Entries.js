@@ -31,13 +31,17 @@ const Entries = (props) => {
                         <div className='experiencing'>
                             <p className='entriesCarouselTitle'>Experiencing:</p>
                             <div className='entriesSymptoms'>
-                            {checkboxes}
+                                {checkboxes.map(symptom => {
+                                    return (
+                                        <p> {symptom}</p>
+                                    )
+                                })}
                             </div>
                         </div>
                         <div className='entriesNotes'>
                             <p className='entriesCarouselTitle'>Notes:</p>
                             <div className='entriesSymptoms'>
-                            {props.location.state}
+                                {props.location.state}
                             </div>
                         </div>
                     </div>
@@ -52,3 +56,4 @@ const Entries = (props) => {
 }
 
 export default Entries;
+
