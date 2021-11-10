@@ -1,7 +1,6 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import './Experience.css';
 import {useHistory} from 'react-router-dom';
-import {useContext} from "react";
 import {SymptomsContext} from "./ContextComponent";
 import Notes from "../images/notes.png";
 
@@ -55,11 +54,19 @@ function Experience(props) {
 
 
     const handleChange = (position) => {
-        const updatedCheckedState = checkedState.map((item, index) => {
+        const updatedCheckedState = checkedState.map((isChecked, index) => {
                 if (index === position) {
-                    setFilteredsymptoms([...filteredSymptoms, {name: symptoms[index].name, state: false}])
+                    if (isChecked) {
+                        setFilteredsymptoms(filteredSymptoms.filter((symptom) => {
+                            return symptom.name !== symptoms[position].names
+                        }))
+                    } else {
+                        setFilteredsymptoms([...filteredSymptoms, {name: symptoms[position].name, state: false}])
+                    }
+
+                    return !isChecked;
                 }
-                return console.log('')
+                return isChecked;
             }
         )
         setCheckedState(updatedCheckedState);
@@ -68,7 +75,6 @@ function Experience(props) {
     const handleSymptoms = () => {
         if (filteredSymptoms.length > 0 || notes !== '') {
             nextPage();
-            handleChange();
             setCheckboxes(filteredSymptoms.map(filteredSymptom => filteredSymptom.name))
         } else {
             setShowError(true)
@@ -85,7 +91,8 @@ function Experience(props) {
 
                 <div className='experiencingAndNotesWrapper'>
                     <div className='experiencing'>
-                        <p className='experiencingSmallTitle'>Check off <em>all</em> the symptoms you are experiencing:</p>
+                        <p className='experiencingSmallTitle'>Check off <em>all</em> the symptoms you are experiencing:
+                        </p>
                         <div className="symptoms-list">
                             {symptoms.map(({name}, index) => {
                                 return (
@@ -94,7 +101,7 @@ function Experience(props) {
                                             <div className="symptomsChecklist">
                                                 <label htmlFor={`custom-checkbox-${index}`}>{name}</label>
                                                 <input
-                                                    className='checkbox'
+                                                    className={checkedState[index] ? 'checkboxChecked' : 'checkbox'}
                                                     type="checkbox"
                                                     id={`custom-checkbox-${index}`}
                                                     name={name}
@@ -114,7 +121,8 @@ function Experience(props) {
 
                         <div className='notesTitleWrapper'>
                             <img src={Notes} className='experienceImage'/>
-                            <p className='experiencingSmallTitleRight'><label htmlFor="notes">Anything to add?</label></p>
+                            <p className='experiencingSmallTitleRight'><label htmlFor="notes">Anything to add?</label>
+                            </p>
                         </div>
                         <textarea className='symptoms' id="notes" name="notes" required value={notes}
                                   onChange={(e) => setNotes(e.target.value)}/>

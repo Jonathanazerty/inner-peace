@@ -155,7 +155,9 @@
     cursor: pointer;
     justify-self: end;
 }
-
+.checkboxChecked{
+    background-color: #141fa0;
+}
 label {
     margin-bottom: 0;
     cursor: pointer;
