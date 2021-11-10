@@ -92,18 +92,18 @@ const Guidance = (props) => {
 
         <div className='guidance-header'>
           <Container fluid>
-            <Row direction="row" style={{ margin: '10px' }} >
-              <Col xs={4} align="center" justify="center" text="center">
+            <Row direction="row" className='guidance-buttons' >
+              <Col className='guidance-button' >
                 <div>
                     <button className="button-breathing" onClick={Breathing} >Breathing</button>
                 </div>
               </Col>
-              <Col xs={4} align="center" justify="center" text="center">
+              <Col className='guidance-button'>
                 <div>
                   <button className="button-help" onClick={Help} >Find Help</button>
                 </div>
               </Col>
-              <Col xs={4} align="center" justify="center" text="center">
+              <Col className='guidance-button'>
                 <div>
                     <button className="button-grounding" onClick={Grounding} >Grounding</button>
                 </div>
@@ -111,25 +111,31 @@ const Guidance = (props) => {
             </Row>
           </Container>
         </div>
-        <div className='guidance' style={{ height: "auto", width: "auto", marginTop:"20px"}}>
+        <div className='guidance'>
               <h1 align="center" justify="center" text="center">
                 Guidance
               </h1>
               <div className='guidance-main'>
-                <div className="guidance-content" justify="center">
-                  <div className="grid-left1" style={{ margin: '10px'}}>
-                    <img className="icon-guidance" src={read} alt="read" style={{ height: "70px", width: "70px", float: "right", margin:"5px"}}/>
-                    <button className="button-modals" onClick={openRelax}>Relax</button>
+                <div className="guidance-content" justify="center" style={{ margin: '10px'}}>
+                  <div className="grid-left1">
+                    <img className="icon-guidance" src={read} alt="read"/>
+                    <div>
+                      <button className="button-modals" onClick={openRelax}>Relax</button>
+                    </div>
                     <p>Click on button to get advice on what it means to <b>relax !</b></p>
                   </div>
-                  <div className="grid-left2" style={{ margin: '10px'}}>
-                    <img className="icon-guidance" src={love} alt="positive" style={{ height: "70px", width: "70px", float: "right", margin:"5px"}}/>
-                    <button className="button-modals" onClick={openTalk}>Talk about your feelings</button>
+                  <div className="grid-left2">
+                    <img className="icon-guidance" src={love} alt="positive"/>
+                    <div>
+                      <button className="button-modals" onClick={openTalk}>Talk about your feelings</button>
+                    </div>
                     <p>Click on button to get advice on what it means to <b>talk about your feelings !</b></p>
                   </div>
-                  <div className="grid-left3" style={{ margin: '10px'}}>
-                    <img className="icon-guidance" src={sleep} alt="sleep" style={{ height: "70px", width: "70px", float: "right", margin:"5px"}}/>
-                    <button className="button-modals" onClick={openAccept}>Accept who you are</button>
+                  <div className="grid-left3">
+                    <img className="icon-guidance" src={sleep} alt="sleep"/>
+                    <div>
+                      <button className="button-modals" onClick={openAccept}>Accept who you are</button>
+                    </div>
                     <p>Click on button to get advice on what it means to <b>accept who you are !</b></p>
                   </div>
                   <div class="tree">
@@ -214,19 +220,25 @@ const Guidance = (props) => {
                       </g>
                     </svg>
                   </div>
-                  <div className="grid-right1" style={{ margin: '10px'}}>
-                    <img className="icon-guidance" src={run} alt="sport" style={{ height: "70px", width: "70px", float: "right", margin:"5px"}}/>
-                    <button className="button-modals" onClick={openExercise}>Exercise</button>
+                  <div className="grid-right1">
+                    <img className="icon-guidance" src={run} alt="sport"/>
+                    <div>
+                      <button className="button-modals" onClick={openExercise}>Exercise</button>
+                    </div>
                     <p>Click on button to get advice on what it means to <b>exercise !</b></p>
                   </div>
-                  <div className="grid-right2" style={{ margin: '10px'}}>
-                    <img className="icon-guidance" src={eat} alt="eat" style={{ height: "70px", width: "70px", float: "right", margin:"5px"}}/>
-                    <button className="button-modals" onClick={openFood}>Food and Drinks</button>
+                  <div className="grid-right2">
+                    <img className="icon-guidance" src={eat} alt="eat"/>
+                    <div>
+                      <button className="button-modals" onClick={openFood}>Food and Drinks</button>
+                    </div>
                     <p>Click on button to get advice on what it means to <b>watch what you eat and drink !</b></p>
                   </div>
-                  <div className="grid-right3" style={{ margin: '10px'}}>
-                    <img className="icon-guidance" src={question} alt="help" style={{ height: "70px", width: "70px", float: "right", margin:"5px"}}/>
-                    <button className="button-modals" onClick={openHelp}>Professional Help</button>
+                  <div className="grid-right3">
+                    <img className="icon-guidance" src={question} alt="help"/>
+                    <div>
+                      <button className="button-modals" onClick={openHelp}>Professional Help</button>
+                    </div>
                     <p>Click on button to get advice on what it means to <b>get professional help !</b></p>
                   </div>
                 </div>
