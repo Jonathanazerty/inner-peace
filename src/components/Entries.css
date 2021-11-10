@@ -24,6 +24,10 @@
     margin-right: 1rem;
     box-shadow: 2px 2px 10px darkgrey;
     overflow: auto;
+    font-size: 1rem;
+}
+p{
+    font-size: 1rem;
 }
 
 .entriesCarouselTitle {
