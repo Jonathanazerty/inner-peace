@@ -98,10 +98,10 @@ function Experience(props) {
                                 return (
                                     <div key={index}>
                                         <div className="symptoms-list-item">
-                                            <div className="symptomsChecklist">
+                                            <div className={checkedState[index] ? 'symptomsChecklistChecked' : 'symptomsChecklist'}>
                                                 <label htmlFor={`custom-checkbox-${index}`}>{name}</label>
                                                 <input
-                                                    className={checkedState[index] ? 'checkboxChecked' : 'checkbox'}
+                                                    className='checkbox'
                                                     type="checkbox"
                                                     id={`custom-checkbox-${index}`}
                                                     name={name}

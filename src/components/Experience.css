@@ -91,6 +91,19 @@
     margin-left: 4rem;
     margin-right: 4rem;
 }
+.symptomsChecklistChecked {
+    display: grid;
+    grid-template-columns: 80% auto;
+    align-items: center;
+    margin-bottom: 0.8rem;
+    background-color: rgba(255, 255, 255, 0.65);
+    box-shadow: 5px 5px 10px rgba(100, 167, 255, 0.192);
+    border-radius: 16px;
+    padding: 1rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
 
 .notes {
     justify-self: auto;
@@ -127,6 +140,7 @@
     box-shadow: 2px 2px 10px darkgrey;
     overflow: auto;
     margin-top: 2rem;
+    color: #04539a;
 }
 
 .experienceImage {
@@ -155,9 +169,7 @@
     cursor: pointer;
     justify-self: end;
 }
-.checkboxChecked{
-    background-color: #141fa0;
-}
+
 label {
     margin-bottom: 0;
     cursor: pointer;
