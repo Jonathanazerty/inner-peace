@@ -13,7 +13,7 @@ import {FeelingContext} from "./ContextComponent";
 
 const Feeling = (props) => {
 
-    const {feel, setFeel} = useContext(FeelingContext);
+    const {/*feel,*/ setFeel} = useContext(FeelingContext);
 
     const isMobile = useMediaQuery('(max-width : 650px)')
 

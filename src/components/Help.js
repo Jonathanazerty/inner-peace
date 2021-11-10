@@ -68,7 +68,7 @@ const Help = (props) => {
             <h2> Asking for help is brave !</h2>
             <div style={{ margin: '40px', marginTop: '70px'}}>
               {/* <GoogleMap mapContainerStyle={mapContainerStyle} zoom={8} center={center}></GoogleMap> */}
-              <iframe src="https://www.google.com/maps/d/embed?mid=1_NIgJ2l5J8IzI7hfAP6ESRYHeX8" width="870" height="500" />
+              <iframe title="Psychologists Map of Flanders in Belgium" src="https://www.google.com/maps/d/embed?mid=1_NIgJ2l5J8IzI7hfAP6ESRYHeX8" width="870" height="500" />
             </div>
             </Col>
          </Row>
