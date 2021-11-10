@@ -51,7 +51,7 @@ function Experience(props) {
         history.push('/Entries', [notes])
     }
     const Error = () =>
-        <div className='errorMessage'> Please check off a symptom or write something in the notes 📖 </div>
+        <div className='errorMessage'> ⚠️ Please check off a symptom or write something in the notes ⚠️ </div>
 
 
     const handleChange = (position) => {
