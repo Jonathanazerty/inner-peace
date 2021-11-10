@@ -122,21 +122,21 @@ const Guidance = (props) => {
                     <div>
                       <button className="button-modals" onClick={openRelax}>Relax</button>
                     </div>
-                    <p>Click on button to get advice on what it means to <b>relax !</b></p>
+                    <p className="text-guidance">Click on button to get advice on what it means to <b>relax !</b></p>
                   </div>
                   <div className="grid-left2">
                     <img className="icon-guidance" src={love} alt="positive"/>
                     <div>
                       <button className="button-modals" onClick={openTalk}>Talk about your feelings</button>
                     </div>
-                    <p>Click on button to get advice on what it means to <b>talk about your feelings !</b></p>
+                    <p className="text-guidance">Click on button to get advice on what it means to <b>talk about your feelings !</b></p>
                   </div>
                   <div className="grid-left3">
                     <img className="icon-guidance" src={sleep} alt="sleep"/>
                     <div>
                       <button className="button-modals" onClick={openAccept}>Accept who you are</button>
                     </div>
-                    <p>Click on button to get advice on what it means to <b>accept who you are !</b></p>
+                    <p className="text-guidance">Click on button to get advice on what it means to <b>accept who you are !</b></p>
                   </div>
                   <div class="tree">
                     <svg id="animation" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 302.7 436.37">
@@ -225,21 +225,21 @@ const Guidance = (props) => {
                     <div>
                       <button className="button-modals" onClick={openExercise}>Exercise</button>
                     </div>
-                    <p>Click on button to get advice on what it means to <b>exercise !</b></p>
+                    <p className="text-guidance">Click on button to get advice on what it means to <b>exercise !</b></p>
                   </div>
                   <div className="grid-right2">
                     <img className="icon-guidance" src={eat} alt="eat"/>
                     <div>
                       <button className="button-modals" onClick={openFood}>Food and Drinks</button>
                     </div>
-                    <p>Click on button to get advice on what it means to <b>watch what you eat and drink !</b></p>
+                    <p className="text-guidance">Click on button to get advice on what it means to <b>watch what you eat and drink !</b></p>
                   </div>
                   <div className="grid-right3">
                     <img className="icon-guidance" src={question} alt="help"/>
                     <div>
                       <button className="button-modals" onClick={openHelp}>Professional Help</button>
                     </div>
-                    <p>Click on button to get advice on what it means to <b>get professional help !</b></p>
+                    <p className="text-guidance">Click on button to get advice on what it means to <b>get professional help !</b></p>
                   </div>
                 </div>
               </div>

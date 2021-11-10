@@ -3,6 +3,7 @@ import './Breathing.css';
 import { CountdownCircleTimer } from 'react-countdown-circle-timer';
 import {Container, Row, Col} from 'react-grid-system';
 import { useHistory } from 'react-router-dom';
+import { useMediaQuery } from 'react-responsive';
 
 
 const renderTime1 = ({ remainingTime }) => {
@@ -12,8 +13,8 @@ const renderTime1 = ({ remainingTime }) => {
 
   return (
     <div className="timer">
-      <div className="text" style={{fontSize:"30px"}}>Breath IN for 4 seconds</div>
-      <div className="value" style={{fontSize:"70px"}} >{remainingTime}</div>
+      <div className="text" >Breath IN for 4 seconds</div>
+      <div className="value" >{remainingTime}</div>
     </div>
   );
 };
@@ -25,8 +26,8 @@ const renderTime2 = ({ remainingTime }) => {
 
   return (
     <div className="timer">
-      <div className="text" style={{fontSize:"30px"}}>HOLD breath for 8 seconds</div>
-      <div className="value" style={{fontSize:"70px"}} >{remainingTime}</div>
+      <div className="text" >HOLD breath for 8 seconds</div>
+      <div className="value" >{remainingTime}</div>
     </div>
   );
 };
@@ -38,8 +39,8 @@ const renderTime3 = ({ remainingTime }) => {
 
   return (
     <div className="timer">
-      <div className="text" style={{fontSize:"30px"}}>Breath OUT for 7 seconds</div>
-      <div className="value" style={{fontSize:"70px"}} >{remainingTime}</div>
+      <div className="text" >Breath OUT for 7 seconds</div>
+      <div className="value" >{remainingTime}</div>
     </div>
   );
 };
@@ -47,6 +48,10 @@ const renderTime3 = ({ remainingTime }) => {
 
 
 const Breathing = (props) => {
+
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1400px)' })
+  const isTabletOrMobile2 = useMediaQuery({ query: '(max-width: 1200px)' })
+  
 
   let history = useHistory();
 
@@ -128,48 +133,30 @@ const Breathing = (props) => {
           </Row>
         </Container>
       </div>
-        <div className="breathing" style={{
-           marginTop: '20px',
-           justifyContent: "center",
-           alignItems: "center",
-           textAlign: "center"
-         }}>
-          <Container fluid>
-            <Row direction="row" style={{ marginTop: '70px' }}>
-              <Col xs={7} className="text-breathing" align="center" justify="center" text="center">
-                <h1>
-                Breathing exercise
-                <br />
-                4-8-7 technique
+        <div className="breathing">
+            <div className="text-breathing" align="center" justify="center" text="center">
+                <h1  className="info">
+                  <p>Breathing exercise</p>
+                  <p>4-8-7 technique</p>
                 </h1>
-                <h3><br></br>
-                  Great help when experiencing anxiety<br></br><br></br>
-                  <u>Breath in</u> for <u>4</u> seconds<br></br>
-                  <u>Hold your breath</u> for <u>8</u> seconds<br></br>
-                  then <u>breath out</u> for <u>7</u> seconds
+                <h3 className="info">
+                  <p>Great help when experiencing anxiety</p>
+                  <p><u>Breath in</u> for <u>4</u> seconds</p>
+                  <p><u>Hold your breath</u> for <u>8</u> seconds</p>
+                  <p>then <u>breath out</u> for <u>7</u> seconds</p>
                 </h3>
-                <Row direction="row" style={{ margin: '50px' }} >
-                  <Col xs={12} align="center" justify="center" text="center">
-                    <h3 className="info">
+                < h3 className="info2">
                       Reduces anxiety and helps to get to sleep
                     </h3>
-                  </Col>
-                </Row>
-                <Row direction="row" style={{ margin: '50px' }} >
-                  <Col xs={6} align="right" justify="center" text="center">
-                      <input className="start-breathing" type="submit" value="Start" onClick={() => setInMotion(true)} />
-                  </Col>
-                  <Col xs={6} align="left" justify="center" text="center">
-                      <input className="restart" type="submit" value="Restart" onClick={restartExercise} />
-                  </Col>
-                </Row>
-              </Col>
-              <Col xs={5} className="circles" align="center" justify="center" text="center">
+                <input className="start-breathing" type="submit" value="Start" onClick={() => setInMotion(true)} />
+                <input className="restart" type="submit" value="Restart" onClick={restartExercise} />
+              </div>
+              <div className="circles">
                 <div className="breath-in" style={{ opacity: hideTimer1 ? 1 : 0, transition: scaleTimer1 ? "all .4s ease-in" : 0, transform: scaleTimer1 ? "scale(1.1)" : 0}}>
                   <CountdownCircleTimer
                     isPlaying={inMotion}
                     duration={4}
-                    size={400}
+                    size={isTabletOrMobile ? 370 : 450 && isTabletOrMobile2 ? 340 : 450}
                     colors={[
                       ['#004777', 0.33],
                       ['#006aff', 0.33],
@@ -184,7 +171,7 @@ const Breathing = (props) => {
                   <CountdownCircleTimer
                     isPlaying={inMotion2}
                     duration={8}
-                    size={400}
+                    size={isTabletOrMobile ? 370 : 450}
                     colors={[
                       ['#004777', 0.33],
                       ['#006aff', 0.33],
@@ -199,7 +186,7 @@ const Breathing = (props) => {
                   <CountdownCircleTimer
                     isPlaying={inMotion3}
                     duration={7}
-                    size={400}
+                    size={isTabletOrMobile ? 370 : 450}
                     colors={[
                       ['#004777', 0.33],
                       ['#006aff', 0.33],
@@ -210,9 +197,7 @@ const Breathing = (props) => {
                     {renderTime3}
                   </CountdownCircleTimer>
                 </div>
-              </Col>
-            </Row>
-          </Container>
+              </div>
         </div>
     </>
   );
