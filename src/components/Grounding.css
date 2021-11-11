@@ -7,6 +7,13 @@ html, body {
     flex-flow: column;
     flex-flow: column;
     align-items: center;
+    margin: 1rem;
+    margin-top: 0;
+    padding: 1rem;
+    border-radius: 16px;
+    background-color: #91a5ff15;
+    box-shadow: 5px 5px 10px rgba(100, 167, 255, 0.192);
+    min-height: 100vh;
 }
 
 .groundingTitleWrapper, .groundingCard, .groundingExtraSection {
@@ -145,10 +152,16 @@ html, body {
 
 @media only screen and (max-width: 400px) {
     .groundingTitle {
-        font-size: 1.6rem;
+        font-size: 1.2rem;
     }
 
     .groundingSmallerTitle {
-        font-size: 1.2rem;
+        font-size: 1rem;
+    }
+
+    .groundingTitleWrapper {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        padding: 1rem;
     }
 }
