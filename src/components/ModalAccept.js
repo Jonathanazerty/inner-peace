@@ -1,9 +1,9 @@
 import React, {useRef, useEffect, useCallback} from 'react';
-// import {useSpring, animated} from 'react-spring'
 import styled from 'styled-components'
 import accept from '../images/me.jpg';
 import { MdClose } from 'react-icons/md'
 import data from "./data/data.json";
+import './Guidance.css';
 
 const Background = styled.div`
     width: 1900px;
@@ -14,7 +14,10 @@ const Background = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 20px
+    @media (max-width: 1050px) {
+        width: 1050px;
+        height: 1500px;
+      }
 `
 
 const ModalWrapper = styled.div`
@@ -28,7 +31,57 @@ const ModalWrapper = styled.div`
     display: grid;
     grid-template-columns: 0.5fr 3.5fr;
     z-index: 10;
-    border-radius: 20px
+    border-radius: 20px;
+    @media (max-width: 1700px) {
+        width: 900px;
+        height: 550px;
+      }
+    @media (max-width: 1600px) {
+        margin-left: -200px;
+        position: relative;
+    }
+    @media (max-width: 1400px) {
+        margin-left: -500px;
+    }
+    @media (max-width: 1300px) {
+        margin-left: -700px;
+    }
+    @media (max-width: 1200px) {
+        width: 800px;
+        height: 400px;
+    }
+    @media (max-width: 1050px) {
+        margin-left: 0px;
+        margin-bottom: 400px;
+      }
+    @media (max-width: 1000px) {
+        width: 400px;
+        height: 900px;
+        display: grid;
+        grid-template-columns: 0.5fr;
+    }
+    @media (max-width: 900px) {
+        margin-left: -150px;
+    }
+    @media (max-width: 800px) {
+        margin-left: -250px;
+    }
+    @media (max-width: 700px) {
+        margin-left: -350px;
+    }
+    @media (max-width: 600px) {
+        margin-left: -500px;
+    }
+    @media (max-width: 500px) {
+        margin-left: -600px;
+    }
+    @media (max-width: 444px) {
+        width: 250px;
+        height: 900px;
+    }
+    @media (max-width: 400px) {
+        margin-left: -700px;
+    }
 `
 
 const ModalImg = styled.img`
@@ -37,6 +90,28 @@ const ModalImg = styled.img`
     height: 450px;
     border-radius: 50%;
     border: none;
+    @media (max-width: 1700px) {
+        margin: 120px 50px;
+        width: 220px;
+        height: 300px;
+    }
+    @media (max-width: 1200px) {
+        margin: 50px 50px;
+        width: 220px;
+        height: 300px;
+    }
+    @media (max-width: 1000px) {
+        margin-top: 100px;
+        margin-left: 85px;
+        margin-bottom: -400px;
+    }
+    @media (max-width: 444px) {
+        margin-top: 150px;
+        margin-left: 50px;
+        margin-bottom: -200px;
+        width: 150px;
+        height: 200px;
+    }
 `
 
 const ModalContent = styled.div`
@@ -55,7 +130,25 @@ const ModalContent = styled.div`
             color: #fff;
             border: none;
         }
-`;
+        @media (max-width: 1700px) {
+            font-size: 18px;
+            }
+        @media (max-width: 1200px) {
+            font-size: 14px;
+            }
+        @media (max-width: 1000px) {
+            padding-left: 50px;
+            padding-right: 0px;
+            display: flex;
+            flex-direction: row;
+            margin-top: -150px;
+        }
+        @media (max-width: 444px) {
+            margin-top: -150px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+`
 
 const CloseModalButton = styled(MdClose)`
         cursor: pointer;
@@ -72,15 +165,6 @@ const CloseModalButton = styled(MdClose)`
 export const ModalAccept = ( { showModal, setShowModal} , props) => {
 
     const modalRef = useRef()
-
-    // const animation = useSpring ({
-    //     config: {
-    //         duration: 4000
-    //     },
-    //     opacity: showModal ? 1 : 0,
-    //     // transform: showModal ? `translateY(0px)` : `translateY(-1000px)`,
-    //     transition: showModal ? `transform 4s ease-out` : `transform 5s ease-in`
-    // });
 
     // closes box when clicking on the background
     const closeModal = e => {
@@ -110,7 +194,6 @@ export const ModalAccept = ( { showModal, setShowModal} , props) => {
         <>
 {  showModal ? 
         <Background ref={modalRef} onClick={closeModal}>
-            {/* <animated.div style={animation}> */}
             <ModalWrapper>
                 <ModalImg src={accept} alt='accept'/>
                 <ModalContent>
@@ -124,7 +207,6 @@ export const ModalAccept = ( { showModal, setShowModal} , props) => {
                 onClick={() => setShowModal(prev => !prev)}
                 />
             </ModalWrapper>
-            {/* </animated.div> */}
         </Background>
             : null
 }

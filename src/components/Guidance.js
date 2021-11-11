@@ -116,7 +116,7 @@ const Guidance = (props) => {
                 Guidance
               </h1>
               <div className='guidance-main'>
-                <div className="guidance-content" justify="center" style={{ margin: '10px'}}>
+                <div className="guidance-content" justify="center">
                   <div className="grid-left1">
                     <img className="icon-guidance" src={read} alt="read"/>
                     <div>

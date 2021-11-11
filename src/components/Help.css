@@ -7,11 +7,57 @@
   box-shadow: 5px 5px 5px rgba(100, 167, 255, 0.192);
 }
 
+.asking, .near {
+  height: 720px;
+  width: 1000px;
+}
+
+.map-psychologists {
+  margin: 40px;
+  margin-top: 70px;
+}
+
 .icon-help {
   border-radius: 50%;
   box-shadow: 5px 5px 5px rgba(100, 167, 255, 0.192);
+  height: 70px;
+  width: 70px;
+  float: right;
+  margin-right: -10px;
 }
 
 .icon-help:hover, .icon-find:hover{
   transform: scale(1.2);
+}
+
+.icon-find {
+  height: 100px;
+  width: 100px;
+  float: right;
+  margin-right: -10px;
+}
+
+/* responsiveness */
+
+@media only screen and (max-width: 1990px) {
+  .icon-guidance {
+      height: 70px;
+      width: 70px;
+  }
+  .button-modals {
+    font-size: 17px;
+  }
+}
+
+@media only screen and (max-width: 1840px) {
+  .icon-guidance {
+      height: 70px;
+      width: 70px;
+  }
+  .button-modals {
+    font-size: 14px;
+  }
+  .text-guidance{
+    font-size: 12px;
+  }
 }

@@ -1,19 +1,17 @@
 
 .breathing  {
-    margin: 5rem;
-    background-color: #91a5ff15;
-    padding: 5rem;
-    border-radius: 16px;
-    box-shadow: 5px 5px 5px rgba(100, 167, 255, 0.192);
+    margin: 2rem;
     justify-content: center;
     text-align: center;
     display: grid;
-    grid-template-columns: 1.1fr 0.7fr;
+    grid-template-columns: 0.7fr 0.7fr;
     grid-template-areas:
     "text-breathing        circles" ;
   }
 
   .text-breathing {
+    margin-right: 50px;
+    margin-left: 200px;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
@@ -22,6 +20,7 @@
 
   .circles{
     margin-top: 50px;
+    margin-left: 100px;
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
@@ -32,8 +31,34 @@
       margin: 20px;
   }
 
-  .info {
-      margin-bottom: 70px;
+  .info1 {
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    background-color: #91a5ff15;
+    padding: 2rem;
+    padding-bottom: 1rem;
+    border-radius: 16px;
+    box-shadow: 5px 5px 5px rgba(100, 167, 255, 0.192);
+  }
+  .info2 {
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #91a5ff15;
+    padding: 2rem;
+    padding-bottom: 1rem;
+    border-radius: 16px;
+    box-shadow: 5px 5px 5px rgba(100, 167, 255, 0.192);
+  }
+  .info3 {
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #91a5ff15;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 5px 5px 5px rgba(100, 167, 255, 0.192);
   }
 
 .start-breathing, .restart, .stop, .button-guidance{
@@ -57,7 +82,7 @@
 }
 
 .text {
-    font-size: 30px;
+    font-size: 35px;
 }
 .value {
     font-size: 70px;
@@ -69,27 +94,60 @@
 } */
 
 
-.info {
+.info1, .info2, .info3 {
     position: relative;
 }
 
 
 /* responsiveness */
 
- @media only screen and (max-width: 1400px) {
-    .text {
-        font-size: 25px;
-    }
-    .value {
-        font-size: 50px;
-    }
+@media only screen and (max-width: 1800px) {
+  .text-breathing {
+    margin-right: 50px;
+    margin-left: 50px;
+  }
 
-    .info{
-        font-size: 25px;
+  .circles{
+    margin-top: 50px;
+    margin-left: 100px;
+  }
+}
+
+@media only screen and (max-width: 1700px) {
+  .info1 {
+    font-size: 40px;
+  }
+  .info2 {
+    font-size: 20px;
+  }
+  .info3 {
+    font-size: 20px;
+  }
+  .text {
+    font-size: 25px;
+  }
+  .value {
+      font-size: 50px;
+  }
+}
+
+ @media only screen and (max-width: 1400px) {
+  .info1 {
+    font-size: 30px;
+  }
+  .info2 {
+    font-size: 20px;
+  }
+  .info3 {
+    font-size: 20px;
+  }
+  .circles{
+    margin-top: 50px;
+    margin-left: 50px;
   }
 }
   
-/* @media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1200px) {
     .breathing  {
         display: grid;
         grid-template-columns: 1fr;
@@ -106,66 +164,65 @@
       }
     
     .circles{
-        margin-top: 50px;
+        margin-left: 330px;
+        margin-top: 20px;
+        margin-bottom: 100px;
         grid-column-start: 1;
         grid-column-end: 2;
         grid-row-start: 2;
         grid-row-end: 3;
       }
 
-      
-    .info {
-        margin-bottom: 40px;
+      .info1 {
+        margin-bottom: 10px;
+      }
+      .info2 {
+        margin-bottom: 10px;
+      }
+      .info3 {
+        margin-bottom: 10px;
+      }
+} 
+  
+@media only screen and (max-width: 1100px) {
+    .circles{
+      margin-left: 250px;
     }
-}  */
+  }
   
-/* @media only screen and (max-width: 1200px) {
-    .breathing  {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-areas:
-        "text-breathing"
-        "circles" ;
-    } 
-    
-  }*/
+@media only screen and (max-width: 1000px) {
+  .circles{
+    margin-left: 200px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .circles{
+    margin-left: 150px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .circles{
+    margin-left: 100px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .circles{
+    margin-left: 50px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .circles{
+    margin-left: 0px;
+  }
+}
   
-  
-  /* @media only screen and (max-width: 1370px) {
-    .guidance-content {
-      grid-template-columns: 0.4fr 0.4fr 0.4fr;
-    }
-  } */
-  
-  
-  /* @media only screen and (max-width: 1290px) {
-    .guidance-content {
-      grid-template-columns: 0.4fr 0.3fr 0.4fr;
-    }
-  } */
-  
-  /* @media only screen and (max-width: 1190px) {
-    .grid-left1, .grid-left2, .grid-left3, .grid-right1, .grid-right2, .grid-right3 {
-      padding: 15px;
-    }
-  } */
-  
-  /* @media only screen and (max-width: 1100px) {
-    .icon-guidance {
-      height: 55px;
-      width: 55px;
-    }
-  } */
-  
-  /* @media only screen and (max-width: 1060px) {
-    .button-modals {
-      padding-left: 15px;
-      padding-right: 15px;
-      padding-top: 5px;
-      padding-bottom: 5px;
-    }
-    .icon-guidance {
-      height: 45px;
-      width: 45px;
-    }
-  } */
+@media only screen and (max-width: 500px) {
+  .text-breathing {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+}

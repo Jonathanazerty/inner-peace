@@ -49,7 +49,7 @@ const renderTime3 = ({ remainingTime }) => {
 
 const Breathing = (props) => {
 
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1400px)' })
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1700px)' })
   const isTabletOrMobile2 = useMediaQuery({ query: '(max-width: 1200px)' })
   
 
@@ -134,29 +134,30 @@ const Breathing = (props) => {
         </Container>
       </div>
         <div className="breathing">
-            <div className="text-breathing" align="center" justify="center" text="center">
-                <h1  className="info">
+            <div className="text-breathing">
+                <div className="info1">
                   <p>Breathing exercise</p>
                   <p>4-8-7 technique</p>
-                </h1>
-                <h3 className="info">
+                </div>
+                <div className="info2">
                   <p>Great help when experiencing anxiety</p>
                   <p><u>Breath in</u> for <u>4</u> seconds</p>
                   <p><u>Hold your breath</u> for <u>8</u> seconds</p>
                   <p>then <u>breath out</u> for <u>7</u> seconds</p>
-                </h3>
-                < h3 className="info2">
+                </div>
+                < div className="info3">
                       Reduces anxiety and helps to get to sleep
-                    </h3>
+                    </div>
                 <input className="start-breathing" type="submit" value="Start" onClick={() => setInMotion(true)} />
                 <input className="restart" type="submit" value="Restart" onClick={restartExercise} />
               </div>
               <div className="circles">
-                <div className="breath-in" style={{ opacity: hideTimer1 ? 1 : 0, transition: scaleTimer1 ? "all .4s ease-in" : 0, transform: scaleTimer1 ? "scale(1.1)" : 0}}>
+                <div className="breath-in" style={{ opacity: hideTimer1 ? 1 : 0}}>
                   <CountdownCircleTimer
                     isPlaying={inMotion}
                     duration={4}
-                    size={isTabletOrMobile ? 370 : 450 && isTabletOrMobile2 ? 340 : 450}
+                    strokeWidth={25}
+                    size={isTabletOrMobile ? 450 : 600}
                     colors={[
                       ['#004777', 0.33],
                       ['#006aff', 0.33],
@@ -171,7 +172,8 @@ const Breathing = (props) => {
                   <CountdownCircleTimer
                     isPlaying={inMotion2}
                     duration={8}
-                    size={isTabletOrMobile ? 370 : 450}
+                    size={isTabletOrMobile ? 450 : 600}
+                    strokeWidth={25}
                     colors={[
                       ['#004777', 0.33],
                       ['#006aff', 0.33],
@@ -182,11 +184,12 @@ const Breathing = (props) => {
                     {renderTime2}
                   </CountdownCircleTimer>
                 </div>
-                <div className="breath-out" style={{ opacity: hideTimer3 ? 1 : 0, transition: scaleTimer3 ? "all .7s ease-in-out" : 0, transform: scaleTimer3 ? "scale(1.2)" : 0}}>
+                <div className="breath-out" style={{ opacity: hideTimer3 ? 1 : 0}}>
                   <CountdownCircleTimer
                     isPlaying={inMotion3}
                     duration={7}
-                    size={isTabletOrMobile ? 370 : 450}
+                    size={isTabletOrMobile ? 450 : 600}
+                    strokeWidth={25}
                     colors={[
                       ['#004777', 0.33],
                       ['#006aff', 0.33],
