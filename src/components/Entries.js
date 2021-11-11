@@ -23,7 +23,8 @@ const Entries = (props) => {
     return (
         <div className='entriesMain'>
             <h2 className='previousEntries'> Previous Entries </h2>
-            <Slider {...settings}>
+            <hr/>
+            <Slider {...settings} className='slider'>
                 <div>
                     <h3 className='entriesTitle'>{today}</h3>
                     <h4 className='entriesTitle'>{feel}</h4>

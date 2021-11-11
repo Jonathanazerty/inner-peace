@@ -7,6 +7,7 @@
 .entriesTitle {
     text-align: center;
     margin: 2rem;
+    color: #04539a;
 }
 
 .entriesMain {
@@ -18,7 +19,8 @@
 }
 
 .previousEntries {
-    text-align: center;
+    font-size: 1.2em;
+    color: #04539a;
 }
 
 
@@ -39,6 +41,13 @@ p{
 .entriesCarouselTitle {
     padding: 1rem;
     font-size: 1.3rem;
+    font-weight: bolder;
+}
+hr{
+    opacity: 0.4;
+}
+.slider{
+    margin-bottom: 3rem;
 }
 
 .entriesNotes {
@@ -52,3 +61,4 @@ p{
     background-color: rgba(145, 165, 255, 0.25);
     box-shadow: 5px 5px 10px rgba(100, 167, 255, 0.192);
 }
+
