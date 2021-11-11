@@ -35,7 +35,8 @@
     background-color: #91a5ff15;
     box-shadow: 5px 5px 10px rgba(100, 167, 255, 0.192);
 }
-.errorMessage{
+
+.errorMessage {
     text-align: center;
 }
 
@@ -91,6 +92,7 @@
     margin-left: 4rem;
     margin-right: 4rem;
 }
+
 .symptomsChecklistChecked {
     display: grid;
     grid-template-columns: 80% auto;
@@ -191,6 +193,11 @@ label {
         margin-left: 2rem;
         margin-right: 2rem;
     }
+
+    .symptomsChecklistChecked {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
 }
 
 @media only screen and (max-width: 950px) {
@@ -240,26 +247,38 @@ label {
     .experienceHeader {
         grid-template-columns: auto;
     }
+
     .experienceMain {
         margin: 0;
     }
+
     .symptomsChecklist {
         margin-left: 0.5rem;
         margin-right: 0.5rem;
         padding: 0.5rem;
     }
+
+    .symptomsChecklistChecked {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        padding: 0.5rem;
+    }
+
     .feeling {
         margin-bottom: 1rem;
     }
+
     .experienceSubmitWrapper {
         padding: 0;
     }
 
 }
+
 @media only screen and (max-width: 400px) {
     .experienceMain {
         padding: 0.7rem;
     }
+
     .experiencingSmallTitle {
         margin-right: 0;
         margin-left: 0;
