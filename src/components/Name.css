@@ -10,11 +10,6 @@ body {
     box-shadow: 10px 10px 10px rgb(217, 217, 255);
 }
 
-/*.gif:hover {*/
-/*  transform: scale(1.2);*/
-/*  box-shadow: 10px 10px 10px rgb(217, 217, 255);*/
-/*}*/
-
 .input-name, .label {
     border: none;
     background-color: transparent;

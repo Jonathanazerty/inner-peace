@@ -1,20 +1,62 @@
+.helps {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+  "near        asking" ;
+}
+
+.near {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.asking {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+
 .asking, .near, .speak, .help, .heart  {
-  margin-left: 20px;
-  margin-right: 20px;
+  margin: 10px;
   background-color: #91a5ff15;
-  padding: 2rem;
+  padding: 0.5rem;
   border-radius: 16px;
   box-shadow: 5px 5px 5px rgba(100, 167, 255, 0.192);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .asking, .near {
-  height: 720px;
-  width: 1000px;
+  margin-top: 50px;
+  padding: 2rem;
+  height: 770px; 
+  width: 850px;
+}
+iframe{
+  width: 700px;
+  height: 520px;
+  border-radius: 4%;
+  box-shadow: 5px 5px 5px rgba(100, 167, 255, 0.192);
+  border: none;
+}
+.ask{
+  margin-top: 50px;
+}
+
+.text {
+  font-size: 20px;
 }
 
 .map-psychologists {
   margin: 40px;
-  margin-top: 70px;
+  margin-top: 50px;
 }
 
 .icon-help {
@@ -22,8 +64,6 @@
   box-shadow: 5px 5px 5px rgba(100, 167, 255, 0.192);
   height: 70px;
   width: 70px;
-  float: right;
-  margin-right: -10px;
 }
 
 .icon-help:hover, .icon-find:hover{
@@ -31,33 +71,62 @@
 }
 
 .icon-find {
-  height: 100px;
-  width: 100px;
+  height: 70px;
+  width: 70px;
   float: right;
-  margin-right: -10px;
+  margin: 50px;
 }
 
 /* responsiveness */
 
-@media only screen and (max-width: 1990px) {
-  .icon-guidance {
-      height: 70px;
-      width: 70px;
+
+@media only screen and (max-width: 1800px) {
+  iframe{
+    width: 700px;
+    height: 450px;
   }
-  .button-modals {
+}
+
+@media only screen and (max-width: 1600px) {
+  iframe{
+    width: 600px;
+    height: 450px;
+  }
+  .text {
     font-size: 17px;
   }
 }
 
-@media only screen and (max-width: 1840px) {
-  .icon-guidance {
-      height: 70px;
-      width: 70px;
+@media only screen and (max-width: 1400px) {
+  iframe{
+    width: 500px;
+    height: 450px;
   }
-  .button-modals {
+  .text {
+    font-size: 17px;
+  }
+}
+
+@media only screen and (max-width: 1270px) {
+  iframe{
+    width: 400px;
+    height: 450px;
+  }
+  .text {
     font-size: 14px;
   }
-  .text-guidance{
+}
+
+@media only screen and (max-width: 1000px) {
+  iframe{
+    width: 300px;
+    height: 450px;
+  }
+  .text {
     font-size: 12px;
   }
+}
+
+@media only screen and (max-width: 770px) {
+
 }
