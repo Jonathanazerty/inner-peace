@@ -1,6 +1,7 @@
-html, body{
+html, body {
     height: auto;
 }
+
 .groundingBody {
     display: flex;
     flex-flow: column;
@@ -9,8 +10,9 @@ html, body{
 }
 
 .groundingTitleWrapper, .groundingCard, .groundingExtraSection {
-    background-color: #91a5ff15;
+    background-color: rgba(145, 165, 255, 0.25);
     box-shadow: 5px 5px 10px rgba(100, 167, 255, 0.192);
+    color: #04539a;
     border-radius: 16px;
     margin: 1.5rem;
     padding: 2rem;
@@ -19,12 +21,15 @@ html, body{
     align-items: center;
 }
 
+.break {
+    width: 100%;
+}
+
 .groundingButton {
-    background-color: rgb(100, 167, 255);
+    background-color: #5eafe5;
     color: white;
     border: none;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px rgb(217, 217, 255);
     font-weight: bold;
     text-decoration: none;
     cursor: pointer;
@@ -33,10 +38,11 @@ html, body{
     margin: 1rem;
     min-height: 3rem;
     min-width: 5rem;
+    box-shadow: 5px 5px 5px rgb(217, 217, 255);
 }
 
 .groundingButton:hover {
-    background-color: rgb(116, 177, 255);
+    background-color: #6ab6e8;
     text-decoration: none;
     color: white;
 }
@@ -52,9 +58,16 @@ html, body{
 }
 
 .groundingParagraph {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     margin-bottom: 1rem;
     text-align: center;
+}
+
+#groundingStart {
+    min-width: 13rem;
+    padding: 0.5rem;
+    margin: 1.2rem;
+    font-family: 'Comfortaa', cursive;
 }
 
 .groundingIcon {
@@ -64,11 +77,12 @@ html, body{
 }
 
 .groundingCard {
-    max-width: 15rem;
+    max-width: 15.5rem;
     text-align: center;
     display: grid;
     grid-template-rows: auto auto auto auto;
     justify-items: center;
+    color: #04539a;
 }
 
 .groundingText {
@@ -78,6 +92,8 @@ html, body{
 .groundingCards {
     display: grid;
     grid-template-columns: auto auto auto auto auto;
+    justify-content: space-between;
+
 }
 
 .groundingExtraSection {

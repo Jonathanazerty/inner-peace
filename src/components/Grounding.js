@@ -20,11 +20,11 @@ const Grounding = (props) => {
     const [showOne, setShowOne] = useState(false);
     const [showExtras, setShowExtras] = useState(false);
 
-    const StartButton = () => <button className='groundingButton' onClick={startGrounding}> I'm ready to start</button>
+    const StartButton = () => <button id='groundingStart' className='groundingButton' onClick={startGrounding}> I'm ready to start</button>
     const Five = () =>
         <div className='groundingCard' ref={cardRef}>
             <img className='groundingIcon' src={See} alt='eye'/>
-            <p className='groundingText'>Find <strong>5</strong> things you <strong>see</strong> around you.</p>
+            <p className='groundingText'>Find <em>5</em> things you <em>see</em> around you.</p>
             <p className='groundingTextSmall'> Maybe a pen or stapler, or maybe a bird or a tree.</p>
             <button className='groundingButton' onClick={display4}> Done</button>
         </div>
@@ -32,7 +32,7 @@ const Grounding = (props) => {
     const Four = () =>
         <div className='groundingCard' ref={cardRef}>
             <img className='groundingIcon' src={Touch} alt='hand'/>
-            <p className='groundingText'>Find <strong>4</strong> things you can <strong>touch</strong> from where you're
+            <p className='groundingText'>Find <em>4</em> things you can <em>touch</em> from where you're
                 sitting.</p>
             <p className='groundingTextSmall'> Your hair, hands, the ground beneath your feet.</p>
             <button className='groundingButton' onClick={display3}> Done</button>
@@ -41,7 +41,7 @@ const Grounding = (props) => {
     const Three = () =>
         <div className='groundingCard' ref={cardRef}>
             <img className='groundingIcon' src={Hear} alt='ear'/>
-            <p className='groundingText'>Find <strong>3</strong> things you can <strong>hear</strong> around you.</p>
+            <p className='groundingText'>Find <em>3</em> things you can <em>hear</em> around you.</p>
             <p className='groundingTextSmall'> Focus on your stomach growling, or a car passing, a dog barking, or
                 someone's
                 steps.</p>
@@ -51,7 +51,7 @@ const Grounding = (props) => {
     const Two = () =>
         <div className='groundingCard' ref={cardRef}>
             <img className='groundingIcon' src={Smell} alt='nose'/>
-            <p className='groundingText'>Find <strong>2</strong> things you can <strong>smell</strong> around you.</p>
+            <p className='groundingText'>Find <em>2</em> things you can <em>smell</em> around you.</p>
             <p className='groundingTextSmall'> Maybe the soap, your furniture. The outdoors has plenty of options for
                 smell.</p>
             <button className='groundingButton' onClick={display1}> Done</button>
@@ -60,7 +60,7 @@ const Grounding = (props) => {
     const One = () =>
         <div className='groundingCard' id='groundingCardOne' ref={cardRef}>
             <img className='groundingIcon' src={Taste} alt='tongue'/>
-            <p className='groundingText'>Find <strong>1</strong> thing you can <strong>taste</strong> around you.</p>
+            <p className='groundingText'>Find <em>1</em> thing you can <em>taste</em> around you.</p>
             <p className='groundingTextSmall'> It doesn't have to be food. Maybe the toothpaste or minty floss. Your
                 coffee or tea.</p>
             <button className='groundingButton' onClick={displayButtons}> Done</button>
@@ -122,7 +122,7 @@ const Grounding = (props) => {
         <div className="groundingTitleWrapper">
             <h1 className='groundingTitle'> Ground yourself </h1>
             <h5 className='groundingSmallerTitle'> The 5-4-3-2-1 method </h5>
-
+            <hr className='break'/>
             <p className='groundingParagraph'> Make an effort to notice the little things you might not always pay
                 attention
                 to,
