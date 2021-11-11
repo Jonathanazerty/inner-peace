@@ -6,4 +6,8 @@
   opacity: 0;
   transition: opacity 1s ease;
 }
-  
+
+.step, .name{
+  font-family: 'Comfortaa', cursive;
+  color: #04539a;
+}
