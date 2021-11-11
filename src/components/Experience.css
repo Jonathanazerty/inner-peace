@@ -141,6 +141,8 @@
     overflow: auto;
     margin-top: 2rem;
     color: #04539a;
+    border: none;
+    outline: none;
 }
 
 .experienceImage {
@@ -176,7 +178,7 @@ label {
 }
 
 .checkbox:checked {
-    background-color: rgba(7, 19, 118, 0.58);
+    background-color: rgba(4, 83, 154, 0.7);
     /*border: solid white 1px;*/
 }
 
