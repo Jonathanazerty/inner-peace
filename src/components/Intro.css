@@ -10,4 +10,20 @@
 .step, .name{
   font-family: 'Comfortaa', cursive;
   color: #04539a;
+  cursor: default;
+}
+.name{
+  font-size: 20px;
+}
+.step{
+  font-size: 50px;
+}
+
+@media only screen and (max-width: 400px) {
+  .name {
+    font-size: 15px;
+  }
+  .step{
+    font-size: 30px;
+  }
 }
