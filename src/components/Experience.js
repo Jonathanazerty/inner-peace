@@ -35,7 +35,7 @@ function Experience(props) {
     ];
 
 
-    const {checkboxes, setCheckboxes} = useContext(SymptomsContext);
+    const {/*checkboxes,*/ setCheckboxes} = useContext(SymptomsContext);
     const [notes, setNotes] = useState('');
     const [filteredSymptoms, setFilteredsymptoms] = useState([]);
     const [checkedState, setCheckedState] = useState(
@@ -123,6 +123,8 @@ function Experience(props) {
                             <img src={Notes} className='experienceImage'/>
                             <p className='experiencingSmallTitleRight'><label htmlFor="notes">Anything to add?</label>
                             </p>
+                            <img src={Notes} className='experienceImage' alt="img"/>
+                            <p className='experiencingSmallTitleRight'><label htmlFor="notes">Notes:</label></p>
                         </div>
                         <textarea className='symptoms' id="notes" name="notes" required value={notes}
                                   onChange={(e) => setNotes(e.target.value)}/>

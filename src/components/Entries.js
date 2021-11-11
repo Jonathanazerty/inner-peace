@@ -9,8 +9,8 @@ const Entries = (props) => {
     const date = new Date();
     let today = date.toLocaleDateString("en-US", options) + ' ' + date.getDate() + '-' + (date.getMonth() + 1) + '-' + date.getFullYear();
 
-    const {checkboxes, setCheckboxes} = useContext(SymptomsContext);
-    const {feel, setFeel} = useContext(FeelingContext);
+const {checkboxes/*, setCheckboxes*/} = useContext(SymptomsContext);
+    const {feel/*, setFeel*/} = useContext(FeelingContext);
 
     let settings = {
         dots: true,

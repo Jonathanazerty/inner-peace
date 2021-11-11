@@ -17,7 +17,6 @@ const Name = (props) => {
 
     const handleForm = (event) => {
         event.preventDefault();
-        console.log({name});
         nextPage();
     }
     
