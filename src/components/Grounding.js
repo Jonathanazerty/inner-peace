@@ -6,7 +6,6 @@ import Touch from '../images/feel.png';
 import Smell from '../images/smell.png';
 import Taste from '../images/taste.png';
 import Yay from '../images/yay.png';
-import {useHistory} from 'react-router-dom';
 import Header from './Header';
 import Breathing from "./Breathing";
 

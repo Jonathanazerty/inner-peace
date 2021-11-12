@@ -4,7 +4,6 @@ import Slider from "react-slick";
 import Entry from "./Entry";
 import {SymptomsContext, FeelingContext} from "./ContextComponent";
 import Header from "./Header";
-import data from "./data/data.json";
 import Nothing from "../images/nothing.png";
 
 const Entries = (props) => {
@@ -42,14 +41,14 @@ const Entries = (props) => {
                                             <p className='entriesSymptoms'> {symptom}</p>
                                         )
                                     }) :
-                                    <div className='entryImgWrapper'><img src={Nothing} className='entryImage'/>
+                                    <div className='entryImgWrapper'><img src={Nothing} alt="nothing" className='entryImage'/>
                                         <p className='entryMessage'> Nothing to show here! </p></div>
                                 }
                             </div>
                             <div className='entriesNotes'>
                                 <p className='entriesCarouselTitle'>Notes:</p>
                                 {props.location.state[0] === "" ?
-                                    <div className='entryImgWrapper'><img src={Nothing} className='entryImage'/>
+                                    <div className='entryImgWrapper'><img src={Nothing} alt="nothing" className='entryImage'/>
                                         <p className='entryMessage'> Nothing to show here! </p></div>
                                     : <div className='entriesSymptoms'> {props.location.state} </div>}
                             </div>
