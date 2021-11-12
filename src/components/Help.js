@@ -54,7 +54,7 @@ const Help = (props) => {
                         <p className="text-help">Dear friends,</p>
                         <img className="icon-help" src={speak} alt="read"/>
                         <p className="text-help">On the map you can find psychologists in Flanders.</p>
-                        <p className="text-help">Don't hesitate to ask for help !</p>
+                        <p className="text-help"><em>Don't hesitate to ask for help !</em></p>
                     </div>
                     <div className="help">
                         <img className="icon-help" src={help} alt="read"/>

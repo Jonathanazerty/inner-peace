@@ -269,17 +269,15 @@ header {
     }
 }
 
-@media only screen and (max-width: 601px) {
+@media only screen and (max-width: 700px) {
   .button-help, .button-breathing, .button-grounding  {
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
     background-color: #5eafe5;
     color: white;
     border: none;
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgb(217, 217, 255);
     font-size: 15px;
+    min-width: 20px;
     }
 }
 

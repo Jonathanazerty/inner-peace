@@ -140,13 +140,15 @@ html, body {
     .groundingCard {
         max-width: 17rem;
     }
+    .button-breathing, .button-guidance, .button-help {
+        min-width: 20px;
+    }
 }
 
 @media only screen and (max-width: 600px) {
     .groundingCards {
         grid-template-columns: auto;
     }
-
     #groundingCardOne {
         grid-column: span 1;
     }
