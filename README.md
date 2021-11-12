@@ -1,4 +1,4 @@
-# :droplet: Inner Peace :droplet: - a wellness web app
+# :droplet: Inner Peace :droplet: - A Wellness Web App
 
 :seedling: Deployed to netlify. You can take a look here: https://inner-peace.netlify.app/
 
