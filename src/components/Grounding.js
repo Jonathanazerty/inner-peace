@@ -21,7 +21,8 @@ const Grounding = (props) => {
     const [showOne, setShowOne] = useState(false);
     const [showExtras, setShowExtras] = useState(false);
 
-    const StartButton = () => <button id='groundingStart' className='groundingButton' onClick={startGrounding}> I'm ready to start</button>
+    const StartButton = () => <button id='groundingStart' className='groundingButton' onClick={startGrounding}> I'm
+        ready to start</button>
     const Five = () =>
         <div className='groundingCard' ref={cardRef}>
             <img className='groundingIcon' src={See} alt='eye'/>
@@ -118,28 +119,63 @@ const Grounding = (props) => {
         setShowExtras(true)
     }
 
+    const Grounding = () => {
+        history.push('/Grounding')
+    }
+
+    const Help = () => {
+        history.push('/Help')
+    }
+
+    const Guidance = () => {
+        history.push('/Guidance')
+    }
+
     return (
-        <body className="groundingBody">
-        <div className="groundingTitleWrapper">
-            <h1 className='groundingTitle'> Ground yourself </h1>
-            <h5 className='groundingSmallerTitle'> The 5-4-3-2-1 method </h5>
-            <hr className='break'/>
-            <p className='groundingParagraph'> Make an effort to notice the little things you might not always pay
-                attention
-                to,
-                such as the color of the flecks in the carpet or the hum of your computer.
-            </p>
-        </div>
-        {showStartButton ? <StartButton/> : null}
-        <div className='groundingCards'>
-            {showFive ? <Five/> : null}
-            {showFour ? <Four/> : null}
-            {showThree ? <Three/> : null}
-            {showTwo ? <Two/> : null}
-            {showOne ? <One/> : null}
-            {showExtras ? <Extra/> : null}
-        </div>
-        </body>
+        <>
+            <div className='breathing-header'>
+                <Container fluid>
+                    <Row direction="row" style={{margin: '10px'}}>
+                        <Col xs={4} align="center" justify="center" text="center">
+                            <div>
+                                <button className="button-guidance" onClick={Guidance}>Guidance</button>
+                            </div>
+                        </Col>
+                        <Col xs={4} align="center" justify="center" text="center">
+                            <div>
+                                <button className="button-help" onClick={Help}>Find Help</button>
+                            </div>
+                        </Col>
+                        <Col xs={4} align="center" justify="center" text="center">
+                            <div>
+                                <button className="button-grounding" onClick={Grounding}>Grounding</button>
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
+            <body className="groundingBody">
+            <div className="groundingTitleWrapper">
+                <h1 className='groundingTitle'> Ground yourself </h1>
+                <h5 className='groundingSmallerTitle'> The 5-4-3-2-1 method </h5>
+                <hr className='break'/>
+                <p className='groundingParagraph'> Make an effort to notice the little things you might not always pay
+                    attention
+                    to,
+                    such as the color of the flecks in the carpet or the hum of your computer.
+                </p>
+            </div>
+            {showStartButton ? <StartButton/> : null}
+            <div className='groundingCards'>
+                {showFive ? <Five/> : null}
+                {showFour ? <Four/> : null}
+                {showThree ? <Three/> : null}
+                {showTwo ? <Two/> : null}
+                {showOne ? <One/> : null}
+                {showExtras ? <Extra/> : null}
+            </div>
+            </body>
+        </>
     )
 }
 
