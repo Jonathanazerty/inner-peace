@@ -19,6 +19,7 @@
 .entryImage {
     width: 10vw;
     justify-self: center;
+    align-self: center;
 }
 
 .entryImgWrapper {

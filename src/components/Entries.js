@@ -39,7 +39,7 @@ const Entries = (props) => {
                                 {checkboxes.length > 0 ?
                                     checkboxes.map(symptom => {
                                         return (
-                                            <p> {symptom}</p>
+                                            <p className='entriesSymptoms'> {symptom}</p>
                                         )
                                     }) :
                                     <div className='entryImgWrapper'><img src={Nothing} className='entryImage'/>
