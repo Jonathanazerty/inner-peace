@@ -79,8 +79,6 @@ const Grounding = (props) => {
             </div>
         </div>
 
-    let history = useHistory();
-
     function startGrounding() {
         setShowExtras(false)
         setShowStartButton(false)

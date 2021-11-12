@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import './Breathing.css';
 import {CountdownCircleTimer} from 'react-countdown-circle-timer';
-import {Container, Row, Col} from 'react-grid-system';
 import {useMediaQuery} from 'react-responsive';
 import Header from "./Header";
 
@@ -61,8 +60,8 @@ const Breathing = (props) => {
     const [hideTimer2, setHideTimer2] = useState(false);
     const [hideTimer3, setHideTimer3] = useState(false);
 
-    const [scaleTimer1, setScaleTimer1] = useState(true);
-    const [scaleTimer3, setScaleTimer3] = useState(true);
+    const [, setScaleTimer1] = useState(true);
+    const [, setScaleTimer3] = useState(true);
 
     const restartExercise = () => {
         window.location.reload();

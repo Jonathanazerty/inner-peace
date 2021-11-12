@@ -21,41 +21,6 @@ function App() {
     return (
         <div className="App">
             <Router>
-                <Link to="/"><input className="submit" type="submit" id="Intro"
-                                            name="Intro"
-                                            value="Intro"/></Link>
-
-                <Link to="/Name"><input className="submit" type="submit" id="Name"
-                                            name="Name"
-                                            value="Name"/></Link>
-
-                <Link to="/Feeling"><input className="submit" type="submit" id="Feeling"
-                                            name="Feeling"
-                                            value="Feeling"/></Link>
-
-                <Link to="/Experience"><input className="submit" type="submit" id="Experience"
-                                            name="Experience"
-                                            value="Experience"/></Link>
-
-                <Link to="/Guidance"><input className="submit" type="submit" id="Guidance"
-                                            name="Guidance"
-                                            value="Guidance"/></Link>
-
-                <Link to="/Breathing"><input className="submit" type="submit" id="Breathing"
-                                            name="Breathing"
-                                            value="Breathing"/></Link>
-
-                <Link to="/Grounding"><input className="submit" type="submit" id="Grounding"
-                                            name="Grounding"
-                                            value="Grounding"/></Link>
-
-                <Link to="/Help"><input className="submit" type="submit" id="Help"
-                                            name="Help"
-                                            value="Help"/></Link>
-
-                <Link to="/Entries"><input className="submit" type="submit" id="Entries"
-                                            name="Entries"
-                                            value="Entries"/></Link>
                 <Switch>
                     <Route path="/" exact component={Intro}/>
                     <Route path="/Name" component={Name}/>

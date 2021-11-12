@@ -2,6 +2,11 @@ body {
     font-family: 'Comfortaa', cursive;
     color: #04539a;
 }
+
+.name{
+    height: auto;
+    width: auto;
+}
 .logoWrapper{
     margin: 3rem;
 }
