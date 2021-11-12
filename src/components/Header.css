@@ -1,24 +1,35 @@
-.header{
-    display: flex;
-    justify-content: center;
+.headerHeader{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
 }
 .headerButton{
-    background-color: rgb(100, 167, 255);
+    background-color: #5eafe5;
     color: white;
     border: none;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px rgb(217, 217, 255);
     font-weight: bold;
     text-decoration: none;
     cursor: pointer;
     text-align: center;
     padding: 0.5rem;
     margin: 1rem;
-    min-width: 12rem;
+    min-height: 3rem;
+    min-width: 5rem;
+    box-shadow: 5px 5px 5px rgb(217, 217, 255);
 }
-
-.headerButton:hover {
-    background-color: rgb(116, 177, 255);
+.headerButton:hover{
+    background-color: #6ab6e8;
     text-decoration: none;
     color: white;
+}
+@media only screen and (max-width: 500px) {
+    .headerButton{
+        font-size: 1rem;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .headerButton{
+        font-size: 0.8rem;
+    }
 }

@@ -1,15 +1,25 @@
 import React from "react";
 import './Header.css';
+import {useHistory} from 'react-router-dom';
+
 
 const Header = () => {
+    let history = useHistory();
+    const Breathing = () => {
+        history.push('/Breathing')
+    }
+    const Help = () => {
+        history.push('/Help')
+    }
+    const Guidance = () => {
+        history.push('/Guidance')
+    }
 
     return (
-        <div className='header'>
-            <a href='Help' className='headerButton'> Help </a>
-            <a href='Breathing' className='headerButton'> Breathing </a>
-            <a href='Grounding' className='headerButton'> Grounding </a>
-            <a href='Guidance' className='headerButton'> Guidance </a>
-
+        <div className='headerHeader'>
+            <button className="headerButton" onClick={Guidance}>Guidance</button>
+            <button className="headerButton" onClick={Help}>Find Help</button>
+            <button className="headerButton" onClick={Breathing}>Breathing</button>
         </div>
     )
 }

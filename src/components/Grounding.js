@@ -7,7 +7,8 @@ import Smell from '../images/smell.png';
 import Taste from '../images/taste.png';
 import Yay from '../images/yay.png';
 import {useHistory} from 'react-router-dom';
-import {Container, Row, Col} from 'react-grid-system';
+import Header from './Header';
+import Breathing from "./Breathing";
 
 const Grounding = (props) => {
 
@@ -115,41 +116,9 @@ const Grounding = (props) => {
         setShowExtras(true)
     }
 
-    const Breathing = () => {
-        history.push('/Breathing')
-    }
-
-    const Help = () => {
-        history.push('/Help')
-    }
-
-    const Guidance = () => {
-        history.push('/Guidance')
-    }
-
     return (
         <>
-            <div className='breathing-header'>
-                <Container fluid>
-                    <Row direction="row">
-                        <Col xs={4} align="center" justify="center" text="center">
-                            <div>
-                                <button className="button-guidance" onClick={Guidance}>Guidance</button>
-                            </div>
-                        </Col>
-                        <Col xs={4} align="center" justify="center" text="center">
-                            <div>
-                                <button className="button-help" onClick={Help}>Find Help</button>
-                            </div>
-                        </Col>
-                        <Col xs={4} align="center" justify="center" text="center">
-                            <div>
-                                <button className="button-breathing" onClick={Breathing}>Breathing</button>
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
-            </div>
+            <Header/>
             <body className="groundingBody">
             <div className="groundingTitleWrapper">
                 <h1 className='groundingTitle'> Ground yourself </h1>
