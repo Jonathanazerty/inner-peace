@@ -42,7 +42,7 @@
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 1;
-  grid-row-end: 3;
+  grid-row-end: 2;
 }
 .asking {
   grid-column-start: 2;
@@ -71,7 +71,7 @@
 iframe{
   /*width: 700px;*/
   /*height: 520px;*/
-  min-height: 50vh;
+  min-height: 100vh;
   border-radius: 4%;
   box-shadow: 5px 5px 5px rgba(100, 167, 255, 0.192);
   border: none;
@@ -130,13 +130,14 @@ iframe{
   margin-top: 2rem;
 }
 
-.asking{
-  /*display: grid;*/
-  /*grid-template-rows: auto auto;*/
-}
-
 /* responsiveness */
 
+@media only screen and (min-width: 1800px) {
+  iframe{
+    width: 700px;
+    height: 450px;
+  }
+}
 
 @media only screen and (max-width: 1800px) {
   iframe{
@@ -176,16 +177,6 @@ iframe{
 }
 
 @media only screen and (max-width: 1000px) {
-  iframe{
-    width: 300px;
-    height: 450px;
-  }
-  .text-help {
-    font-size: 12px;
-  }
-}
-
-@media only screen and (max-width: 850px) {
   iframe{
     min-height: 50vh;
     min-width: 80vw;
