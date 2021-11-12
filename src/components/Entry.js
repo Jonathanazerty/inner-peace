@@ -1,7 +1,10 @@
 import React from 'react';
 import data from "./data/data.json";
+import Nothing from '../images/nothing.png';
 
 function Entry(props) {
+
+    console.log(data[props.number].Experiencing);
     return (
         <div>
             <h3 className='entriesTitle'>{data[props.number].Date}</h3>
@@ -9,15 +12,18 @@ function Entry(props) {
             <div className='experiencingAndNotesWrapper' id='entriesCarouselWrapper'>
                 <div className='entriesNotes'>
                     <p className='entriesCarouselTitle'>Experiencing:</p>
-                    <div className='entriesSymptoms'>
-                        {data[props.number].Experiencing}
-                    </div>
+                    {data[props.number].Experiencing === "" ?
+                        <div className='entryImgWrapper'><img src={Nothing} className='entryImage'/>
+                            <p className='entryMessage'> Nothing to show here! </p></div> :
+                        <div className='entriesSymptoms'> {data[props.number].Experiencing} </div>}
                 </div>
                 <div className='entriesNotes'>
                     <p className='entriesCarouselTitle'>Notes:</p>
-                    <div className='entriesSymptoms'>
-                        {data[props.number].Notes}
-                    </div>
+                    {/*{data[props.number].Notes}*/}
+                    {data[props.number].Notes === "" ?
+                        <div className='entryImgWrapper'><img src={Nothing} className='entryImage'/>
+                            <p className='entryMessage'> Nothing to show here! </p></div> :
+                        <div className='entriesSymptoms'> {data[props.number].Notes} </div>}
                 </div>
             </div>
         </div>
