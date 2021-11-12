@@ -4,7 +4,6 @@ import Nothing from '../images/nothing.png';
 
 function Entry(props) {
 
-    console.log(data[props.number].Experiencing);
     return (
         <div>
             <h3 className='entriesTitle'>{data[props.number].Date}</h3>
@@ -19,7 +18,6 @@ function Entry(props) {
                 </div>
                 <div className='entriesNotes'>
                     <p className='entriesCarouselTitle'>Notes:</p>
-                    {/*{data[props.number].Notes}*/}
                     {data[props.number].Notes === "" ?
                         <div className='entryImgWrapper'><img src={Nothing} className='entryImage'/>
                             <p className='entryMessage'> Nothing to show here! </p></div> :
