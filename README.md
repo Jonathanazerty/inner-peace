@@ -12,6 +12,5 @@
 ![Page where you select how you're feeling](https://raw.githubusercontent.com/Jonathanazerty/inner-peace/main/src/images/readme/screen2.png)
 ![Symptom tracker screenshot](https://raw.githubusercontent.com/Jonathanazerty/inner-peace/main/src/images/readme/screen3.png)
 ![Guidance page screenshot](https://raw.githubusercontent.com/Jonathanazerty/inner-peace/main/src/images/readme/screen1.png)
-![Grounding page screenshot](https://raw.githubusercontent.com/Jonathanazerty/inner-peace/main/src/images/readme/screen6.png)
-![Map screenshot](https://raw.githubusercontent.com/Jonathanazerty/inner-peace/main/src/images/readme/screen5.png)
+
 
