@@ -38,7 +38,7 @@ const Entries = (props) => {
         <>
             <div className='breathing-header'>
                 <Container fluid>
-                    <Row direction="row" style={{margin: '10px'}}>
+                    <Row direction="row">
                         <Col xs={4} align="center" justify="center" text="center">
                             <div>
                                 <button className="button-guidance" onClick={Guidance}>Guidance</button>

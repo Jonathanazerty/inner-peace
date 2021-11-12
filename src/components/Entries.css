@@ -61,6 +61,13 @@ hr{
     background-color: rgba(145, 165, 255, 0.25);
     box-shadow: 5px 5px 10px rgba(100, 167, 255, 0.192);
 }
+
+@media only screen and (max-width: 700px) {
+    .button-guidance, .button-help, .button-grounding{
+        min-width: 20px;
+      }
+}
+
 @media only screen and (max-width: 600px) {
     .entriesNotes {
         margin: 0.5rem;

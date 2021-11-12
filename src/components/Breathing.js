@@ -13,7 +13,7 @@ const renderTime1 = ({ remainingTime }) => {
 
   return (
     <div className="timer">
-      <div className="text" >Breath IN for 4 seconds</div>
+      <div className="text" >Breathe IN for 4 seconds</div>
       <div className="value" >{remainingTime}</div>
     </div>
   );
@@ -39,7 +39,7 @@ const renderTime3 = ({ remainingTime }) => {
 
   return (
     <div className="timer">
-      <div className="text" >Breath OUT for 7 seconds</div>
+      <div className="text" >Breathe OUT for 7 seconds</div>
       <div className="value" >{remainingTime}</div>
     </div>
   );
@@ -53,15 +53,6 @@ const Breathing = (props) => {
   const isTabletOrMobile2 = useMediaQuery({ query: '(max-width: 520px)' })
   const isTabletOrMobile3 = useMediaQuery({ query: '(max-width: 444px)' })
 
-  // if(isTabletOrMobile) {
-  //   return 450
-  // }
-  // else if(isTabletOrMobile2) {
-  //   return 350
-  // }
-  // else {
-  //   return 250
-  // }
 
   let history = useHistory();
 
@@ -124,7 +115,7 @@ const Breathing = (props) => {
     <>
       <div className='breathing-header'>
         <Container fluid>
-          <Row direction="row" style={{ margin: '10px' }} >
+          <Row direction="row">
             <Col xs={4} align="center" justify="center" text="center">
               <div>
                   <button className="button-guidance" onClick={Guidance} >Guidance</button>
@@ -151,9 +142,9 @@ const Breathing = (props) => {
                 </div>
                 <div className="info2">
                   <p>Great help when experiencing anxiety</p>
-                  <p><u>Breath in</u> for <u>4</u> seconds</p>
-                  <p><u>Hold your breath</u> for <u>8</u> seconds</p>
-                  <p>then <u>breath out</u> for <u>7</u> seconds</p>
+                  <p><u><em>Breathe in</em></u> for <u><em>4</em></u> seconds</p>
+                  <p><u><em>Hold your breath</em></u> for <u><em>8</em></u> seconds</p>
+                  <p>then <u><em>breathe out</em></u> for <u><em>7</em></u> seconds</p>
                 </div>
                 < div className="info3">
                       Reduces anxiety and helps to get to sleep
@@ -167,10 +158,6 @@ const Breathing = (props) => {
                     isPlaying={inMotion}
                     duration={4}
                     strokeWidth={25}
-                    // size={[
-                    //   [isTabletOrMobile ? 450 : 600] && 
-                    //   [isTabletOrMobile2 ? 350 : 600]
-                    // ]}
                     size={isTabletOrMobile ? 600 : isTabletOrMobile2 ? 300 : isTabletOrMobile3 ? 150 : 450}
                     colors={[
                       ['#004777', 0.33],

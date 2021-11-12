@@ -203,6 +203,11 @@ iframe{
     min-width: 60%;
   }
 }
+@media only screen and (max-width: 700px) {
+  .button-breathing, .button-grounding, .button-entries{
+    min-width: 40px;
+  }
+}
 @media only screen and (max-width: 500px) {
   .ask{
     font-size: 1.4rem;

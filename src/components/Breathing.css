@@ -28,7 +28,18 @@
   }
 
   .restart, .start-breathing {
-      margin: 20px;
+      min-width: 140px;
+      background-color: #5eafe5;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+      padding: 1rem;
+      margin: 1rem;
+      box-shadow: 5px 5px 5px rgb(217, 217, 255);
   }
 
   .info1 {
@@ -61,7 +72,7 @@
     box-shadow: 5px 5px 5px rgba(100, 167, 255, 0.192);
   }
 
-.start-breathing, .restart, .button-guidance{
+.button-guidance, .button-help, .button-grounding{
   background-color: #5eafe5;
   color: white;
   border: none;
@@ -219,6 +230,9 @@
   .circles{
     margin-left: 50px;
   }
+  .button-guidance, .button-help, .button-grounding{
+    min-width: 20px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -232,7 +246,7 @@
     margin-left: 50px;
   }
   .text {
-    font-size: 20px;
+    font-size: 17px;
   }
   .value {
     font-size: 45px;

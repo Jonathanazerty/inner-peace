@@ -80,10 +80,6 @@ const Grounding = (props) => {
 
     let history = useHistory();
 
-    const Breathing = () => {
-        history.push('/Breathing')
-    }
-
     function startGrounding() {
         setShowExtras(false)
         setShowStartButton(false)
@@ -119,8 +115,8 @@ const Grounding = (props) => {
         setShowExtras(true)
     }
 
-    const Grounding = () => {
-        history.push('/Grounding')
+    const Breathing = () => {
+        history.push('/Breathing')
     }
 
     const Help = () => {
@@ -135,7 +131,7 @@ const Grounding = (props) => {
         <>
             <div className='breathing-header'>
                 <Container fluid>
-                    <Row direction="row" style={{margin: '10px'}}>
+                    <Row direction="row">
                         <Col xs={4} align="center" justify="center" text="center">
                             <div>
                                 <button className="button-guidance" onClick={Guidance}>Guidance</button>
@@ -148,7 +144,7 @@ const Grounding = (props) => {
                         </Col>
                         <Col xs={4} align="center" justify="center" text="center">
                             <div>
-                                <button className="button-grounding" onClick={Grounding}>Grounding</button>
+                                <button className="button-breathing" onClick={Breathing}>Breathing</button>
                             </div>
                         </Col>
                     </Row>
