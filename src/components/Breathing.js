@@ -51,17 +51,17 @@ const Breathing = (props) => {
 
   const isTabletOrMobile = useMediaQuery({ query: '(min-width: 1700px)' })
   const isTabletOrMobile2 = useMediaQuery({ query: '(max-width: 520px)' })
+  const isTabletOrMobile3 = useMediaQuery({ query: '(max-width: 444px)' })
 
-  if(isTabletOrMobile) {
-    console.log("screen")
-  }
-  else if(isTabletOrMobile2) {
-    console.log("mobile")
-  }
-  else {
-    console.log("tablet")
-  }
-  
+  // if(isTabletOrMobile) {
+  //   return 450
+  // }
+  // else if(isTabletOrMobile2) {
+  //   return 350
+  // }
+  // else {
+  //   return 250
+  // }
 
   let history = useHistory();
 
@@ -171,7 +171,7 @@ const Breathing = (props) => {
                     //   [isTabletOrMobile ? 450 : 600] && 
                     //   [isTabletOrMobile2 ? 350 : 600]
                     // ]}
-                    size={isTabletOrMobile ? 450 : 600}
+                    size={isTabletOrMobile ? 600 : isTabletOrMobile2 ? 300 : isTabletOrMobile3 ? 150 : 450}
                     colors={[
                       ['#004777', 0.33],
                       ['#006aff', 0.33],
@@ -186,7 +186,7 @@ const Breathing = (props) => {
                   <CountdownCircleTimer
                     isPlaying={inMotion2}
                     duration={8}
-                    size={isTabletOrMobile ? 450 : 600}
+                    size={isTabletOrMobile ? 600 : isTabletOrMobile2 ? 300 : isTabletOrMobile3 ? 150 : 450}
                     strokeWidth={25}
                     colors={[
                       ['#004777', 0.33],
@@ -202,7 +202,7 @@ const Breathing = (props) => {
                   <CountdownCircleTimer
                     isPlaying={inMotion3}
                     duration={7}
-                    size={isTabletOrMobile ? 450 : 600}
+                    size={isTabletOrMobile ? 600 : isTabletOrMobile2 ? 300 : isTabletOrMobile3 ? 150 : 450}
                     strokeWidth={25}
                     colors={[
                       ['#004777', 0.33],
