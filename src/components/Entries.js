@@ -4,6 +4,8 @@ import Slider from "react-slick";
 import Entry from "./Entry";
 import {SymptomsContext, FeelingContext} from "./ContextComponent";
 import Header from "./Header";
+import data from "./data/data.json";
+import Nothing from "../images/nothing.png";
 
 const Entries = (props) => {
     const options = {weekday: 'long'}
@@ -34,19 +36,22 @@ const Entries = (props) => {
                         <div className='experiencingAndNotesWrapper' id='entriesCarouselWrapper'>
                             <div className='entriesNotes'>
                                 <p className='entriesCarouselTitle'>Experiencing:</p>
-                                <div className='entriesSymptoms'>
-                                    {checkboxes.map(symptom => {
+                                {checkboxes.length > 0 ?
+                                    checkboxes.map(symptom => {
                                         return (
-                                            <p> {symptom}</p>
+                                            <p className='entriesSymptoms'> {symptom}</p>
                                         )
-                                    })}
-                                </div>
+                                    }) :
+                                    <div className='entryImgWrapper'><img src={Nothing} className='entryImage'/>
+                                        <p className='entryMessage'> Nothing to show here! </p></div>
+                                }
                             </div>
                             <div className='entriesNotes'>
                                 <p className='entriesCarouselTitle'>Notes:</p>
-                                <div className='entriesSymptoms'>
-                                    {props.location.state}
-                                </div>
+                                {props.location.state[0] === "" ?
+                                    <div className='entryImgWrapper'><img src={Nothing} className='entryImage'/>
+                                        <p className='entryMessage'> Nothing to show here! </p></div>
+                                    : <div className='entriesSymptoms'> {props.location.state} </div>}
                             </div>
                         </div>
                     </div>
