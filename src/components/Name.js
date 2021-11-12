@@ -24,29 +24,29 @@ const Name = (props) => {
     return (
         <div className='name'>
             <Container fluid>
-                <Row direction="column" style={{ margin: '100px' }} >
-                    <Col xs={12} align="center" justify="center" text="center">
+                <Row direction="column">
+                    <Col xs={12} className="logo" align="center" justify="center" text="center">
                         <div>
                             <img className="gif" src={logo} alt="logo"/>
                         </div>
                     </Col>
                 </Row>
-                <Row direction="column" style={{ fontSize: '18px'}} >
-                    <Col xs={12} align="center" justify="center" text="center">
+                <Row direction="column">
+                    <Col xs={12} className="text-name1" align="center" justify="center" text="center">
                         NEVER EVER DOUBT THE FACT THAT
                     </Col>
                 </Row>
-                <Row direction="column" style={{ fontSize: '60px'}} >
-                    <Col xs={12} align="center" justify="center" text="center">
+                <Row direction="column" >
+                    <Col xs={12} className="text-name2" align="center" justify="center" text="center">
                         YOU MATTER !
                     </Col>
                 </Row>
-                <Row direction="column" style={{ margin: '40px' }} >
-                    <Col xs={12} align="center" justify="center" text="center">
+                <Row direction="column">
+                    <Col xs={12} className="text-name3" align="center" justify="center" text="center">
                         <form>
-                            <label class="label">
+                            <label className="label">
                                 Name:
-                                <input  class="input-name" type="text" name="username" placeholder="Don't forget your name" required value={name} onChange={(e) => setName(e.target.value)}/><br></br>
+                                <input  className="input-name" type="text" name="username" placeholder="Don't forget your name" required value={name} onChange={(e) => setName(e.target.value)}/><br></br>
                             </label><br></br>
                             <input className="button-confirm" type="submit" value="Confirm" onClick={(event) => handleForm(event)} />
                         </form>
