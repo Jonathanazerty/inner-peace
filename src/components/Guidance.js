@@ -6,32 +6,17 @@ import sleep from '../images/meditation.png';
 import run from '../images/run.png';
 import eat from '../images/vegetable.png';
 import question from '../images/question.png';
-import { Container, Row, Col } from 'react-grid-system';
-import { useHistory } from 'react-router-dom';
 import { ModalRelax } from './ModalRelax';
 import { ModalTalk } from './ModalTalk';
 import { ModalAccept } from './ModalAccept';
 import { ModalExercise } from './ModalExercise';
 import { ModalFood } from './ModalFood';
 import { ModalHelp } from './ModalHelp';
+import Header from "./Header";
 
 const Guidance = (props) => {
   console.log(props)
 
-  let history = useHistory();
-
-  const Grounding = () => {
-    history.push('/Grounding')
-  }
-
-  const Help = () => {
-    history.push('/Help')
-  }
-
-  const Breathing = () => {
-    history.push('/Breathing')
-  }
-  
   /* Modals */
   const [showRelax, setShowRelax] = useState(false)
 
@@ -90,27 +75,7 @@ const Guidance = (props) => {
           showModal={showHelp} setShowModal={setShowHelp}
         />
 
-        <div className='guidance-header'>
-          <Container fluid>
-            <Row direction="row" className='guidance-buttons' >
-              <Col className='guidance-button' >
-                <div>
-                    <button className="button-breathing" onClick={Breathing} >Breathing</button>
-                </div>
-              </Col>
-              <Col className='guidance-button'>
-                <div>
-                  <button className="button-help" onClick={Help} >Find Help</button>
-                </div>
-              </Col>
-              <Col className='guidance-button'>
-                <div>
-                    <button className="button-grounding" onClick={Grounding} >Grounding</button>
-                </div>
-              </Col>
-            </Row>
-          </Container>
-        </div>
+        <Header/>
         <div className='guidance'>
               <h1 align="center" justify="center" text="center">
                 Guidance
