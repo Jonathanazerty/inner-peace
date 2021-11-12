@@ -50,7 +50,7 @@ const renderTime3 = ({ remainingTime }) => {
 const Breathing = (props) => {
 
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1700px)' })
-  const isTabletOrMobile2 = useMediaQuery({ query: '(max-width: 1200px)' })
+  // const isTabletOrMobile2 = useMediaQuery({ query: '(max-width: 1200px)' })
   
 
   let history = useHistory();
@@ -75,8 +75,8 @@ const Breathing = (props) => {
   const [hideTimer2, setHideTimer2] = useState(false);
   const [hideTimer3, setHideTimer3] = useState(false);
 
-  const [scaleTimer1, setScaleTimer1] = useState(true);
-  const [scaleTimer3, setScaleTimer3] = useState(true);
+  const [/*scaleTimer1,*/ setScaleTimer1] = useState(true);
+  const [/*scaleTimer3,*/ setScaleTimer3] = useState(true);
 
   const restartExercise = () => {
     window.location.reload();
