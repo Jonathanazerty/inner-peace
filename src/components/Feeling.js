@@ -64,15 +64,17 @@ const Feeling = (props) => {
                         <img className='feelingIcon' src={emoji} alt='smiley'/>
                     </div>
 
-                    <Stack className='stack' sx={isMobile ? {height: 10, width: 250} : {height: 300}} spacing={1} direction="row">
+                    <Stack className='stack' sx={isMobile ? {height: 10, width: 250} : {height: 300}} spacing={1}
+                           direction="row">
                         <Slider
                             aria-label="Temperature"
-                            orientation={isMobile ? "horizontal":"vertical"}
+                            orientation={isMobile ? "horizontal" : "vertical"}
                             getAriaValueText={valuetext}
                             defaultValue={30}
                             onChange={changeEmoji}
                             sx={{
-                                color: '#04539a'}}
+                                color: '#04539a'
+                            }}
                         />
                     </Stack>
                 </div>

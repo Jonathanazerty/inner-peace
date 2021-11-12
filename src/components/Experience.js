@@ -58,7 +58,7 @@ function Experience(props) {
                 if (index === position) {
                     if (isChecked) {
                         setFilteredsymptoms(filteredSymptoms.filter((symptom) => {
-                            return symptom.name !== symptoms[position].names
+                            return symptom.name !== symptoms[position].name
                         }))
                     } else {
                         setFilteredsymptoms([...filteredSymptoms, {name: symptoms[position].name, state: false}])
