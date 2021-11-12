@@ -35,7 +35,7 @@ function Experience(props) {
     ];
 
 
-    const {checkboxes, setCheckboxes} = useContext(SymptomsContext);
+    const {/*checkboxes,*/ setCheckboxes} = useContext(SymptomsContext);
     const [notes, setNotes] = useState('');
     const [filteredSymptoms, setFilteredsymptoms] = useState([]);
     const [checkedState, setCheckedState] = useState(

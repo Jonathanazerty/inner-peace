@@ -16,15 +16,26 @@
 }
 
 .button-entries, .button-breathing, .button-grounding  {
-  padding: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  background-color: rgb(100, 167, 255);
+  background-color: #5eafe5;
   color: white;
   border: none;
   border-radius: 10px;
-  box-shadow: 5px 5px 5px rgb(217, 217, 255);
   font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem;
+  min-height: 3rem;
+  min-width: 5rem;
+  box-shadow: 5px 5px 5px rgb(217, 217, 255);
+}
+
+.button-entries:hover, .button-breathing:hover, .button-grounding:hover {
+  background-color: #6ab6e8;
+  text-decoration: none;
+  color: white;
 }
 
 .near {
@@ -68,7 +79,7 @@ iframe{
   margin-top: 50px;
 }
 
-.text {
+.text-help {
   font-size: 20px;
 }
 
@@ -110,7 +121,7 @@ iframe{
     width: 600px;
     height: 450px;
   }
-  .text {
+  .text-help {
     font-size: 17px;
   }
 }
@@ -120,7 +131,7 @@ iframe{
     width: 500px;
     height: 450px;
   }
-  .text {
+  .text-help {
     font-size: 17px;
   }
 }
@@ -130,7 +141,7 @@ iframe{
     width: 400px;
     height: 450px;
   }
-  .text {
+  .text-help {
     font-size: 14px;
   }
 }
@@ -140,7 +151,7 @@ iframe{
     width: 300px;
     height: 450px;
   }
-  .text {
+  .text-help {
     font-size: 12px;
   }
 }

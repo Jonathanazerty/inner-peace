@@ -88,32 +88,44 @@ header {
 }
   
 .button-help, .button-breathing, .button-grounding  {
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    background-color: rgb(100, 167, 255);
-    color: white;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 5px 5px 5px rgb(217, 217, 255);
-    font-size: 20px;
-}
-
-.button-help:hover, .button-breathing:hover, .button-grounding:hover, .button-modals:hover  {
-    transform: scale(1.2);
-}
-
-.button-modals {
-  margin-bottom: 20px;
-  padding: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  background-color: rgb(93, 168, 168);
+  background-color: #5eafe5;
   color: white;
   border: none;
   border-radius: 10px;
-  box-shadow: 5px 5px 5px rgb(217, 217, 255);
   font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem;
+  min-height: 3rem;
+  min-width: 5rem;
+  box-shadow: 5px 5px 5px rgb(217, 217, 255);
+}
+
+.button-help:hover, .button-breathing:hover, .button-grounding:hover, .button-modals:hover  {
+  background-color: #6ab6e8;
+  text-decoration: none;
+  color: white;
+}
+
+.button-modals {
+  background-color: #5eafe5;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  padding: 1rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  margin: 1rem;
+  min-height: 3rem;
+  min-width: 5rem;
+  box-shadow: 5px 5px 5px rgb(217, 217, 255);
 }
 
 /* responsiveness */
@@ -262,7 +274,7 @@ header {
     padding: 10px;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: rgb(100, 167, 255);
+    background-color: #5eafe5;
     color: white;
     border: none;
     border-radius: 10px;
@@ -289,7 +301,7 @@ header {
     padding: 5px;
     padding-left: 10px;
     padding-right: 10px;
-    background-color: rgb(100, 167, 255);
+    background-color: #5eafe5;
     color: white;
     border: none;
     border-radius: 10px;

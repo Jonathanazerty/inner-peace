@@ -49,8 +49,18 @@ const renderTime3 = ({ remainingTime }) => {
 
 const Breathing = (props) => {
 
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1700px)' })
-  // const isTabletOrMobile2 = useMediaQuery({ query: '(max-width: 1200px)' })
+  const isTabletOrMobile = useMediaQuery({ query: '(min-width: 1700px)' })
+  const isTabletOrMobile2 = useMediaQuery({ query: '(max-width: 520px)' })
+
+  if(isTabletOrMobile) {
+    console.log("screen")
+  }
+  else if(isTabletOrMobile2) {
+    console.log("mobile")
+  }
+  else {
+    console.log("tablet")
+  }
   
 
   let history = useHistory();
@@ -75,8 +85,8 @@ const Breathing = (props) => {
   const [hideTimer2, setHideTimer2] = useState(false);
   const [hideTimer3, setHideTimer3] = useState(false);
 
-  const [/*scaleTimer1,*/ setScaleTimer1] = useState(true);
-  const [/*scaleTimer3,*/ setScaleTimer3] = useState(true);
+  const [scaleTimer1, setScaleTimer1] = useState(true);
+  const [scaleTimer3, setScaleTimer3] = useState(true);
 
   const restartExercise = () => {
     window.location.reload();
@@ -157,6 +167,10 @@ const Breathing = (props) => {
                     isPlaying={inMotion}
                     duration={4}
                     strokeWidth={25}
+                    // size={[
+                    //   [isTabletOrMobile ? 450 : 600] && 
+                    //   [isTabletOrMobile2 ? 350 : 600]
+                    // ]}
                     size={isTabletOrMobile ? 450 : 600}
                     colors={[
                       ['#004777', 0.33],

@@ -61,20 +61,27 @@
     box-shadow: 5px 5px 5px rgba(100, 167, 255, 0.192);
   }
 
-.start-breathing, .restart, .stop, .button-guidance{
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    background-color: rgb(100, 167, 255);
-    color: white;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 5px 5px 5px rgb(217, 217, 255);
-    font-size: 20px;
+.start-breathing, .restart, .button-guidance{
+  background-color: #5eafe5;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem;
+  min-height: 3rem;
+  min-width: 5rem;
+  box-shadow: 5px 5px 5px rgb(217, 217, 255);
 }
 
 .start-breathing:hover, .restart:hover, .stop:hover, .button-guidance:hover {
-    transform: scale(1.2);
+  background-color: #6ab6e8;
+  text-decoration: none;
+  color: white;
 }
 
 .breath-in, .hold-breath, .breath-out {
@@ -127,7 +134,7 @@
     font-size: 25px;
   }
   .value {
-      font-size: 50px;
+    font-size: 50px;
   }
 }
 
@@ -217,6 +224,18 @@
 @media only screen and (max-width: 600px) {
   .circles{
     margin-left: 0px;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .circles{
+    margin-left: 50px;
+  }
+  .text {
+    font-size: 20px;
+  }
+  .value {
+    font-size: 45px;
   }
 }
   

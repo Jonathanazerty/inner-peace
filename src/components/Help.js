@@ -51,21 +51,21 @@ const Help = (props) => {
               <div className="near">
                 <h2> Help near you</h2>
                     <div className="speak">
-                        <p className="text">Dear friends,</p>
+                        <p className="text-help">Dear friends,</p>
                         <img className="icon-help" src={speak} alt="read"/>
-                        <p className="text">On the map you can find psychologists in Flanders.</p>
-                        <p className="text">Don't hesitate to ask for help !</p>
+                        <p className="text-help">On the map you can find psychologists in Flanders.</p>
+                        <p className="text-help">Don't hesitate to ask for help !</p>
                     </div>
                     <div className="help">
                         <img className="icon-help" src={help} alt="read"/>
-                        <p className="text">The biggest step is being aware of it and the next step is the most courageous one,</p>
-                        <p className="text"><b>asking for help !</b></p>
+                        <p className="text-help">The biggest step is being aware of it and the next step is the most courageous one,</p>
+                        <p className="text-help"><b>asking for help !</b></p>
                     </div>
                     <div className="heart">
-                        <p className="text">When we are physically hurt, we go to the doctor so</p>
-                        <p className="text">when we are mentally hurt, we go to the psychologist.</p>
+                        <p className="text-help">When we are physically hurt, we go to the doctor so</p>
+                        <p className="text-help">when we are mentally hurt, we go to the psychologist.</p>
                         <img className="icon-help" src={heart} alt="read"/>
-                        <p className="text">Fight the taboo and fight for yourself !</p>
+                        <p className="text-help">Fight the taboo and fight for yourself !</p>
                     </div>
               </div>
               <div className="asking">
