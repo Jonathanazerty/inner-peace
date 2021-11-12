@@ -7,17 +7,17 @@ import './Guidance.css';
 
 const Background = styled.div`
     width: 1900px;
-    height: 860px;
+    height: 1200px;
     margin: 0;
     background: rgba(0, 0, 0, 0.7);
-    position: fixed;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     @media (max-width: 1050px) {
-        width: 1050px;
-        height: 1500px;
-      }
+    width: 1050px;
+    height: 2200px;
+    }
 `
 
 const ModalWrapper = styled.div`
