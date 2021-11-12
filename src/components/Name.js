@@ -24,10 +24,10 @@ const Name = (props) => {
     return (
         <div className='name'>
             <Container fluid>
-                <Row direction="column" style={{ margin: '50px' }} >
+                <Row direction="column" style={{ margin: '100px' }} >
                     <Col xs={12} align="center" justify="center" text="center">
                         <div>
-                            <img className="gif" src={logo} alt="logo" style={{ height: '250px', width: '250px' }}/>
+                            <img className="gif" src={logo} alt="logo"/>
                         </div>
                     </Col>
                 </Row>
