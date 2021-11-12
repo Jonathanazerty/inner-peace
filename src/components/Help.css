@@ -31,7 +31,7 @@
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 1;
-  grid-row-end: 2;
+  grid-row-end: 3;
 }
 .asking {
   grid-column-start: 2;
@@ -58,15 +58,16 @@
   /*width: 850px;*/
 }
 iframe{
-  width: 700px;
-  height: 520px;
+  /*width: 700px;*/
+  /*height: 520px;*/
+  min-height: 50vh;
   border-radius: 4%;
   box-shadow: 5px 5px 5px rgba(100, 167, 255, 0.192);
   border: none;
 }
-.ask{
-  margin-top: 50px;
-}
+/*.ask{*/
+/*  margin-top: 50px;*/
+/*}*/
 
 .text {
   font-size: 20px;
@@ -87,12 +88,40 @@ iframe{
 .icon-help:hover, .icon-find:hover{
   transform: scale(1.2);
 }
+.ask{
+  font-size: 1.6rem;
+  margin: 1rem;
+}
 
+.askWrapper{
+  display: grid;
+  grid-template-columns: 80% 20%;
+  align-items: center;
+  justify-content: space-between;
+}
 .icon-find {
-  height: 70px;
-  width: 70px;
-  float: right;
-  margin: 50px;
+  height: 60px;
+  width: 60px;
+  /*float: right;*/
+  /*margin: 50px;*/
+}
+.text{
+  margin: 0;
+}
+
+.speak, .help, .heart {
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  justify-items:  center;
+  row-gap: 1.5em;
+  padding: 1rem;
+  margin: 1rem;
+  margin-top: 2rem;
+}
+
+.asking{
+  /*display: grid;*/
+  /*grid-template-rows: auto auto;*/
 }
 
 /* responsiveness */
@@ -146,6 +175,10 @@ iframe{
 }
 
 @media only screen and (max-width: 850px) {
+  iframe{
+    min-height: 50vh;
+    min-width: 80vw;
+  }
   .helps {
     /*align-items: center;*/
     display: grid;
