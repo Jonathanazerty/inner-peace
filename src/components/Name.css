@@ -2,6 +2,9 @@ body {
     font-family: 'Comfortaa', cursive;
     color: #04539a;
 }
+.logoWrapper{
+    margin: 3rem;
+}
 
 .gif {
     width: 150px;

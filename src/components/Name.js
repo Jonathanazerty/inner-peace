@@ -24,7 +24,7 @@ const Name = (props) => {
     return (
         <div className='name'>
             <Container fluid>
-                <Row direction="column" style={{ margin: '100px' }} >
+                <Row direction="column" className='logoWrapper'  >
                     <Col xs={12} align="center" justify="center" text="center">
                         <div>
                             <img className="gif" src={logo} alt="logo"/>
