@@ -14,9 +14,21 @@ const Background = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width: 2700px) {
+        width: 2700px;
+        height: 1500px;
+        }
+    @media (max-width: 2000px) {
+        width: 2000px;
+        height: 1500px;
+        }
+    @media (max-width: 1700px) {
+        width: 1700px;
+        height: 1200px;
+        }
     @media (max-width: 1050px) {
         width: 1050px;
-        height: 2200px;
+        height: 1200px;
         }
 `
 
