@@ -68,6 +68,10 @@
   /*height: 770px; */
   /*width: 850px;*/
 }
+.asking{
+  display: grid;
+  grid-template-rows: 6% 94%;
+}
 iframe{
   /*width: 700px;*/
   /*height: 520px;*/
@@ -75,18 +79,15 @@ iframe{
   border-radius: 4%;
   box-shadow: 5px 5px 5px rgba(100, 167, 255, 0.192);
   border: none;
+  align-self: center;
 }
-/*.ask{*/
-/*  margin-top: 50px;*/
-/*}*/
 
 .text-help {
   font-size: 20px;
 }
 
 .map-psychologists {
-  margin: 40px;
-  margin-top: 50px;
+  margin-top: 1rem;
 }
 
 .icon-help {
@@ -107,12 +108,10 @@ iframe{
 .askWrapper{
   display: grid;
   grid-template-columns: 80% 20%;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .icon-find {
-  height: 60px;
-  width: 60px;
+  height: 40px;
   /*float: right;*/
   /*margin: 50px;*/
 }
