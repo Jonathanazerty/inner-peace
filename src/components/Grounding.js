@@ -7,7 +7,7 @@ import Smell from '../images/smell.png';
 import Taste from '../images/taste.png';
 import Yay from '../images/yay.png';
 import Header from './Header';
-import Breathing from "./Breathing";
+import {useHistory} from "react-router-dom";
 
 const Grounding = (props) => {
 
@@ -20,6 +20,11 @@ const Grounding = (props) => {
     const [showTwo, setShowTwo] = useState(false);
     const [showOne, setShowOne] = useState(false);
     const [showExtras, setShowExtras] = useState(false);
+
+    let history = useHistory();
+    const Breathing = () => {
+        history.push('/Breathing')
+    }
 
     const StartButton = () => <button id='groundingStart' className='groundingButton' onClick={startGrounding}> I'm
         ready to start</button>
