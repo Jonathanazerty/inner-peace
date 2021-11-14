@@ -17,9 +17,7 @@ const Header = () => {
     const Grounding = () => {
         history.push('/Grounding')
     }
-    const Entries = () => {
-        history.push('/Entries')
-    }
+
 
     return (
         <div className='headerHeader'>
@@ -27,7 +25,6 @@ const Header = () => {
             <button className="headerButton" onClick={Breathing}>Breathing</button>
             <button className="headerButton" onClick={Grounding}>Grounding</button>
             <button className="headerButton" onClick={Help}>Find Help</button>
-            <button className="headerButton" onClick={Entries}>Entries</button>
         </div>
     )
 }
