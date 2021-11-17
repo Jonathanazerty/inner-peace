@@ -2,53 +2,49 @@ body {
     font-family: 'Comfortaa', cursive;
     color: #04539a;
 }
-
-.name{
-    height: auto;
-    width: auto;
+.nameTitle{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
 }
-.logoWrapper{
+.nameSmallTitle{
+    font-size: 1.5rem;
+}
+.nameBigTitle{
+    font-size: 2.5rem;
+}
+.gif {
+    width: 14rem;
+    border-radius: 50%;
+    box-shadow: 10px 10px 20px rgb(217, 217, 255);
     margin: 3rem;
 }
-
-.logo {
-    margin: 100px;
+.gifWrapper{
+    display: flex;
+    justify-content: center;
 }
-
-.text-name1 {
-    font-size: 18px;
+.nameInside{
+    height : calc(100vh - 15vh);
 }
-.text-name2{
-    font-size: 60px;
-}
-.text-name3{
-    margin: 40px;
-}
-
-.gif {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    box-shadow: 10px 10px 10px rgb(217, 217, 255);
-}
-
 .input-name, .label {
     border: none;
     background-color: transparent;
-    font-size: 20px;
+    font-size: 1.5rem;
     color: #04539a;
     padding: 0.2rem;
     margin: 0.5rem;
 }
 .input-name{
-    background-color: #91a5ff15;
+    background-color: rgba(145, 165, 255, 0.23);
     box-shadow: 5px 5px 10px rgba(100, 167, 255, 0.192);
     border-radius: 10px;
 }
-
+.input-name:focus{
+    background-color: rgba(255, 255, 255, 0.45);
+}
 .button-confirm {
     border-radius: 10px;
-    font-size: 20px;
+    font-size: 1.5rem;
     background-color: #5eafe5;
     color: white;
     border: none;
@@ -63,48 +59,47 @@ body {
     min-width: 5rem;
 }
 
-/* responsiveness */
+.button-confirm:hover {
+    background-color: #6ab6e8;
+    text-decoration: none;
+    color: white;
+}
+form{
+    margin-top: 3rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+
+}
+/*!* responsiveness *!*/
 
 @media only screen and (max-width: 700px) {
-    .logo {
-        margin-top: 2rem;
+    .gif {
+        width: 12rem;
     }
-    .logoWrapper{
-        margin: 0;
+    .nameSmallTitle {
+        font-size: 1rem;
     }
 
-    .text-name1 {
-        font-size: 14px;
+    .nameBigTitle {
+        font-size: 2rem;
     }
-    .text-name2{
-        font-size: 45px;
-    }
-    .text-name3{
-        margin: 30px;
-    }
-  }
 
-  
-@media only screen and (max-width: 500px) {
-    .text-name1 {
-        font-size: 14px;
+    .input-name, .label {
+        font-size: 1rem;
     }
-    .text-name2{
-        font-size: 35px;
-    }
-    .text-name3{
-        margin: 20px;
-    }
-  }
 
-  @media only screen and (max-width: 450px) {
-    .text-name1 {
-        font-size: 12px;
+    .button-confirm {
+        font-size: 1rem;
     }
-    .text-name2{
-        font-size: 30px;
+    form {
+        margin-top: 2.5rem;
     }
-    .input-name, .label{
-        font-size: 17px;
+}
+
+@media only screen and (max-height: 750px) {
+    form {
+        margin-top: 1rem;
     }
-  }
+}
