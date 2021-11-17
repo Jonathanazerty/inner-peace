@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import './Name.css';
-import {Container, Row, Col} from 'react-grid-system';
 import {useHistory} from 'react-router-dom';
 import logo from '../images/Inner Peace.gif';
 import Footer from "./Footer";
