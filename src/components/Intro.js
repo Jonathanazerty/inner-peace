@@ -16,7 +16,7 @@ const Intro = ({text}) => {
             } else {
                 window.location = "/Name";
             }
-        }, 2000);
+        }, 3000);
 
         return () => clearInterval(timeout)
     }, [fadeProp])
